@@ -12,7 +12,16 @@
 
 #include "list.h"
 
-void	ft_printf(const char *str1,...) {
-    printf("Hello, World!\n");
-    return 0;
+void	ft_printf(const char *str1, ...)
+{
+	void	*par;
+
+	va_list ap;
+	va_start(ap, str1);
+	while ()
+	{
+		par = va_arg(ap, void *);
+		
+	}
+	va_end(ap)
 }

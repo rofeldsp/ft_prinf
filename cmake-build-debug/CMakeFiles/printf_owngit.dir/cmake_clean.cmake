@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/printf_owngit.dir/author.c.o"
   "CMakeFiles/printf_owngit.dir/ft_printf.c.o"
+  "CMakeFiles/printf_owngit.dir/main.c.o"
   "printf_owngit"
   "printf_owngit.pdb"
 )

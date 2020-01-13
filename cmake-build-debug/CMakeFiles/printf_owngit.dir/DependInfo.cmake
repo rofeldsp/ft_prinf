@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/Users/rofeldsp/printf_owngit/author.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/author.c.o"
   "/Users/rofeldsp/printf_owngit/ft_printf.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/ft_printf.c.o"
+  "/Users/rofeldsp/printf_owngit/main.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

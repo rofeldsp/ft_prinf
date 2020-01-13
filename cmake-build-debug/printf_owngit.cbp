@@ -80,10 +80,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/rofeldsp/printf_owngit/author.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.c">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/list.h">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/main.c">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/CMakeLists.txt">
