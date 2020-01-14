@@ -3,4 +3,4 @@ project(printf_owngit C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(printf_owngit ft_printf.c list.h main.c author.c)
+add_executable(printf_owngit ft_printf.c ft_printf.h main.c author.c)

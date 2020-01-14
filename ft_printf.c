@@ -10,18 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "list.h"
+#include "ft_printf.h"
 
-void	ft_printf(const char *str1, ...)
+void	ft_printf(const char *str, ...)
 {
-	void	*par;
+	t_print		node;
 
-	va_list ap;
-	va_start(ap, str1);
-	while ()
+	va_start(node.ap, str);
+	node.input = (char *)str;
+	while (*node.input)
 	{
-		par = va_arg(ap, void *);
-		
+		if (*node.input == '%')
+		{
+			get_flag();
+		}
+		else
+		{
+//			buffer_chars(&node);
+
+		}
+		(*node.input)++;
 	}
-	va_end(ap)
+	va_end(ap);
 }
+
+

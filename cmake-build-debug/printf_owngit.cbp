@@ -86,7 +86,7 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.c">
 			<Option target="printf_owngit"/>
 		</Unit>
-		<Unit filename="/Users/rofeldsp/printf_owngit/list.h">
+		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.h">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/main.c">
