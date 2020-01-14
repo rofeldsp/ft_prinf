@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/12 17:47:25 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/14 21:03:51 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	t_print		node;
+	size_t			i;
+	unsigned char	*a;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	a = (unsigned char*)s;
+	i = 0;
+	while (i < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		if (a[i] == (unsigned char)c)
+			return ((void*)(s + i));
+		i++;
 	}
-	va_end(node.ap);
+	return (NULL);
 }
-
-

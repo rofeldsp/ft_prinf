@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/07 20:29:55 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:20:45 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+char		*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	t_print		node;
+	size_t			i;
+	size_t			a;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	a = 0;
+	i = ft_strlen(src);
+	while (a < i && a < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		dest[a] = src[a];
+		a++;
 	}
-	va_end(node.ap);
+	while (a < n)
+	{
+		if (i < n)
+			dest[a] = '\0';
+		else
+			dest[a] = src[a];
+		a++;
+	}
+	return (dest);
 }
-
-

@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/15 15:58:26 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:21:18 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+int	ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	t_print		node;
+	size_t		i;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	while ((s1[i] || s2[i]) && i < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
+		if (s1[i] == s2[i])
+			i++;
 		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+			return (0);
 	}
-	va_end(node.ap);
+	return (1);
 }
-
-

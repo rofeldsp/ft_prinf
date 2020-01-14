@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/11 22:30:36 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:27:05 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	t_print		node;
+	size_t			i;
+	char			*a;
+	char			*b;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	if (dst == 0 && src == 0)
+		return (NULL);
+	a = (char*)dst;
+	b = (char*)src;
+	while (i < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		a[i] = b[i];
+		i++;
 	}
-	va_end(node.ap);
+	return (dst);
 }
-
-

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/12 16:03:04 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/12 17:00:36 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	t_print		node;
+	size_t			i;
+	unsigned char	*dest;
+	unsigned char	*source;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	dest = (unsigned char*)dst;
+	source = (unsigned char*)src;
+	while (i < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		dest[i] = source[i];
+		if (dest[i] == (unsigned char)c)
+			return ((void*)(dst + i + 1));
+		i++;
 	}
-	va_end(node.ap);
+	return (NULL);
 }
-
-

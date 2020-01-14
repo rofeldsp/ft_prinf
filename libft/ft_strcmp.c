@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/04 17:04:27 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/11 22:11:33 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_print		node;
+	int				a;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
-	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
-	}
-	va_end(node.ap);
+	a = 0;
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	while ((str1[a] == str2[a]) && str1[a] != '\0' && str2[a] != '\0')
+		a++;
+	if (str1[a] == str2[a] && str1[a] == '\0')
+		return (0);
+	else
+		return (str1[a] - str2[a]);
 }
-
-

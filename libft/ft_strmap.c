@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/15 15:25:26 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:12:25 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	t_print		node;
+	char	*dst;
+	int		i;
+	int		len;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	if (s == NULL)
+		return (NULL);
+	len = ft_strlen(s);
+	dst = (char*)malloc(sizeof(char) * (len + 1));
+	if (dst == NULL)
+		return (NULL);
+	while (s[i])
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		dst[i] = f(s[i]);
+		i++;
 	}
-	va_end(node.ap);
+	dst[i] = '\0';
+	return (dst);
 }
-
-

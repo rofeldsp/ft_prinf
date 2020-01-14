@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/07 22:28:29 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/11 22:09:39 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	t_print		node;
+	int		a;
+	int		i;
+	char	*st2;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	a = 0;
+	st2 = (char*)s2;
+	while (s1[i] != '\0')
+		i++;
+	while (st2[a] != '\0')
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		s1[i] = st2[a];
+		i++;
+		a++;
 	}
-	va_end(node.ap);
+	s1[i] = '\0';
+	return (s1);
 }
-
-

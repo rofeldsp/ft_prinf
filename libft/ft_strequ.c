@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/15 15:43:11 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/15 15:54:28 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	t_print		node;
+	int		i;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	if (s1 == NULL || s2 == NULL)
+		return (0);
+	while (s1[i] || s2[i])
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
+		if (s1[i] == s2[i])
+			i++;
 		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+			return (0);
 	}
-	va_end(node.ap);
+	return (1);
 }
-
-

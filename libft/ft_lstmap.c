@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/19 16:15:40 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:50:02 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_print		node;
+	t_list	*out;
+	t_list	*out1;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	if (!(out = malloc(sizeof(lst))))
+		return (NULL);
+	out = f(lst);
+	out1 = out;
+	while (lst->next != NULL)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		if (!(out->next = malloc(sizeof(lst->next))))
+			return (NULL);
+		out->next = f(lst->next);
+		out = out->next;
+		lst = lst->next;
 	}
-	va_end(node.ap);
+	return (out1);
 }
-
-

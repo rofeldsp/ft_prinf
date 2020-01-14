@@ -44,6 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/rofeldsp/printf_owngit/."/>
+					<Add directory="/Users/rofeldsp/printf_owngit/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -65,6 +67,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/Users/rofeldsp/printf_owngit/."/>
+					<Add directory="/Users/rofeldsp/printf_owngit/libft"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
@@ -80,13 +84,187 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/rofeldsp/printf_owngit/author.c">
-			<Option target="printf_owngit"/>
-		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.c">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.h">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_atoi.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_bzero.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_isalnum.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_isalpha.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_isascii.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_isdigit.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_isprint.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_itoa.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstadd.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstdel.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstdelone.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstiter.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstmap.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_lstnew.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memalloc.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memccpy.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memchr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memcmp.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memcpy.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memdel.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memmove.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_memset.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putchar.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putchar_fd.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putendl.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putendl_fd.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putnbr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putnbr_fd.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putstr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_putstr_fd.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strcat.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strchr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strclr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strcmp.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strcpy.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strdel.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strdup.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strequ.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_striter.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_striteri.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strjoin.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strlcat.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strlen.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strmap.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strmapi.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strncat.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strncmp.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strncpy.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strnequ.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strnew.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strnstr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strrchr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strsplit.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strstr.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strsub.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_strtrim.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_tolower.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_toupper.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/libft/libft.h">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/main.c">

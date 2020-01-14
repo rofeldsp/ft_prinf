@@ -3,6 +3,7 @@
 //
 
 #include <stdint.h>
+#include "ft_printf.h"
 
 int main(void)
 {
@@ -15,4 +16,6 @@ int main(void)
 	char 				letter;
 	char 				*string;
 
+	ft_printf("sdfsdfjkshdf");
+	return(0);
 }

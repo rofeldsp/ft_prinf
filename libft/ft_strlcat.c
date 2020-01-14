@@ -1,38 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/08 19:57:58 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:11:57 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {
-	t_print		node;
+	size_t			a;
+	size_t			i;
+	unsigned int	lendest;
+	unsigned int	lensrc;
+	char			*s;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	a = 0;
+	s = (char*)src;
+	lendest = ft_strlen(dest);
+	lensrc = ft_strlen(s);
+	if (n <= lendest)
+		return (lensrc + n);
+	while (dest[i])
+		i++;
+	while (s[a] && i < (n - 1))
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		dest[i] = s[a];
+		i++;
+		a++;
 	}
-	va_end(node.ap);
+	dest[i] = '\0';
+	return (lendest + lensrc);
 }
-
-

@@ -18,7 +18,7 @@
 */
 
 
-# include "../libft/libft.h"
+# include "libft/libft.h"
 
 /*
 ** Node desc
@@ -29,5 +29,11 @@ typedef struct	print
 	va_list		ap;
 	char 		*input;
 }				t_print;
+
+/*
+**	Functions
+*/
+
+void	ft_printf(const char *str, ...);
 
 #endif

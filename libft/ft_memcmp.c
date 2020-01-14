@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/14 19:09:40 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/14 19:31:37 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	t_print		node;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	size_t			i;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
+	while (i < n)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
 	}
-	va_end(node.ap);
+	return (0);
 }
-
-

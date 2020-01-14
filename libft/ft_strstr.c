@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/14 21:22:02 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/20 13:24:10 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+char	*ft_strstr(const char *haystack, const char *needle)
 {
-	t_print		node;
+	char			*str;
+	char			*s;
+	int				i;
+	int				a;
 
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	i = 0;
+	a = 0;
+	str = (char*)haystack;
+	s = (char*)needle;
+	if (s[a] == '\0')
+		return (str);
+	while (str[i])
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		if (str[i] == s[a])
+			if (ft_strncmp(&str[i], s, ft_strlen(s)) == 0)
+				return (&str[i]);
+		i++;
 	}
-	va_end(node.ap);
+	return (NULL);
 }
-
-

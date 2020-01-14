@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/17 12:32:08 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/17 16:47:21 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	t_print		node;
-
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
+	if (nb == -2147483648)
 	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		nb = 147483648;
 	}
-	va_end(node.ap);
+	if (nb < 0)
+	{
+		nb = -nb;
+		ft_putchar_fd('-', fd);
+	}
+	if (nb / 10)
+		ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd('0' + nb % 10, fd);
 }
-
-

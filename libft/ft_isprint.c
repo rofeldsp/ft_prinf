@@ -1,38 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/12/26 17:20:00 by rofeldsp          #+#    #+#             */
-/*   Updated: 2019/12/26 17:20:02 by rofeldsp         ###   ########.fr       */
+/*   Created: 2019/09/14 23:50:10 by rofeldsp          #+#    #+#             */
+/*   Updated: 2019/09/17 13:04:01 by rofeldsp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-void	ft_printf(const char *str, ...)
+int	ft_isprint(int c)
 {
-	t_print		node;
-
-	va_start(node.ap, str);
-	node.input = (char *)str;
-	while (*node.input)
-	{
-		if (*node.input == '%')
-		{
-			//get_flag();
-			break ;
-		}
-		else
-		{
-//			buffer_chars(&node);
-			ft_putchar('1');
-		}
-		*node.input++;
-	}
-	va_end(node.ap);
+	if ((c >= ' ' && c <= 47) || (c >= '(' && c <= '/') ||
+		(c >= '0' && c <= '7') || (c >= '8' && c <= '?') ||
+		(c >= '@' && c <= 'G') || (c >= 'H' && c <= 'O') ||
+		(c >= 'P' && c <= 'W') || (c >= 'X' && c <= '_') ||
+		(c >= '`' && c <= 'g') || (c >= 'h' && c <= 'o') ||
+		(c >= 'p' && c <= 'w') || (c >= 'x' && c <= '~'))
+		return (1);
+	return (0);
 }
-
-
