@@ -13,9 +13,9 @@ int main(void)
 	unsigned int		d;
 	uint64_t 			e;
 	uint32_t 			f;
-	char 				letter;
+	char 				letter = 'p';
 	char 				*string;
 
-	ft_printf("sdfsdfjkshdf");
+	ft_printf("sdfsd\nfjks%%hdf\n%c", letter);
 	return(0);
 }

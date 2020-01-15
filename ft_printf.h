@@ -21,19 +21,26 @@
 # include "libft/libft.h"
 
 /*
-** Node desc
+** Node desc and macros
 */
 
 typedef struct	print
 {
 	va_list		ap;
 	char 		*input;
+	char 		*buffer;
+	int 		pointer;
 }				t_print;
+
+# define BUFF_SIZE 2
 
 /*
 **	Functions
 */
 
-void	ft_printf(const char *str, ...);
+void				ft_printf(const char *str, ...);
+t_print				print_arg(t_print node);
+t_print				get_flag(t_print node);
+char 				*increase_buffer(char **str);
 
 #endif
