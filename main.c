@@ -14,8 +14,9 @@ int main(void)
 	uint64_t 			e;
 	uint32_t 			f;
 	char 				letter = 'p';
-	char 				*string;
+	char 				*string = "Hello";
 
-	ft_printf("sdfsd\nfjks%%hdf\n%c", letter);
+	ft_printf("sdfsd\nfjks%%hdf\n%c\n%s", letter, string);
+//	ft_printf("%c%s", letter, string);
 	return(0);
 }

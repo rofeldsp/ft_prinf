@@ -183,3 +183,11 @@ CMakeFiles/printf_owngit.dir/main.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/main.c.o: ../libft/libft.h
 CMakeFiles/printf_owngit.dir/main.c.o: ../main.c
 
+CMakeFiles/printf_owngit.dir/parse_char.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_char.c.o: ../libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_char.c.o: ../parse_char.c
+
+CMakeFiles/printf_owngit.dir/parse_string.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_string.c.o: ../libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_string.c.o: ../parse_string.c
+

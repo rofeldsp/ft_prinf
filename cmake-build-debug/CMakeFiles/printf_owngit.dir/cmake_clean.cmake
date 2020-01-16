@@ -59,6 +59,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o"
   "CMakeFiles/printf_owngit.dir/main.c.o"
+  "CMakeFiles/printf_owngit.dir/parse_char.c.o"
+  "CMakeFiles/printf_owngit.dir/parse_string.c.o"
   "printf_owngit"
   "printf_owngit.pdb"
 )

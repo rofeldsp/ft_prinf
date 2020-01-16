@@ -837,6 +837,32 @@ CMakeFiles/printf_owngit.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/main.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/main.c -o CMakeFiles/printf_owngit.dir/main.c.s
 
+CMakeFiles/printf_owngit.dir/parse_char.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_char.c.o: ../parse_char.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/printf_owngit.dir/parse_char.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_char.c.o   -c /Users/rofeldsp/printf_owngit/parse_char.c
+
+CMakeFiles/printf_owngit.dir/parse_char.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_char.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_char.c > CMakeFiles/printf_owngit.dir/parse_char.c.i
+
+CMakeFiles/printf_owngit.dir/parse_char.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_char.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_char.c -o CMakeFiles/printf_owngit.dir/parse_char.c.s
+
+CMakeFiles/printf_owngit.dir/parse_string.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_string.c.o: ../parse_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/printf_owngit.dir/parse_string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_string.c.o   -c /Users/rofeldsp/printf_owngit/parse_string.c
+
+CMakeFiles/printf_owngit.dir/parse_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_string.c > CMakeFiles/printf_owngit.dir/parse_string.c.i
+
+CMakeFiles/printf_owngit.dir/parse_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_string.c -o CMakeFiles/printf_owngit.dir/parse_string.c.s
+
 # Object files for target printf_owngit
 printf_owngit_OBJECTS = \
 "CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o" \
@@ -898,7 +924,9 @@ printf_owngit_OBJECTS = \
 "CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/printf_owngit.dir/ft_printf.c.o" \
-"CMakeFiles/printf_owngit.dir/main.c.o"
+"CMakeFiles/printf_owngit.dir/main.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_char.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_string.c.o"
 
 # External object files for target printf_owngit
 printf_owngit_EXTERNAL_OBJECTS =
@@ -963,9 +991,11 @@ printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/ft_printf.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/main.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_char.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_string.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/build.make
 printf_owngit: CMakeFiles/printf_owngit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Linking C executable printf_owngit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Linking C executable printf_owngit"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf_owngit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

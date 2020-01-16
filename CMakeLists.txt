@@ -68,4 +68,4 @@ add_executable(printf_owngit
         libft/libft.h
         ft_printf.c
         ft_printf.h
-        main.c)
+        main.c parse_char.c parse_string.c)

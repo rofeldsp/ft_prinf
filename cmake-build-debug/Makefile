@@ -1743,6 +1743,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/main.c.s
 .PHONY : main.c.s
 
+parse_char.o: parse_char.c.o
+
+.PHONY : parse_char.o
+
+# target to build an object file
+parse_char.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_char.c.o
+.PHONY : parse_char.c.o
+
+parse_char.i: parse_char.c.i
+
+.PHONY : parse_char.i
+
+# target to preprocess a source file
+parse_char.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_char.c.i
+.PHONY : parse_char.c.i
+
+parse_char.s: parse_char.c.s
+
+.PHONY : parse_char.s
+
+# target to generate assembly for a file
+parse_char.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_char.c.s
+.PHONY : parse_char.c.s
+
+parse_string.o: parse_string.c.o
+
+.PHONY : parse_string.o
+
+# target to build an object file
+parse_string.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_string.c.o
+.PHONY : parse_string.c.o
+
+parse_string.i: parse_string.c.i
+
+.PHONY : parse_string.i
+
+# target to preprocess a source file
+parse_string.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_string.c.i
+.PHONY : parse_string.c.i
+
+parse_string.s: parse_string.c.s
+
+.PHONY : parse_string.s
+
+# target to generate assembly for a file
+parse_string.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_string.c.s
+.PHONY : parse_string.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1932,6 +1986,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parse_char.o"
+	@echo "... parse_char.i"
+	@echo "... parse_char.s"
+	@echo "... parse_string.o"
+	@echo "... parse_string.i"
+	@echo "... parse_string.s"
 .PHONY : help
 
 
