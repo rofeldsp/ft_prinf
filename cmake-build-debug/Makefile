@@ -150,6 +150,33 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+get_flag.o: get_flag.c.o
+
+.PHONY : get_flag.o
+
+# target to build an object file
+get_flag.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_flag.c.o
+.PHONY : get_flag.c.o
+
+get_flag.i: get_flag.c.i
+
+.PHONY : get_flag.i
+
+# target to preprocess a source file
+get_flag.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_flag.c.i
+.PHONY : get_flag.c.i
+
+get_flag.s: get_flag.c.s
+
+.PHONY : get_flag.s
+
+# target to generate assembly for a file
+get_flag.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_flag.c.s
+.PHONY : get_flag.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -1809,6 +1836,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... get_flag.o"
+	@echo "... get_flag.i"
+	@echo "... get_flag.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

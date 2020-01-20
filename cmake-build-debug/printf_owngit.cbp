@@ -90,6 +90,9 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.h">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/get_flag.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_atoi.c">
 			<Option target="printf_owngit"/>
 		</Unit>

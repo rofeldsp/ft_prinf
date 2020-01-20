@@ -32,7 +32,10 @@ typedef struct	print
 	char 		*input;
 	char 		*buffer;
 	int 		pointer;
+	char 		flag;
 	int 		size;
+	int 		width;
+	int 		precision;
 }				t_print;
 
 /*
@@ -41,9 +44,13 @@ typedef struct	print
 
 void				ft_printf(const char *str, ...);
 t_print				print_arg(t_print node);
-t_print				get_flag(t_print node);
+t_print				get_type(t_print node);
 char 				*increase_buffer(char **str, t_print *node);
 t_print				parse_char(t_print node);
 t_print				parse_string(t_print node);
+t_print				get_flag(t_print node);
+t_print				get_width(t_print node);
+t_print				get_precision(t_print node);
+t_print				get_size(t_print node);
 
 #endif

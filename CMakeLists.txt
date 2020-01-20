@@ -6,12 +6,7 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 include_directories(libft)
 
-add_executable(printf_owngit
-        libft/ft_atoi.c
-        libft/ft_bzero.c
-        libft/ft_isalnum.c
-        libft/ft_isalpha.c
-        libft/ft_isascii.c
+add_executable(printf_owngit libft/ft_atoi.c libft/ft_bzero.c libft/ft_isalnum.c libft/ft_isalpha.c libft/ft_isascii.c
         libft/ft_isdigit.c
         libft/ft_isprint.c
         libft/ft_itoa.c
@@ -68,4 +63,6 @@ add_executable(printf_owngit
         libft/libft.h
         ft_printf.c
         ft_printf.h
-        main.c parse_char.c parse_string.c)
+        main.c parse_char.c parse_string.c
+        get_flag.c
+        )

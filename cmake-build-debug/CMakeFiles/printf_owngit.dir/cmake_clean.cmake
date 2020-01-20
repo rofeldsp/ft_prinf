@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/ft_printf.c.o"
+  "CMakeFiles/printf_owngit.dir/get_flag.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_bzero.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_isalnum.c.o"
