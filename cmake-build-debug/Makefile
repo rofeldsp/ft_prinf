@@ -177,6 +177,114 @@ get_flag.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_flag.c.s
 .PHONY : get_flag.c.s
 
+get_precision.o: get_precision.c.o
+
+.PHONY : get_precision.o
+
+# target to build an object file
+get_precision.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_precision.c.o
+.PHONY : get_precision.c.o
+
+get_precision.i: get_precision.c.i
+
+.PHONY : get_precision.i
+
+# target to preprocess a source file
+get_precision.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_precision.c.i
+.PHONY : get_precision.c.i
+
+get_precision.s: get_precision.c.s
+
+.PHONY : get_precision.s
+
+# target to generate assembly for a file
+get_precision.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_precision.c.s
+.PHONY : get_precision.c.s
+
+get_size.o: get_size.c.o
+
+.PHONY : get_size.o
+
+# target to build an object file
+get_size.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_size.c.o
+.PHONY : get_size.c.o
+
+get_size.i: get_size.c.i
+
+.PHONY : get_size.i
+
+# target to preprocess a source file
+get_size.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_size.c.i
+.PHONY : get_size.c.i
+
+get_size.s: get_size.c.s
+
+.PHONY : get_size.s
+
+# target to generate assembly for a file
+get_size.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_size.c.s
+.PHONY : get_size.c.s
+
+get_type.o: get_type.c.o
+
+.PHONY : get_type.o
+
+# target to build an object file
+get_type.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_type.c.o
+.PHONY : get_type.c.o
+
+get_type.i: get_type.c.i
+
+.PHONY : get_type.i
+
+# target to preprocess a source file
+get_type.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_type.c.i
+.PHONY : get_type.c.i
+
+get_type.s: get_type.c.s
+
+.PHONY : get_type.s
+
+# target to generate assembly for a file
+get_type.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_type.c.s
+.PHONY : get_type.c.s
+
+get_width.o: get_width.c.o
+
+.PHONY : get_width.o
+
+# target to build an object file
+get_width.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_width.c.o
+.PHONY : get_width.c.o
+
+get_width.i: get_width.c.i
+
+.PHONY : get_width.i
+
+# target to preprocess a source file
+get_width.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_width.c.i
+.PHONY : get_width.c.i
+
+get_width.s: get_width.c.s
+
+.PHONY : get_width.s
+
+# target to generate assembly for a file
+get_width.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/get_width.c.s
+.PHONY : get_width.c.s
+
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
 .PHONY : libft/ft_atoi.o
@@ -1797,6 +1905,33 @@ parse_char.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_char.c.s
 .PHONY : parse_char.c.s
 
+parse_decimal.o: parse_decimal.c.o
+
+.PHONY : parse_decimal.o
+
+# target to build an object file
+parse_decimal.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.o
+.PHONY : parse_decimal.c.o
+
+parse_decimal.i: parse_decimal.c.i
+
+.PHONY : parse_decimal.i
+
+# target to preprocess a source file
+parse_decimal.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.i
+.PHONY : parse_decimal.c.i
+
+parse_decimal.s: parse_decimal.c.s
+
+.PHONY : parse_decimal.s
+
+# target to generate assembly for a file
+parse_decimal.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.s
+.PHONY : parse_decimal.c.s
+
 parse_string.o: parse_string.c.o
 
 .PHONY : parse_string.o
@@ -1839,6 +1974,18 @@ help:
 	@echo "... get_flag.o"
 	@echo "... get_flag.i"
 	@echo "... get_flag.s"
+	@echo "... get_precision.o"
+	@echo "... get_precision.i"
+	@echo "... get_precision.s"
+	@echo "... get_size.o"
+	@echo "... get_size.i"
+	@echo "... get_size.s"
+	@echo "... get_type.o"
+	@echo "... get_type.i"
+	@echo "... get_type.s"
+	@echo "... get_width.o"
+	@echo "... get_width.i"
+	@echo "... get_width.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2019,6 +2166,9 @@ help:
 	@echo "... parse_char.o"
 	@echo "... parse_char.i"
 	@echo "... parse_char.s"
+	@echo "... parse_decimal.o"
+	@echo "... parse_decimal.i"
+	@echo "... parse_decimal.s"
 	@echo "... parse_string.o"
 	@echo "... parse_string.i"
 	@echo "... parse_string.s"

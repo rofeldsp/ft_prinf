@@ -9,6 +9,22 @@ CMakeFiles/printf_owngit.dir/get_flag.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/get_flag.c.o: ../get_flag.c
 CMakeFiles/printf_owngit.dir/get_flag.c.o: ../libft/libft.h
 
+CMakeFiles/printf_owngit.dir/get_precision.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/get_precision.c.o: ../get_precision.c
+CMakeFiles/printf_owngit.dir/get_precision.c.o: ../libft/libft.h
+
+CMakeFiles/printf_owngit.dir/get_size.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/get_size.c.o: ../get_size.c
+CMakeFiles/printf_owngit.dir/get_size.c.o: ../libft/libft.h
+
+CMakeFiles/printf_owngit.dir/get_type.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/get_type.c.o: ../get_type.c
+CMakeFiles/printf_owngit.dir/get_type.c.o: ../libft/libft.h
+
+CMakeFiles/printf_owngit.dir/get_width.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/get_width.c.o: ../get_width.c
+CMakeFiles/printf_owngit.dir/get_width.c.o: ../libft/libft.h
+
 CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o: ../libft/ft_atoi.c
 CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o: ../libft/libft.h
 
@@ -190,6 +206,10 @@ CMakeFiles/printf_owngit.dir/main.c.o: ../main.c
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../parse_char.c
+
+CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../parse_decimal.c
 
 CMakeFiles/printf_owngit.dir/parse_string.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_string.c.o: ../libft/libft.h

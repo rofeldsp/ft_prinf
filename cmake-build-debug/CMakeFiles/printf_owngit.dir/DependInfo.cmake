@@ -6,6 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/rofeldsp/printf_owngit/ft_printf.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/ft_printf.c.o"
   "/Users/rofeldsp/printf_owngit/get_flag.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_flag.c.o"
+  "/Users/rofeldsp/printf_owngit/get_precision.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_precision.c.o"
+  "/Users/rofeldsp/printf_owngit/get_size.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_size.c.o"
+  "/Users/rofeldsp/printf_owngit/get_type.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_type.c.o"
+  "/Users/rofeldsp/printf_owngit/get_width.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_width.c.o"
   "/Users/rofeldsp/printf_owngit/libft/ft_atoi.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o"
   "/Users/rofeldsp/printf_owngit/libft/ft_bzero.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/libft/ft_bzero.c.o"
   "/Users/rofeldsp/printf_owngit/libft/ft_isalnum.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/libft/ft_isalnum.c.o"
@@ -66,6 +70,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rofeldsp/printf_owngit/libft/ft_toupper.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o"
   "/Users/rofeldsp/printf_owngit/main.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/main.c.o"
   "/Users/rofeldsp/printf_owngit/parse_char.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_char.c.o"
+  "/Users/rofeldsp/printf_owngit/parse_decimal.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_decimal.c.o"
   "/Users/rofeldsp/printf_owngit/parse_string.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_string.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

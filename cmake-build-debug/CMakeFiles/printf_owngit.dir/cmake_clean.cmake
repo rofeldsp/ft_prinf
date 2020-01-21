@@ -1,6 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/ft_printf.c.o"
   "CMakeFiles/printf_owngit.dir/get_flag.c.o"
+  "CMakeFiles/printf_owngit.dir/get_precision.c.o"
+  "CMakeFiles/printf_owngit.dir/get_size.c.o"
+  "CMakeFiles/printf_owngit.dir/get_type.c.o"
+  "CMakeFiles/printf_owngit.dir/get_width.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_bzero.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_isalnum.c.o"
@@ -61,6 +65,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o"
   "CMakeFiles/printf_owngit.dir/main.c.o"
   "CMakeFiles/printf_owngit.dir/parse_char.c.o"
+  "CMakeFiles/printf_owngit.dir/parse_decimal.c.o"
   "CMakeFiles/printf_owngit.dir/parse_string.c.o"
   "printf_owngit"
   "printf_owngit.pdb"

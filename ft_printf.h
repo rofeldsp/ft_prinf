@@ -24,7 +24,7 @@
 ** Node desc and macros
 */
 
-# define BUFF_SIZE 5
+# define BUFF_SIZE 100
 
 typedef struct	print
 {
@@ -34,6 +34,7 @@ typedef struct	print
 	int 		pointer;
 	char 		flag;
 	int 		size;
+	int 		empty_space;
 	int 		width;
 	int 		precision;
 }				t_print;
@@ -52,5 +53,9 @@ t_print				get_flag(t_print node);
 t_print				get_width(t_print node);
 t_print				get_precision(t_print node);
 t_print				get_size(t_print node);
+t_print				adjust_to_width(t_print node, int len);
+t_print				adjust_to_flag(t_print node, int len);
+t_print 			parse_decimal(t_print node);
+int 				num_length(int num, t_print *node);
 
 #endif

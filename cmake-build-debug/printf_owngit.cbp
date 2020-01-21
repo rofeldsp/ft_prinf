@@ -93,6 +93,18 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/get_flag.c">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/get_precision.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/get_size.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/get_type.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/get_width.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/libft/ft_atoi.c">
 			<Option target="printf_owngit"/>
 		</Unit>
@@ -274,6 +286,9 @@
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_char.c">
+			<Option target="printf_owngit"/>
+		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/parse_decimal.c">
 			<Option target="printf_owngit"/>
 		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_string.c">

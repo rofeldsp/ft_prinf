@@ -6,8 +6,15 @@
 
 t_print		get_flag(t_print node)
 {
-	if (!(node.flag = strchr(" -+#0", *node.input)))
+	char *str;
+
+	str = (char*)malloc(sizeof(char) * 5);
+	str[1] = '\0';
+	if (str = ft_strchr(" -+0#", *node.input))
+	{
+		node.flag = str[0];
+//	if ((node.flag = ft_strchr(" -+#0", *node.input)[0]))
 		node.input++;
-	node = get_width(node);
-	return (node);
+	}
+	return (get_width(node));
 }
