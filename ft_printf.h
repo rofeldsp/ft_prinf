@@ -34,6 +34,7 @@ typedef struct	print
 	int 		pointer;
 	char 		flag;
 	int 		size;
+	int 		number;
 	int 		empty_space;
 	int 		width;
 	int 		precision;
@@ -56,6 +57,6 @@ t_print				get_size(t_print node);
 t_print				adjust_to_width(t_print node, int len);
 t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
-int 				num_length(int num, t_print *node);
+t_print				adjust_to_flag2(t_print node, int len);
 
 #endif

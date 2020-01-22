@@ -68,4 +68,4 @@ add_executable(printf_owngit libft/ft_atoi.c libft/ft_bzero.c libft/ft_isalnum.c
         get_width.c
         get_size.c
         get_precision.c
-        get_type.c parse_decimal.c)
+        get_type.c parse_decimal.c adjust_functions.c)

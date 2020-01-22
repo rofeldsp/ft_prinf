@@ -123,6 +123,33 @@ printf_owngit/fast:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/build
 .PHONY : printf_owngit/fast
 
+adjust_functions.o: adjust_functions.c.o
+
+.PHONY : adjust_functions.o
+
+# target to build an object file
+adjust_functions.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/adjust_functions.c.o
+.PHONY : adjust_functions.c.o
+
+adjust_functions.i: adjust_functions.c.i
+
+.PHONY : adjust_functions.i
+
+# target to preprocess a source file
+adjust_functions.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/adjust_functions.c.i
+.PHONY : adjust_functions.c.i
+
+adjust_functions.s: adjust_functions.c.s
+
+.PHONY : adjust_functions.s
+
+# target to generate assembly for a file
+adjust_functions.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/adjust_functions.c.s
+.PHONY : adjust_functions.c.s
+
 ft_printf.o: ft_printf.c.o
 
 .PHONY : ft_printf.o
@@ -1968,6 +1995,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... printf_owngit"
+	@echo "... adjust_functions.o"
+	@echo "... adjust_functions.i"
+	@echo "... adjust_functions.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"

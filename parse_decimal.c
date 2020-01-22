@@ -9,10 +9,11 @@ t_print 	parse_decimal(t_print node)
 	char	*str;
 	int		i;
 
-	str = ft_itoa(va_arg(node.ap, int));
+	node.number = va_arg(node.ap, int);
+	str = ft_itoa(node.number);
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
-	node = adjust_to_flag(node, ft_strlen(str));
+	node = adjust_to_flag2(node, ft_strlen(str));
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)
@@ -53,21 +54,3 @@ t_print 	parse_decimal(t_print node)
 	*/
 }
 
-int 	num_length(int num, t_print *node)
-{
-	int len;
-	int num2;
-
-	if (num < 0)
-	{
-		num = -num;
-		len = 1;
-	}
-	num2 = num;
-	while (num2 / 10 > 0)
-	{
-		num2 /= 10;
-		len++;
-	}
-	return (len++);
-}

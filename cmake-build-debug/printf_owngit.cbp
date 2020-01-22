@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/rofeldsp/printf_owngit/adjust_functions.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/ft_printf.c">
 			<Option target="printf_owngit"/>
 		</Unit>

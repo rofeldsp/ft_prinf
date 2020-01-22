@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/printf_owngit.dir/adjust_functions.c.o"
   "CMakeFiles/printf_owngit.dir/ft_printf.c.o"
   "CMakeFiles/printf_owngit.dir/get_flag.c.o"
   "CMakeFiles/printf_owngit.dir/get_precision.c.o"
