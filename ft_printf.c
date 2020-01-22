@@ -20,7 +20,6 @@ void	ft_printf(const char *str, ...)
 //	if(!(node.buffer = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 //		return ;
 //	ft_bzero(node.buffer, BUFF_SIZE);
-	node.flag = '\0';
 	node.empty_space = 0;
 	if(!(node.buffer = ft_memalloc(BUFF_SIZE)) && !(node.size = BUFF_SIZE))
 		return ;
@@ -53,6 +52,7 @@ t_print		print_arg(t_print node)
 		node.input ++;
 		return (node);
 	}
+	free_flags(&node);
 	node = get_flag(node);
 	return(node);
 }
@@ -74,4 +74,13 @@ char 		*increase_buffer(char **str, t_print *node)
 	free(*str);
 	node->size += BUFF_SIZE;
 	return(dest);
+}
+
+void		free_flags(t_print *node)
+{
+	node->flag = '\0';
+	node->size = 0;
+	node->empty_space = 0;
+	node->width = 0;
+	node->precision = 0;
 }

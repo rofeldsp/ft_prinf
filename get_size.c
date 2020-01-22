@@ -7,9 +7,9 @@
 t_print		get_size(t_print node)
 {
 	node.size = 0;
-	if (*node.input == 'h' || *node.input == 'l' || *node.input == 'L')
-	{
-		return (get_type(node));
-	}
+	if (*node.input == 'l')
+		(*(node.input + 1) == 'l') ? (node.size = LL) : (node.size = L);
+	if (*node.input == 'h')
+		(*(node.input + 1) == 'h') ? (node.size = HH) : (node.size = H);
 	return(get_type(node));
 }

@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static char		*cut1(int j, int n, int c)
+static char		*cut1(long long int j, long long int n, long long int c)
 {
-	char	*dst;
-	int		b;
+	char				*dst;
+	long long int		b;
 
 	b = n;
 	while (b / 10 > 0)
@@ -40,11 +40,11 @@ static char		*cut1(int j, int n, int c)
 	return (dst);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(long long int n)
 {
-	int		j;
-	char	*dst;
-	int		c;
+	long long int		j;
+	char				*dst;
+	long long int		c;
 
 	j = 1;
 	c = n;

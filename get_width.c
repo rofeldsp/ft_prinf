@@ -6,7 +6,7 @@
 
 t_print		get_width(t_print node)
 {
-	node.width = 0;
+	node.width = -1;
 	if (*node.input >= '1' && *node.input <= '9')
 	{
 		node.width = *node.input - '0';

@@ -8,6 +8,8 @@ t_print		adjust_to_width(t_print node, int len)
 {
 	int len2;
 
+	if (node.width == -1)
+		node.width = len;
 	len2 = node.width;
 	if (node.width <= len)
 		return (node);
@@ -28,7 +30,7 @@ t_print 	adjust_to_flag(t_print node, int len)
 
 	len_width = node.width;
 	node.empty_space = node.width - len;
-	if (node.flag == '0')
+	if (node.flag & ZERO)
 		while (len_width-- > len)
 			node.buffer[node.pointer++] = '0';
 	return (node);
@@ -38,15 +40,22 @@ t_print 	adjust_to_flag2(t_print node, int len)
 {
 	int	len_width;
 
-	len_width = node.width;
+//	len_width = node.width;
 	node.empty_space = node.width - len;
-	if (node.flag == '0')
-		while (len_width-- > len)
+	if (node.flag & MINUS)
+		node.empty_space = 0;
+	len_width = node.empty_space;
+	if (node.flag & ZERO)
+		while (len_width-- > 0)
 			node.buffer[node.pointer++] = '0';
-	if (node.flag == '+')
+//		node.empty_space = 0;
+	if (node.flag & PLUS)
 	{
 		if (node.number >= 0)
 			node.buffer[node.pointer++] = '+';
 	}
+//	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
+//		while (len_width-- > len)
+//			node.buffer[node.pointer++] = ' ';
 	return (node);
 }

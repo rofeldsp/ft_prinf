@@ -14,6 +14,17 @@ t_print 	parse_decimal(t_print node)
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag2(node, ft_strlen(str));
+	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
+	{
+		if (node.flag & ZERO)
+		{
+			node.buffer[node.pointer - node.empty_space] = ' ';
+			node.empty_space = 0;
+		}
+		else
+			node.buffer[node.pointer++] = ' ';
+	}
+	node.pointer += node.empty_space;
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)
@@ -23,7 +34,6 @@ t_print 	parse_decimal(t_print node)
 		node.pointer++;
 	}
 	node.input++;
-	node.pointer += node.empty_space;
 	return (node);
 
 	/*int num;

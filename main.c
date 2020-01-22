@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	int					a = 56;
+	int					a = 43;
 	double				b;
 	float				c;
 	unsigned int		d;
@@ -16,7 +16,7 @@ int main(void)
 	char 				letter = 'p';
 	char 				*string = "Hello";
 
-	ft_printf("sdf%%123\n%-10s123\n%+10d", string, a);
+	ft_printf("%0 *d", 10, a);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }
