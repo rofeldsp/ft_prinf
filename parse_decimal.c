@@ -14,7 +14,7 @@ t_print 	parse_decimal(t_print node)
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag2(node, ft_strlen(str));
-	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
+	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
 		if (node.flag & ZERO)
 		{

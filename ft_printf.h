@@ -12,6 +12,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <string.h> // убрать потом
 
 /*
 ** ----------Standard libraries-------------------
@@ -45,6 +46,7 @@ typedef struct	print
 	unsigned int	flag;
 	unsigned int	size;
 	int 			number;
+//	long long int	nb;
 	int 			empty_space;
 	int 			width;
 	int 			precision;

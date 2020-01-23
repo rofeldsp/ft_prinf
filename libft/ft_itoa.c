@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static char		*cut1(long long int j, long long int n, long long int c)
+static char		*cut1(int j, int n, int c)
 {
 	char				*dst;
-	long long int		b;
+	int		b;
 
 	b = n;
 	while (b / 10 > 0)
@@ -40,11 +40,11 @@ static char		*cut1(long long int j, long long int n, long long int c)
 	return (dst);
 }
 
-char			*ft_itoa(long long int n)
+char			*ft_itoa(int n)
 {
-	long long int		j;
+	int		j;
 	char				*dst;
-	long long int		c;
+	int		c;
 
 	j = 1;
 	c = n;
@@ -58,3 +58,50 @@ char			*ft_itoa(long long int n)
 	dst = cut1(j, n, c);
 	return (dst);
 }
+//static char		*cut1(long long int j, long long int n, long long int c)
+//{
+//	char				*dst;
+//	long long int		b;
+//
+//	b = n;
+//	while (b / 10 > 0)
+//	{
+//		j++;
+//		b = b / 10;
+//	}
+//	dst = (char*)malloc(sizeof(char) * (j + 1));
+//	if (dst == NULL)
+//		return (NULL);
+//	dst[j] = '\0';
+//	j--;
+//	while (n / 10 > 0)
+//	{
+//		dst[j] = '0' + n % 10;
+//		n = n / 10;
+//		j--;
+//	}
+//	dst[j] = '0' + n % 10;
+//	if (c < 0)
+//		dst[j - 1] = '-';
+//	return (dst);
+//}
+//
+//char			*ft_itoa(signed long long int n)
+//{
+//	long long int		j;
+//	char				*dst;
+//	long long int		c;
+//
+//	j = 1;
+//	c = n;
+//	if (n < 0)
+//	{
+//		if (n == -2147483648)
+//			return (ft_strdup("-2147483648"));
+//		n = -n;
+//		j++;
+//	}
+//	dst = cut1(j, n, c);
+//	return (dst);
+//}
+
