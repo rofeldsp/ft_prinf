@@ -65,6 +65,7 @@ t_print				get_width(t_print node);
 t_print				get_precision(t_print node);
 t_print				get_size(t_print node);
 t_print				adjust_to_width(t_print node, int len);
+t_print				adjust_to_precision(t_print node, int len);
 t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
 t_print				adjust_to_flag2(t_print node, int len);

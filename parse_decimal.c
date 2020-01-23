@@ -9,7 +9,7 @@ t_print 	parse_decimal(t_print node)
 	char	*str;
 	int		i;
 
-	node.number = va_arg(node.ap, int);
+//	node.number = va_arg(node.ap, int);
 	str = ft_itoa(node.number);
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
@@ -25,6 +25,7 @@ t_print 	parse_decimal(t_print node)
 			node.buffer[node.pointer++] = ' ';
 	}
 	node.pointer += node.empty_space;
+	node = adjust_to_precision(node);
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)

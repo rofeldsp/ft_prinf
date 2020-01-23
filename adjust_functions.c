@@ -59,3 +59,12 @@ t_print 	adjust_to_flag2(t_print node, int len)
 //			node.buffer[node.pointer++] = ' ';
 	return (node);
 }
+
+t_print 	adjust_to_precision(t_print node, int len)
+{
+	while (node.precision - len > 0)
+	{
+		node.buffer[node.pointer++] = '0';
+	}
+	return (node);
+}
