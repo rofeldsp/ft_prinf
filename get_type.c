@@ -20,6 +20,9 @@ t_print		get_type(t_print node)
 			node.number = (short)va_arg(node.ap, int);
 		else
 			node.number = va_arg(node.ap, int);
+		return(parse_decimal(node));
 	}
+	else if (*node.input == '%')
+		return(parse_percent(node));
 	return(parse_decimal(node));
 }

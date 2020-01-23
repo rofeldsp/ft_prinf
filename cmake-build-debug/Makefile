@@ -1959,6 +1959,33 @@ parse_decimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.s
 .PHONY : parse_decimal.c.s
 
+parse_percent.o: parse_percent.c.o
+
+.PHONY : parse_percent.o
+
+# target to build an object file
+parse_percent.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_percent.c.o
+.PHONY : parse_percent.c.o
+
+parse_percent.i: parse_percent.c.i
+
+.PHONY : parse_percent.i
+
+# target to preprocess a source file
+parse_percent.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_percent.c.i
+.PHONY : parse_percent.c.i
+
+parse_percent.s: parse_percent.c.s
+
+.PHONY : parse_percent.s
+
+# target to generate assembly for a file
+parse_percent.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_percent.c.s
+.PHONY : parse_percent.c.s
+
 parse_string.o: parse_string.c.o
 
 .PHONY : parse_string.o
@@ -2199,6 +2226,9 @@ help:
 	@echo "... parse_decimal.o"
 	@echo "... parse_decimal.i"
 	@echo "... parse_decimal.s"
+	@echo "... parse_percent.o"
+	@echo "... parse_percent.i"
+	@echo "... parse_percent.s"
 	@echo "... parse_string.o"
 	@echo "... parse_string.i"
 	@echo "... parse_string.s"

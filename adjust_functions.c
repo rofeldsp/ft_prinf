@@ -16,9 +16,9 @@ t_print		adjust_to_width(t_print node, int len)
 	if ((node.pointer + node.width) >= 100 || (node.pointer + node.width) % 100
 											  < node.pointer % 100)
 		node.buffer = increase_buffer(&node.buffer, &node);
-	while (len2 >= 0)
+	while (len2 > 0)
 	{
-		node.buffer[node.pointer + len2] = ' ';
+		node.buffer[node.pointer + len2 - 1] = ' ';
 		len2--;
 	}
 	return(node);

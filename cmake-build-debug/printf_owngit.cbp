@@ -294,6 +294,9 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_decimal.c">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/parse_percent.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_string.c">
 			<Option target="printf_owngit"/>
 		</Unit>

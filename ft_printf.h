@@ -54,7 +54,7 @@ typedef struct	print
 **	Functions
 */
 
-void				ft_printf(const char *str, ...);
+int				ft_printf(const char *str, ...);
 t_print				print_arg(t_print node);
 t_print				get_type(t_print node);
 char 				*increase_buffer(char **str, t_print *node);
@@ -70,5 +70,6 @@ t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
 t_print				adjust_to_flag2(t_print node, int len);
 void				free_flags(t_print *node);
+t_print 			parse_percent(t_print node);
 
 #endif

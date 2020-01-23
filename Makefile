@@ -55,7 +55,8 @@ SOURCES = ft_printf.c \
           parse_char.c \
           parse_string.c \
           parse_decimal.c \
-          adjust_functions.c
+          adjust_functions.c \
+          parse_percent.c
 
 SRCS = $(addprefix $(DIR_S)/,$(SOURCES))
 

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-void	ft_printf(const char *str, ...)
+int		ft_printf(const char *str, ...)
 {
 	t_print		node;
 
@@ -22,7 +22,7 @@ void	ft_printf(const char *str, ...)
 //	ft_bzero(node.buffer, BUFF_SIZE);
 	node.empty_space = 0;
 	if(!(node.buffer = ft_memalloc(BUFF_SIZE)) && !(node.size = BUFF_SIZE))
-		return ;
+		return(-1);
 	va_start(node.ap, str);
 	node.input = (char *)str;
 	while (*node.input)
@@ -40,7 +40,9 @@ void	ft_printf(const char *str, ...)
 	}
 	va_end(node.ap);
 	ft_putstr(node.buffer);
+	node.pointer = ft_strlen(node.buffer);
 	free(node.buffer);
+	return(node.pointer);
 }
 
 t_print		print_arg(t_print node)
