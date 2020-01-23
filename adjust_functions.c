@@ -62,8 +62,10 @@ t_print 	adjust_to_flag2(t_print node, int len)
 
 t_print 	adjust_to_precision(t_print node, int len)
 {
-	while (node.precision - len > 0)
+	while ((node.precision--) - len > 0)
 	{
+		if ((node.pointer + 1) % BUFF_SIZE == 1)
+			node.buffer = increase_buffer(&node.buffer, &node);
 		node.buffer[node.pointer++] = '0';
 	}
 	return (node);

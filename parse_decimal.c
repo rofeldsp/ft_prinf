@@ -25,7 +25,7 @@ t_print 	parse_decimal(t_print node)
 			node.buffer[node.pointer++] = ' ';
 	}
 	node.pointer += node.empty_space;
-	node = adjust_to_precision(node);
+	node = adjust_to_precision(node, ft_strlen(str));
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)

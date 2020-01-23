@@ -7,27 +7,24 @@
 t_print		get_size(t_print node)
 {
 	node.size = 0;
-	if (*node.input == 'l')
+	if (*node.input == 'l' || *node.input == 'h')
 	{
-		if (*(node.input + 1) == 'l')
-		{
-			node.size |= LL;
-			node.input ++;
+		if (*node.input == 'l') {
+			if (*(node.input + 1) == 'l') {
+				node.size |= LL;
+				node.input++;
+			} else
+				node.size |= L;
 		}
-		else
-			node.size |= L;
-	}
-	if (*node.input == 'h')
-	{
-		if (*(node.input + 1) == 'h')
-		{
-			node.size |= HH;
-			node.input ++;
+		if (*node.input == 'h') {
+			if (*(node.input + 1) == 'h') {
+				node.size |= HH;
+				node.input++;
+			} else
+				node.size |= H;
 		}
-		else
-			node.size |= H;
+		node.input++;
 	}
-	node.input++;
 //	(*(node.input + 1) == 'l') ? (node.size = LL) : (node.size = L);
 //	if (*node.input == 'h')
 //		(*(node.input + 1) == 'h') ? (node.size = HH) : (node.size = H);
