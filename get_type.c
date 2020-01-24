@@ -25,6 +25,6 @@ t_print		get_type(t_print node)
 	else if (*node.input == '%')
 		return(parse_percent(node));
 	else if (*node.input == 'x')
-		return();
+		return(1);
 	return(parse_decimal(node));
 }
