@@ -49,7 +49,6 @@ typedef struct	print
 	unsigned int	unumber;
 	long long int	llnumber;
 	long int		lnumber;
-	//	long long int	nb;
 	int 			empty_space;
 	int 			width;
 	int 			precision;
