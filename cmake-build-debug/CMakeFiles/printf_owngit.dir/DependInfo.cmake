@@ -72,6 +72,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rofeldsp/printf_owngit/main.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/main.c.o"
   "/Users/rofeldsp/printf_owngit/parse_char.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_char.c.o"
   "/Users/rofeldsp/printf_owngit/parse_decimal.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_decimal.c.o"
+  "/Users/rofeldsp/printf_owngit/parse_hexodecimal.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o"
   "/Users/rofeldsp/printf_owngit/parse_percent.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_percent.c.o"
   "/Users/rofeldsp/printf_owngit/parse_string.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_string.c.o"
   )

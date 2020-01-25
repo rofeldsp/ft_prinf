@@ -22,7 +22,7 @@ int		ft_printf(const char *str, ...)
 //	ft_bzero(node.buffer, BUFF_SIZE);
 	node.empty_space = 0;
 	if(!(node.buffer = ft_memalloc(BUFF_SIZE)) && !(node.size = BUFF_SIZE))
-		return(-1);
+		exit(-1);
 	va_start(node.ap, str);
 	node.input = (char *)str;
 	while (*node.input)

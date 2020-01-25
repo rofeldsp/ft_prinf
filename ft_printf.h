@@ -73,5 +73,8 @@ t_print 			parse_decimal(t_print node);
 t_print				adjust_to_flag2(t_print node, int len);
 void				free_flags(t_print *node);
 t_print 			parse_percent(t_print node);
+t_print 			parse_hexodecimal(t_print node);
+char 				*ft_itoa_base(int nb, int base);
+char 				*ft_itoa_base2(int i, char *str);
 
 #endif

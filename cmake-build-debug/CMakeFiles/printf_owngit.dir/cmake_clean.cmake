@@ -67,6 +67,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/main.c.o"
   "CMakeFiles/printf_owngit.dir/parse_char.c.o"
   "CMakeFiles/printf_owngit.dir/parse_decimal.c.o"
+  "CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o"
   "CMakeFiles/printf_owngit.dir/parse_percent.c.o"
   "CMakeFiles/printf_owngit.dir/parse_string.c.o"
   "printf_owngit"

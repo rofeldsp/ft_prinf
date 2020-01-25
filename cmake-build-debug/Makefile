@@ -1959,6 +1959,33 @@ parse_decimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.s
 .PHONY : parse_decimal.c.s
 
+parse_hexodecimal.o: parse_hexodecimal.c.o
+
+.PHONY : parse_hexodecimal.o
+
+# target to build an object file
+parse_hexodecimal.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o
+.PHONY : parse_hexodecimal.c.o
+
+parse_hexodecimal.i: parse_hexodecimal.c.i
+
+.PHONY : parse_hexodecimal.i
+
+# target to preprocess a source file
+parse_hexodecimal.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i
+.PHONY : parse_hexodecimal.c.i
+
+parse_hexodecimal.s: parse_hexodecimal.c.s
+
+.PHONY : parse_hexodecimal.s
+
+# target to generate assembly for a file
+parse_hexodecimal.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s
+.PHONY : parse_hexodecimal.c.s
+
 parse_percent.o: parse_percent.c.o
 
 .PHONY : parse_percent.o
@@ -2226,6 +2253,9 @@ help:
 	@echo "... parse_decimal.o"
 	@echo "... parse_decimal.i"
 	@echo "... parse_decimal.s"
+	@echo "... parse_hexodecimal.o"
+	@echo "... parse_hexodecimal.i"
+	@echo "... parse_hexodecimal.s"
 	@echo "... parse_percent.o"
 	@echo "... parse_percent.i"
 	@echo "... parse_percent.s"
