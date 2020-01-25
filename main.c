@@ -7,16 +7,16 @@
 
 int main(void)
 {
-	int					a = -5;
+	long long int					a = 42;
 	double				b;
 	float				c;
 	unsigned int		d;
 	uint64_t 			e;
 	uint32_t 			f;
-	char 				letter = '0';
+	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("% d", a);
+	ft_printf("%x", 42);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }

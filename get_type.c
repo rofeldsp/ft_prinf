@@ -20,11 +20,33 @@ t_print		get_type(t_print node)
 			node.number = (short)va_arg(node.ap, int);
 		else
 			node.number = va_arg(node.ap, int);
-		return(parse_decimal(node));
+		return (parse_decimal(node));
 	}
 	else if (*node.input == '%')
-		return(parse_percent(node));
+		return (parse_percent(node));
 	else if (*node.input == 'x')
-		return(parse_hexodecimal(node));
+	{
+		if (node.size & L)
+			return (lparse_hexodecimal(node, 'f'));
+		else if (node.size & LL)
+			return (llparse_hexodecimal(node, 'f'));
+		else if (node.size & H)
+			node.number = (short)va_arg(node.ap, int);
+//		else
+//			node.number = va_arg(node.ap, int);
+		return(parse_hexodecimal(node, 'f'));
+	}
+	else if (*node.input == 'X')
+	{
+		if (node.size & L)
+			return (lparse_hexodecimal(node, 'F'));
+		else if (node.size & LL)
+			return (llparse_hexodecimal(node, 'F'));
+		else if (node.size & H)
+			node.number = (short)va_arg(node.ap, int);
+//		else
+//			node.number = va_arg(node.ap, int);
+		return(parse_hexodecimal(node, 'F'));
+	}
 	return(parse_decimal(node));
 }

@@ -215,6 +215,10 @@ CMakeFiles/printf_owngit.dir/parse_decimal.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../parse_decimal.c
 
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../parse_hexodecimal.c
+
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: ../parse_percent.c
