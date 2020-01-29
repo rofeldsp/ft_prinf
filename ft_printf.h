@@ -45,7 +45,7 @@ typedef struct	print
 	int 			pointer;
 	unsigned int	flag;
 	unsigned int	size;
-	int				number;
+	__int64_t		number;
 	unsigned int	unumber;
 	long long int	llnumber;
 	long int		lnumber;

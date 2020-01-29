@@ -12,16 +12,23 @@ t_print		get_type(t_print node)
 		return(parse_string(node));
 	else if (*node.input == 'd')
 	{
-		if (node.size & L)
-			node.number = va_arg(node.ap, long int);
-		else if (node.size & LL)
-			node.number = va_arg(node.ap, long long int);
-		else if (node.size & H)
-			node.number = (short)va_arg(node.ap, int);
-		else
-			node.number = va_arg(node.ap, int);
+		node.number = (node.size & L) ? va_arg(node.ap, long int) :
+					  ((node.size & LL) ? va_arg(node.ap, long long int) :
+					   va_arg(node.ap, int));
 		return (parse_decimal(node));
 	}
+//	else if (*node.input == 'd')
+//	{
+//		if (node.size & L)
+//			node.number = va_arg(node.ap, long int);
+//		else if (node.size & LL)
+//			node.number = va_arg(node.ap, long long int);
+//		else if (node.size & H)
+//			node.number = (short)va_arg(node.ap, int);
+//		else
+//			node.number = va_arg(node.ap, int);
+//		return (parse_decimal(node));
+//	}
 	else if (*node.input == '%')
 		return (parse_percent(node));
 	else if (*node.input == 'x')
@@ -30,8 +37,8 @@ t_print		get_type(t_print node)
 			return (lparse_hexodecimal(node, 'f'));
 		else if (node.size & LL)
 			return (llparse_hexodecimal(node, 'f'));
-		else if (node.size & H)
-			node.number = (short)va_arg(node.ap, int);
+//		else if (node.size & H)
+//			node.number = (short)va_arg(node.ap, int);
 //		else
 //			node.number = va_arg(node.ap, int);
 		return(parse_hexodecimal(node, 'f'));
