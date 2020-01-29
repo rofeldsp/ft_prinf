@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char		*cut1(int j, int n, int c)
+static char		*cut1(int64_t j, int64_t n, int64_t c)
 {
 	char				*dst;
 	int		b;
@@ -40,11 +40,11 @@ static char		*cut1(int j, int n, int c)
 	return (dst);
 }
 
-char			*ft_itoa(int n)
+char			*ft_itoa(int64_t n)
 {
-	int		j;
+	__int64_t		j;
 	char				*dst;
-	int		c;
+	__int64_t		c;
 
 	j = 1;
 	c = n;

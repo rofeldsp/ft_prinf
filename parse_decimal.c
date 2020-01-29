@@ -10,7 +10,7 @@ t_print 	parse_decimal(t_print node)
 	int		i;
 
 //	node.number = va_arg(node.ap, int);
-	str = ft_itoa(node.number);
+	str = ft_itoa(-2);
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag2(node, ft_strlen(str));

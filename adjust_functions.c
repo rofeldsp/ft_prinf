@@ -46,9 +46,11 @@ t_print 	adjust_to_flag2(t_print node, int len)
 		node.empty_space = 0;
 	len_width = node.empty_space;
 	if (node.flag & ZERO)
+	{
 		while (len_width-- > 0)
 			node.buffer[node.pointer++] = '0';
-//		node.empty_space = 0;
+		node.empty_space = 0;
+	}
 	if (node.flag & PLUS)
 	{
 		if (node.number >= 0)
