@@ -16,7 +16,7 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%hx", 4294967296);
+	ft_printf("%#x", 542);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }

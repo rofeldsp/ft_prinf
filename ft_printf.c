@@ -59,6 +59,16 @@ t_print		print_arg(t_print node)
 	return(node);
 }
 
+void		check_overflow(t_print *node)
+{
+	int		i;
+
+	i = 10;
+	while (i-- >= 0)
+		if ((node->pointer + 1) % BUFF_SIZE == 0)
+			node->buffer = increase_buffer(&node->buffer, node);
+}
+
 char 		*increase_buffer(char **str, t_print *node)
 {
 	char	*dest;

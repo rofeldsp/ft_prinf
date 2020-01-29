@@ -20,7 +20,7 @@ char 		*ft_itoa_base2(int i, char **str)
 	return(str2);
 }
 
-char 		*ft_itoa_base(unsigned int nb, int base, char c)
+char 		*ft_itoa_base(__uint64_t nb, int base, char c)
 {
 	char 	*str;
 	int 	i;
@@ -77,13 +77,17 @@ t_print 	parse_hexodecimal(t_print node, char c)
 	char	*str;
 	int		i;
 
-	node.unumber = va_arg(node.ap, unsigned int);
-	str = ft_itoa_base(node.unumber, 16, c);
+//	node.unumber = va_arg(node.ap, unsigned int);
+//	str = ft_itoa_base(node.unumber, 16, c);
+	str = (node.size == H) ? ft_itoa_base((short)node.unumber, 16, c) :
+			(node.size == HH ? ft_itoa_base((char)node.unumber, 16, c) :
+			ft_itoa_base(node.unumber, 16 , c));
 	i = 0;
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag2(node, ft_strlen(str));
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
+		check_overflow(&node);
 		if (node.flag & ZERO)
 		{
 			node.buffer[node.pointer - node.empty_space] = ' ';
@@ -92,12 +96,16 @@ t_print 	parse_hexodecimal(t_print node, char c)
 		else
 			node.buffer[node.pointer++] = ' ';
 	}
+	if (node.flag & OCTO)
+	{
+		node.buffer[node.pointer++] = '0';
+		node.buffer[node.pointer++] = 'x';
+	}
 	node.pointer += node.empty_space;
 	node = adjust_to_precision(node, ft_strlen(str));
 	while (str[i])
 	{
-		if ((node.pointer + 1) % BUFF_SIZE == 0)
-			node.buffer = increase_buffer(&node.buffer, &node);
+		check_overflow(&node);
 		node.buffer[node.pointer] = str[i];
 		i++;
 		node.pointer++;
@@ -106,7 +114,7 @@ t_print 	parse_hexodecimal(t_print node, char c)
 	free(str);
 	return (node);
 }
-
+/*
 t_print 	lparse_hexodecimal(t_print node, char c)
 {
 	char	*str;
@@ -175,4 +183,4 @@ t_print 	llparse_hexodecimal(t_print node, char c)
 	node.input++;
 	free(str);
 	return (node);
-}
+}  */

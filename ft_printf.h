@@ -46,7 +46,7 @@ typedef struct	print
 	unsigned int	flag;
 	unsigned int	size;
 	__int64_t		number;
-	unsigned int	unumber;
+	__uint64_t		unumber;
 	long long int	llnumber;
 	long int		lnumber;
 	int 			empty_space;
@@ -78,8 +78,9 @@ t_print 			parse_percent(t_print node);
 t_print 			parse_hexodecimal(t_print node, char c);
 t_print 			lparse_hexodecimal(t_print node, char c);
 t_print 			llparse_hexodecimal(t_print node, char c);
-char 				*ft_itoa_base(unsigned int nb, int base, char c);
+char 				*ft_itoa_base(__uint64_t nb, int base, char c);
 char 				*ft_itoa_base2(int i, char **str);
 char 				*llft_itoa_base(long long int nb, int base, char c);
+void				check_overflow(t_print *node);
 
 #endif

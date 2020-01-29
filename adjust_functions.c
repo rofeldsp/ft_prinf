@@ -41,7 +41,7 @@ t_print 	adjust_to_flag2(t_print node, int len)
 	int	len_width;
 
 //	len_width = node.width;
-	node.empty_space = node.width - len;
+	node.empty_space = (node.width > len) ? node.width - len : 0;
 	if (node.flag & MINUS)
 		node.empty_space = 0;
 	len_width = node.empty_space;
