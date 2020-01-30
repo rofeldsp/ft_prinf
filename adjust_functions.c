@@ -88,3 +88,8 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 	}
 	return (node);
 }
+
+t_print 	adjust_to_precision2(t_print node, char **str)
+{
+
+}

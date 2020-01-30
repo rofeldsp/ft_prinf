@@ -14,6 +14,7 @@ t_print 	parse_string(t_print node)
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag(node, ft_strlen(str));
 	node.pointer += node.empty_space;
+	node = adjust_to_precision2(node, &str);
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)

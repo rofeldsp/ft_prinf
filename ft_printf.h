@@ -81,5 +81,6 @@ char 				*ft_itoa_base(__uint64_t nb, int base, char c);
 char 				*ft_itoa_base2(int i, char **str);
 char 				*llft_itoa_base(long long int nb, int base, char c);
 void				check_overflow(t_print *node);
+t_print 			adjust_precision2(t_print node, char **str);
 
 #endif
