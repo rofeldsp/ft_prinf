@@ -5,7 +5,7 @@
 
 t_print		get_precision(t_print node)
 {
-	node.precision = 0;
+//	node.precision = 0;
 	if (*node.input == '.')
 	{
 		node.input++;

@@ -811,9 +811,22 @@ CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/libft/ft_toupper.c -o CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.s
 
+CMakeFiles/printf_owngit.dir/adjust_functions.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/adjust_functions.c.o: ../adjust_functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/printf_owngit.dir/adjust_functions.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/adjust_functions.c.o   -c /Users/rofeldsp/printf_owngit/adjust_functions.c
+
+CMakeFiles/printf_owngit.dir/adjust_functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/adjust_functions.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/adjust_functions.c > CMakeFiles/printf_owngit.dir/adjust_functions.c.i
+
+CMakeFiles/printf_owngit.dir/adjust_functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/adjust_functions.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/adjust_functions.c -o CMakeFiles/printf_owngit.dir/adjust_functions.c.s
+
 CMakeFiles/printf_owngit.dir/ft_printf.c.o: CMakeFiles/printf_owngit.dir/flags.make
 CMakeFiles/printf_owngit.dir/ft_printf.c.o: ../ft_printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object CMakeFiles/printf_owngit.dir/ft_printf.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/printf_owngit.dir/ft_printf.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/ft_printf.c.o   -c /Users/rofeldsp/printf_owngit/ft_printf.c
 
 CMakeFiles/printf_owngit.dir/ft_printf.c.i: cmake_force
@@ -824,9 +837,74 @@ CMakeFiles/printf_owngit.dir/ft_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/ft_printf.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/ft_printf.c -o CMakeFiles/printf_owngit.dir/ft_printf.c.s
 
+CMakeFiles/printf_owngit.dir/get_flag.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/get_flag.c.o: ../get_flag.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/printf_owngit.dir/get_flag.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_flag.c.o   -c /Users/rofeldsp/printf_owngit/get_flag.c
+
+CMakeFiles/printf_owngit.dir/get_flag.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_flag.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_flag.c > CMakeFiles/printf_owngit.dir/get_flag.c.i
+
+CMakeFiles/printf_owngit.dir/get_flag.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_flag.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_flag.c -o CMakeFiles/printf_owngit.dir/get_flag.c.s
+
+CMakeFiles/printf_owngit.dir/get_precision.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/get_precision.c.o: ../get_precision.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/printf_owngit.dir/get_precision.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_precision.c.o   -c /Users/rofeldsp/printf_owngit/get_precision.c
+
+CMakeFiles/printf_owngit.dir/get_precision.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_precision.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_precision.c > CMakeFiles/printf_owngit.dir/get_precision.c.i
+
+CMakeFiles/printf_owngit.dir/get_precision.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_precision.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_precision.c -o CMakeFiles/printf_owngit.dir/get_precision.c.s
+
+CMakeFiles/printf_owngit.dir/get_size.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/get_size.c.o: ../get_size.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/printf_owngit.dir/get_size.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_size.c.o   -c /Users/rofeldsp/printf_owngit/get_size.c
+
+CMakeFiles/printf_owngit.dir/get_size.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_size.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_size.c > CMakeFiles/printf_owngit.dir/get_size.c.i
+
+CMakeFiles/printf_owngit.dir/get_size.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_size.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_size.c -o CMakeFiles/printf_owngit.dir/get_size.c.s
+
+CMakeFiles/printf_owngit.dir/get_type.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/get_type.c.o: ../get_type.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/printf_owngit.dir/get_type.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_type.c.o   -c /Users/rofeldsp/printf_owngit/get_type.c
+
+CMakeFiles/printf_owngit.dir/get_type.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_type.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_type.c > CMakeFiles/printf_owngit.dir/get_type.c.i
+
+CMakeFiles/printf_owngit.dir/get_type.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_type.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_type.c -o CMakeFiles/printf_owngit.dir/get_type.c.s
+
+CMakeFiles/printf_owngit.dir/get_width.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/get_width.c.o: ../get_width.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/printf_owngit.dir/get_width.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_width.c.o   -c /Users/rofeldsp/printf_owngit/get_width.c
+
+CMakeFiles/printf_owngit.dir/get_width.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_width.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_width.c > CMakeFiles/printf_owngit.dir/get_width.c.i
+
+CMakeFiles/printf_owngit.dir/get_width.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_width.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_width.c -o CMakeFiles/printf_owngit.dir/get_width.c.s
+
 CMakeFiles/printf_owngit.dir/main.c.o: CMakeFiles/printf_owngit.dir/flags.make
 CMakeFiles/printf_owngit.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object CMakeFiles/printf_owngit.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/printf_owngit.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/main.c.o   -c /Users/rofeldsp/printf_owngit/main.c
 
 CMakeFiles/printf_owngit.dir/main.c.i: cmake_force
@@ -839,7 +917,7 @@ CMakeFiles/printf_owngit.dir/main.c.s: cmake_force
 
 CMakeFiles/printf_owngit.dir/parse_char.c.o: CMakeFiles/printf_owngit.dir/flags.make
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../parse_char.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object CMakeFiles/printf_owngit.dir/parse_char.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/printf_owngit.dir/parse_char.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_char.c.o   -c /Users/rofeldsp/printf_owngit/parse_char.c
 
 CMakeFiles/printf_owngit.dir/parse_char.c.i: cmake_force
@@ -849,84 +927,6 @@ CMakeFiles/printf_owngit.dir/parse_char.c.i: cmake_force
 CMakeFiles/printf_owngit.dir/parse_char.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_char.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_char.c -o CMakeFiles/printf_owngit.dir/parse_char.c.s
-
-CMakeFiles/printf_owngit.dir/parse_string.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/parse_string.c.o: ../parse_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/printf_owngit.dir/parse_string.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_string.c.o   -c /Users/rofeldsp/printf_owngit/parse_string.c
-
-CMakeFiles/printf_owngit.dir/parse_string.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_string.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_string.c > CMakeFiles/printf_owngit.dir/parse_string.c.i
-
-CMakeFiles/printf_owngit.dir/parse_string.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_string.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_string.c -o CMakeFiles/printf_owngit.dir/parse_string.c.s
-
-CMakeFiles/printf_owngit.dir/get_flag.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/get_flag.c.o: ../get_flag.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/printf_owngit.dir/get_flag.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_flag.c.o   -c /Users/rofeldsp/printf_owngit/get_flag.c
-
-CMakeFiles/printf_owngit.dir/get_flag.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_flag.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_flag.c > CMakeFiles/printf_owngit.dir/get_flag.c.i
-
-CMakeFiles/printf_owngit.dir/get_flag.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_flag.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_flag.c -o CMakeFiles/printf_owngit.dir/get_flag.c.s
-
-CMakeFiles/printf_owngit.dir/get_width.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/get_width.c.o: ../get_width.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/printf_owngit.dir/get_width.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_width.c.o   -c /Users/rofeldsp/printf_owngit/get_width.c
-
-CMakeFiles/printf_owngit.dir/get_width.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_width.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_width.c > CMakeFiles/printf_owngit.dir/get_width.c.i
-
-CMakeFiles/printf_owngit.dir/get_width.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_width.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_width.c -o CMakeFiles/printf_owngit.dir/get_width.c.s
-
-CMakeFiles/printf_owngit.dir/get_size.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/get_size.c.o: ../get_size.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/printf_owngit.dir/get_size.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_size.c.o   -c /Users/rofeldsp/printf_owngit/get_size.c
-
-CMakeFiles/printf_owngit.dir/get_size.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_size.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_size.c > CMakeFiles/printf_owngit.dir/get_size.c.i
-
-CMakeFiles/printf_owngit.dir/get_size.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_size.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_size.c -o CMakeFiles/printf_owngit.dir/get_size.c.s
-
-CMakeFiles/printf_owngit.dir/get_precision.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/get_precision.c.o: ../get_precision.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/printf_owngit.dir/get_precision.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_precision.c.o   -c /Users/rofeldsp/printf_owngit/get_precision.c
-
-CMakeFiles/printf_owngit.dir/get_precision.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_precision.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_precision.c > CMakeFiles/printf_owngit.dir/get_precision.c.i
-
-CMakeFiles/printf_owngit.dir/get_precision.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_precision.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_precision.c -o CMakeFiles/printf_owngit.dir/get_precision.c.s
-
-CMakeFiles/printf_owngit.dir/get_type.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/get_type.c.o: ../get_type.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/printf_owngit.dir/get_type.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/get_type.c.o   -c /Users/rofeldsp/printf_owngit/get_type.c
-
-CMakeFiles/printf_owngit.dir/get_type.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/get_type.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/get_type.c > CMakeFiles/printf_owngit.dir/get_type.c.i
-
-CMakeFiles/printf_owngit.dir/get_type.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/get_type.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/get_type.c -o CMakeFiles/printf_owngit.dir/get_type.c.s
 
 CMakeFiles/printf_owngit.dir/parse_decimal.c.o: CMakeFiles/printf_owngit.dir/flags.make
 CMakeFiles/printf_owngit.dir/parse_decimal.c.o: ../parse_decimal.c
@@ -941,18 +941,18 @@ CMakeFiles/printf_owngit.dir/parse_decimal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_decimal.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_decimal.c -o CMakeFiles/printf_owngit.dir/parse_decimal.c.s
 
-CMakeFiles/printf_owngit.dir/adjust_functions.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/adjust_functions.c.o: ../adjust_functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/printf_owngit.dir/adjust_functions.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/adjust_functions.c.o   -c /Users/rofeldsp/printf_owngit/adjust_functions.c
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../parse_hexodecimal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building C object CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o   -c /Users/rofeldsp/printf_owngit/parse_hexodecimal.c
 
-CMakeFiles/printf_owngit.dir/adjust_functions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/adjust_functions.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/adjust_functions.c > CMakeFiles/printf_owngit.dir/adjust_functions.c.i
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_hexodecimal.c > CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i
 
-CMakeFiles/printf_owngit.dir/adjust_functions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/adjust_functions.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/adjust_functions.c -o CMakeFiles/printf_owngit.dir/adjust_functions.c.s
+CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_hexodecimal.c -o CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s
 
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: CMakeFiles/printf_owngit.dir/flags.make
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: ../parse_percent.c
@@ -967,18 +967,18 @@ CMakeFiles/printf_owngit.dir/parse_percent.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_percent.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_percent.c -o CMakeFiles/printf_owngit.dir/parse_percent.c.s
 
-CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: CMakeFiles/printf_owngit.dir/flags.make
-CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../parse_hexodecimal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o   -c /Users/rofeldsp/printf_owngit/parse_hexodecimal.c
+CMakeFiles/printf_owngit.dir/parse_string.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_string.c.o: ../parse_string.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/printf_owngit.dir/parse_string.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_string.c.o   -c /Users/rofeldsp/printf_owngit/parse_string.c
 
-CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_hexodecimal.c > CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.i
+CMakeFiles/printf_owngit.dir/parse_string.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_string.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_string.c > CMakeFiles/printf_owngit.dir/parse_string.c.i
 
-CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_hexodecimal.c -o CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s
+CMakeFiles/printf_owngit.dir/parse_string.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_string.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_string.c -o CMakeFiles/printf_owngit.dir/parse_string.c.s
 
 # Object files for target printf_owngit
 printf_owngit_OBJECTS = \
@@ -1040,19 +1040,19 @@ printf_owngit_OBJECTS = \
 "CMakeFiles/printf_owngit.dir/libft/ft_strtrim.c.o" \
 "CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o" \
 "CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o" \
+"CMakeFiles/printf_owngit.dir/adjust_functions.c.o" \
 "CMakeFiles/printf_owngit.dir/ft_printf.c.o" \
+"CMakeFiles/printf_owngit.dir/get_flag.c.o" \
+"CMakeFiles/printf_owngit.dir/get_precision.c.o" \
+"CMakeFiles/printf_owngit.dir/get_size.c.o" \
+"CMakeFiles/printf_owngit.dir/get_type.c.o" \
+"CMakeFiles/printf_owngit.dir/get_width.c.o" \
 "CMakeFiles/printf_owngit.dir/main.c.o" \
 "CMakeFiles/printf_owngit.dir/parse_char.c.o" \
-"CMakeFiles/printf_owngit.dir/parse_string.c.o" \
-"CMakeFiles/printf_owngit.dir/get_flag.c.o" \
-"CMakeFiles/printf_owngit.dir/get_width.c.o" \
-"CMakeFiles/printf_owngit.dir/get_size.c.o" \
-"CMakeFiles/printf_owngit.dir/get_precision.c.o" \
-"CMakeFiles/printf_owngit.dir/get_type.c.o" \
 "CMakeFiles/printf_owngit.dir/parse_decimal.c.o" \
-"CMakeFiles/printf_owngit.dir/adjust_functions.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o" \
 "CMakeFiles/printf_owngit.dir/parse_percent.c.o" \
-"CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o"
+"CMakeFiles/printf_owngit.dir/parse_string.c.o"
 
 # External object files for target printf_owngit
 printf_owngit_EXTERNAL_OBJECTS =
@@ -1115,19 +1115,19 @@ printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_strsub.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_strtrim.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/adjust_functions.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/ft_printf.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/get_flag.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/get_precision.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/get_size.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/get_type.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/get_width.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/main.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/parse_char.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/parse_string.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/get_flag.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/get_width.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/get_size.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/get_precision.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/get_type.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/parse_decimal.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/adjust_functions.c.o
-printf_owngit: CMakeFiles/printf_owngit.dir/parse_percent.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_percent.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_string.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/build.make
 printf_owngit: CMakeFiles/printf_owngit.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Linking C executable printf_owngit"

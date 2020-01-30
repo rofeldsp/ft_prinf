@@ -89,7 +89,26 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 	return (node);
 }
 
-t_print 	adjust_to_precision2(t_print node, char **str)
+void	 	adjust_to_precision2(t_print *node, char **str)
 {
+	int 	len;
+	char 	*str2;
 
+	if (node->precision > -2)
+	{
+		len = ft_strlen(*str);
+		str2 = ft_strdup(*str);
+		if (node->precision == -1)
+		{
+			str2[0] = '\0';
+			return ;
+		}
+		while (len > node->precision && len - 1 >= 0)
+		{
+			len--;
+			str2[len] = '\0';
+		}
+		*str = str2;
+		free(str2);
+	}
 }
