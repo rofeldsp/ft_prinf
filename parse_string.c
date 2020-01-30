@@ -13,6 +13,7 @@ t_print 	parse_string(t_print node)
 	str = va_arg(node.ap, char *);
 	node = adjust_to_width(node, ft_strlen(str));
 	node = adjust_to_flag(node, ft_strlen(str));
+	node.pointer += node.empty_space;
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)
@@ -22,7 +23,7 @@ t_print 	parse_string(t_print node)
 		node.pointer++;
 	}
 	node.input++;
-	node.pointer += node.empty_space;
+//	node.pointer += node.empty_space;
 	return (node);
 }
 

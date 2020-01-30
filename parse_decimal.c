@@ -13,8 +13,8 @@ t_print 	parse_decimal(t_print node)
 	str = (node.size == H) ? ft_itoa((short)node.number) : (node.size == HH ?
 			ft_itoa((char)node.number) : ft_itoa(node.number));
 	i = 0;
-	node = adjust_to_width(node, ft_strlen(str));
-	node = adjust_to_flag2(node, ft_strlen(str), '0');
+	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
+	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)), '0');
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
 		if (node.flag & ZERO)
@@ -26,7 +26,7 @@ t_print 	parse_decimal(t_print node)
 			node.buffer[node.pointer++] = ' ';
 	}
 	node.pointer += node.empty_space;
-	node = adjust_to_precision(node, ft_strlen(str));
+	node = adjust_to_precision(node, ft_strlen(str), &str);
 	while (str[i])
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 0)

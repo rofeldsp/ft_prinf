@@ -29,10 +29,10 @@ t_print 	adjust_to_flag(t_print node, int len)
 {
 	int	len_width;
 
-	len_width = node.width;
 	node.empty_space = node.width - len;
+	len_width = node.empty_space;
 	if (node.flag & ZERO)
-		while (len_width-- > len)
+		while (len_width-- > 0)
 		{
 			check_overflow(&node);
 			node.buffer[node.pointer++] = '0';
@@ -51,7 +51,7 @@ t_print 	adjust_to_flag2(t_print node, int len, char c)
 	len_width = node.empty_space;
 	if (node.flag & ZERO)
 	{
-		if (node.flag & OCTO)
+		if (node.flag & OCTO && node.unumber != 0)
 		{
 			node.buffer[node.pointer++] = '0';
 			node.buffer[node.pointer++] = (c == 'f' ? 'x' : 'X');
@@ -75,8 +75,11 @@ t_print 	adjust_to_flag2(t_print node, int len, char c)
 	return (node);
 }
 
-t_print 	adjust_to_precision(t_print node, int len)
+t_print 	adjust_to_precision(t_print node, int len, char **str)
 {
+
+	if (node.precision == -1 && (node.unumber == 0 || node.number == 0))
+		*(str[0]) = '\0';
 	while ((node.precision--) - len > 0)
 	{
 		if ((node.pointer + 1) % BUFF_SIZE == 1)

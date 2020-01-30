@@ -47,11 +47,10 @@ typedef struct	print
 	unsigned int	size;
 	__int64_t		number;
 	__uint64_t		unumber;
-	long long int	llnumber;
-	long int		lnumber;
 	int 			empty_space;
 	int 			width;
 	int 			precision;
+	char 			*str;
 }				t_print;
 
 /*
@@ -69,7 +68,7 @@ t_print				get_width(t_print node);
 t_print				get_precision(t_print node);
 t_print				get_size(t_print node);
 t_print				adjust_to_width(t_print node, int len);
-t_print				adjust_to_precision(t_print node, int len);
+t_print				adjust_to_precision(t_print node, int len, char **str);
 t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
 t_print				adjust_to_flag2(t_print node, int len, char c);

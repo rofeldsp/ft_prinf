@@ -16,7 +16,7 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%4.15d", 42);
+	ft_printf("%.2s is a string", "this");
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }
