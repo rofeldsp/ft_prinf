@@ -11,6 +11,7 @@ t_print		adjust_to_width(t_print node, int len)
 	if (node.width == -1 || node.precision > node.width)
 		node.width = len;
 	len2 = node.width;
+	node.end_of_field = node.pointer + node.width;
 	if (node.width <= len)
 		return (node);
 //	if ((node.pointer + node.width) >= 100 || (node.pointer + node.width) % 100
@@ -31,6 +32,8 @@ t_print 	adjust_to_flag(t_print node, int len)
 
 	node.empty_space = node.width - len;
 	len_width = node.empty_space;
+	if (node.flag & MINUS)
+		node.empty_space = 0;
 	if (node.flag & ZERO)
 		while (len_width-- > 0)
 		{
@@ -108,6 +111,10 @@ void	 	adjust_to_precision2(t_print *node, char **str)
 			len--;
 			str2[len] = '\0';
 		}
+		if (ft_strlen(*str) != ft_strlen(str2) && node->width != (int)ft_strlen(*str) && node->flag ^ MINUS)
+			node->pointer += ft_strlen(*str) - ft_strlen(str2);
+		if (node->width == (int)ft_strlen(*str))
+			node->end_of_field -= (ft_strlen(*str) - ft_strlen(str2));
 		*str = str2;
 		free(str2);
 	}

@@ -50,6 +50,7 @@ typedef struct	print
 	int 			empty_space;
 	int 			width;
 	int 			precision;
+	int 			end_of_field;
 }				t_print;
 
 /*

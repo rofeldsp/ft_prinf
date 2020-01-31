@@ -94,7 +94,8 @@ void		free_flags(t_print *node)
 	node->size = 0;
 	node->empty_space = 0;
 	node->width = 0;
-	node->precision = 0;
+	node->precision = -2;
 	node->number = 1;
 	node->unumber = 1;
+	node->end_of_field = 0;
 }
