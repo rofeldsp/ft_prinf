@@ -51,6 +51,8 @@ typedef struct	print
 	int 			width;
 	int 			precision;
 	int 			end_of_field;
+	int 			field_start;
+	int 			count_nulls;
 }				t_print;
 
 /*
@@ -71,7 +73,7 @@ t_print				adjust_to_width(t_print node, int len);
 t_print				adjust_to_precision(t_print node, int len, char **str);
 t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
-t_print				adjust_to_flag2(t_print node, int len, char c);
+t_print				adjust_to_flag2(t_print node, int len, char c, char *str);
 void				free_flags(t_print *node);
 t_print 			parse_percent(t_print node);
 t_print 			parse_hexodecimal(t_print node, char c);
@@ -82,5 +84,6 @@ char 				*ft_itoa_base2(int i, char **str);
 char 				*llft_itoa_base(long long int nb, int base, char c);
 void				check_overflow(t_print *node);
 void	 			adjust_to_precision2(t_print *node, char **str);
+int 				ft_putstr_printf(char *str, int a);
 
 #endif

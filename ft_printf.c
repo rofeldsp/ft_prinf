@@ -15,8 +15,10 @@
 int		ft_printf(const char *str, ...)
 {
 	t_print		node;
+	int		i;
 
 	node.pointer = 0;
+	node.count_nulls = 0;
 //	if(!(node.buffer = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 //		return ;
 //	ft_bzero(node.buffer, BUFF_SIZE);
@@ -39,10 +41,14 @@ int		ft_printf(const char *str, ...)
 		}
 	}
 	va_end(node.ap);
-	ft_putstr(node.buffer);
-	node.pointer = ft_strlen(node.buffer);
+//	i = -1;
+//	while (++i < node.pointer)
+//		ft_putchar(node.buffer[i]);
+//	ft_putstr(node.buffer);
+//	node.pointer = ft_strlen(node.buffer);
+	i = ft_putstr_printf(node.buffer, node.count_nulls);
 	free(node.buffer);
-	return(node.pointer);
+	return(i);
 }
 
 t_print		print_arg(t_print node)

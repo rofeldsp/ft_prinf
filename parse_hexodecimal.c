@@ -84,7 +84,7 @@ t_print 	parse_hexodecimal(t_print node, char c)
 			ft_itoa_base(node.unumber, 16 , c));
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))));
-	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))), c);
+	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))), c, str);
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
 		check_overflow(&node);

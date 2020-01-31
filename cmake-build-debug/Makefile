@@ -177,6 +177,33 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+ft_putstr_printf.o: ft_putstr_printf.c.o
+
+.PHONY : ft_putstr_printf.o
+
+# target to build an object file
+ft_putstr_printf.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o
+.PHONY : ft_putstr_printf.c.o
+
+ft_putstr_printf.i: ft_putstr_printf.c.i
+
+.PHONY : ft_putstr_printf.i
+
+# target to preprocess a source file
+ft_putstr_printf.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.i
+.PHONY : ft_putstr_printf.c.i
+
+ft_putstr_printf.s: ft_putstr_printf.c.s
+
+.PHONY : ft_putstr_printf.s
+
+# target to generate assembly for a file
+ft_putstr_printf.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.s
+.PHONY : ft_putstr_printf.c.s
+
 get_flag.o: get_flag.c.o
 
 .PHONY : get_flag.o
@@ -2055,6 +2082,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_putstr_printf.o"
+	@echo "... ft_putstr_printf.i"
+	@echo "... ft_putstr_printf.s"
 	@echo "... get_flag.o"
 	@echo "... get_flag.i"
 	@echo "... get_flag.s"

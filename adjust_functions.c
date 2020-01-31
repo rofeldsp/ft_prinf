@@ -43,7 +43,7 @@ t_print 	adjust_to_flag(t_print node, int len)
 	return (node);
 }
 
-t_print 	adjust_to_flag2(t_print node, int len, char c)
+t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
 {
 	int	len_width;
 
@@ -52,6 +52,8 @@ t_print 	adjust_to_flag2(t_print node, int len, char c)
 	if (node.flag & MINUS)
 		node.empty_space = 0;
 	len_width = node.empty_space;
+	if (str[0] == '-')
+		len_width++;
 	if (node.flag & ZERO)
 	{
 		if (node.flag & OCTO && node.unumber != 0)
@@ -70,7 +72,12 @@ t_print 	adjust_to_flag2(t_print node, int len, char c)
 	if (node.flag & PLUS)
 	{
 		if (node.number >= 0)
-			node.buffer[node.pointer++] = '+';
+		{
+			if (node.flag & ZERO)
+				node.buffer[node.field_start] = '+';
+			else
+				node.buffer[node.pointer++] = '+';
+		}
 	}
 //	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
 //		while (len_width-- > len)

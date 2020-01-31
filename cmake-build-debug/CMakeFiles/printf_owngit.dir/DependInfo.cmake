@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/rofeldsp/printf_owngit/adjust_functions.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/adjust_functions.c.o"
   "/Users/rofeldsp/printf_owngit/ft_printf.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/ft_printf.c.o"
+  "/Users/rofeldsp/printf_owngit/ft_putstr_printf.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o"
   "/Users/rofeldsp/printf_owngit/get_flag.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_flag.c.o"
   "/Users/rofeldsp/printf_owngit/get_precision.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_precision.c.o"
   "/Users/rofeldsp/printf_owngit/get_size.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/get_size.c.o"
