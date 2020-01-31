@@ -15,7 +15,7 @@
 static char		*cut1(int64_t j, int64_t n, int64_t c)
 {
 	char				*dst;
-	int		b;
+	int64_t				b;
 
 	b = n;
 	while (b / 10 > 0)
@@ -50,8 +50,8 @@ char			*ft_itoa(int64_t n)
 	c = n;
 	if (n < 0)
 	{
-		if (n == -2147483648)
-			return (ft_strdup("-2147483648"));
+		if (n - 1 > n)
+			return (ft_strdup("-9223372036854775808"));
 		n = -n;
 		j++;
 	}

@@ -9,6 +9,10 @@ CMakeFiles/printf_owngit.dir/ft_printf.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/printf_owngit.dir/ft_printf.c.o: ../ft_printf.h
 
+CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o: ../ft_putstr_printf.c
+
 CMakeFiles/printf_owngit.dir/get_flag.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/get_flag.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/get_flag.c.o: ../get_flag.c
