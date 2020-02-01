@@ -16,10 +16,12 @@ t_print 	parse_decimal(t_print node)
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
 	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)), '0', str);
-	if (node.flag & ZERO && node.number < 0)
+	if ((node.flag & ZERO && node.number < 0) || (node.number < 0 && node.precision >= 0 && !(node.flag & HH) && !(node.flag & H)))
 	{
 		node.buffer[node.field_start] = '-';
 		str = ft_strcpy(str, &(str[1]));
+		if (node.pointer == node.field_start)
+			node.pointer++;
 	}
 	node.pointer += node.empty_space;
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)

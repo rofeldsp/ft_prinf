@@ -54,8 +54,11 @@ t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
 		node.empty_space = 0;
 	len_width = node.empty_space;
 	if (str[0] == '-')
-		len_width++;
-	if (node.flag & ZERO)
+	{
+		len_width++; // поменял на --
+//		node.pointer++;
+	}
+	if (node.flag & ZERO && node.precision < 0)
 	{
 		if (node.flag & OCTO && node.unumber != 0)
 		{
@@ -72,16 +75,16 @@ t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
 //		node.pointer = buf;
 		node.empty_space = 0;
 	}
-	if (node.flag & PLUS)
-	{
-		if (node.number >= 0)
-		{
-			if (node.flag & ZERO)
-				node.buffer[node.field_start] = '+';
-			else
-				node.buffer[node.pointer++] = '+';
-		}
-	}
+//	if (node.flag & PLUS)
+//	{
+//		if (node.number >= 0)
+//		{
+//			if (node.flag & ZERO)
+//				node.buffer[node.field_start] = '+';
+//			else
+//				node.buffer[node.pointer++] = '+';
+//		}
+//	}
 //	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
 //		while (len_width-- > len)
 //			node.buffer[node.pointer++] = ' ';
@@ -94,19 +97,41 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 
 	if (node.precision == -1 && (node.unumber == 0 || node.number == 0))
 		*(str[0]) = '\0';
-	if (node.precision < node.width && node.flag ^ MINUS)
+	if (node.precision < node.width && ((node.flag & MINUS) != MINUS) && node.precision >= 0)
 	{
 		pointer_buff = node.pointer;
-		while ((node.precision--) - len > 0) {
+		while ((node.precision--) - len > 0)
+		{
 			if ((node.pointer + 1) % BUFF_SIZE == 1)
 				node.buffer = increase_buffer(&node.buffer, &node);
 			node.buffer[--node.pointer] = '0';
+		}
+		if (node.flag & PLUS)
+		{
+			if (node.number >= 0)
+			{
+				if (node.flag & ZERO)
+					node.buffer[node.field_start] = '+';
+				else
+					node.buffer[--node.pointer] = '+';
+			}
 		}
 		node.pointer = pointer_buff;
 	}
 	else
 	{
-		while ((node.precision--) - len > 0) {
+		if (node.flag & PLUS)
+		{
+			if (node.number >= 0)
+			{
+				if (node.flag & ZERO)
+					node.buffer[node.field_start] = '+';
+				else
+					node.buffer[node.pointer++] = '+';
+			}
+		}
+		while ((node.precision--) - len > 0)
+		{
 			if ((node.pointer + 1) % BUFF_SIZE == 1)
 				node.buffer = increase_buffer(&node.buffer, &node);
 			node.buffer[node.pointer++] = '0';
