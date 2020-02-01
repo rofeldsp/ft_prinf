@@ -18,7 +18,7 @@ t_print		get_precision(t_print node)
 		}
 		node.precision = *node.input - '0';
 		node.input++;
-		while (*node.input > '0' && *node.input <= '9')
+		while (*node.input >= '0' && *node.input <= '9')
 		{
 			node.precision = node.precision * 10 + (*node.input - '0');
 			node.input++;

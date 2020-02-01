@@ -21,6 +21,7 @@ t_print 	parse_decimal(t_print node)
 		node.buffer[node.field_start] = '-';
 		str = ft_strcpy(str, &(str[1]));
 	}
+	node.pointer += node.empty_space;
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
 		if (node.flag & ZERO)
@@ -29,9 +30,14 @@ t_print 	parse_decimal(t_print node)
 			node.empty_space = 0;
 		}
 		else
-			node.buffer[node.pointer++] = ' ';
+		{
+			if (node.pointer == node.field_start)
+				node.buffer[node.pointer++] = ' ';
+			else
+				node.buffer[node.pointer - 1] = ' ';
+		}
 	}
-	node.pointer += node.empty_space;
+//	node.pointer += node.empty_space;
 	node = adjust_to_precision(node, ft_strlen(str), &str);
 	while (str[i])
 	{
