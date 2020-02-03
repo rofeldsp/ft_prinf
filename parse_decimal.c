@@ -49,6 +49,11 @@ t_print 	parse_decimal(t_print node)
 		i++;
 		node.pointer++;
 	}
+	if (node.flag & MINUS)
+	{
+		if ((node.empty_space = (node.width > (int)ft_strlen(str) ? node.width - ft_strlen(str) : 0)) != 0)
+			node.pointer += node.empty_space;
+	}
 	node.input++;
 	return (node);
 

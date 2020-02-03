@@ -10,12 +10,11 @@ t_print 	parse_udecimal(t_print node) {
 
 //	node.number = va_arg(node.ap, int);
 	node.field_start = node.pointer;
-	str = (node.size == H) ? ft_uitoa((short) node.unumber) : (node.size == HH ?
-			 ft_uitoa((char) node.unumber) : ft_uitoa(node.unumber));
+	str = (node.size == H) ? ft_uitoa((unsigned short) node.unumber) : (node.size == HH ?
+			 ft_uitoa((unsigned char) node.unumber) : ft_uitoa(node.unumber));
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
-	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)),
-						   '0', str);
+	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)),'0', str);
 //	if ((node.flag & ZERO) || (node.precision >= 0 && !(node.flag & HH) && !(node.flag & H)))
 //	{
 //		node.buffer[node.field_start] = '-';

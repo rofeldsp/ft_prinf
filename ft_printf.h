@@ -12,7 +12,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include "limits.h" //можно такую?
 # include <string.h> // убрать потом
+# include <stdio.h> //убрать потом
 
 /*
 ** ----------Standard libraries-------------------

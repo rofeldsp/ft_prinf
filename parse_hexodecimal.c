@@ -79,8 +79,8 @@ t_print 	parse_hexodecimal(t_print node, char c)
 
 //	node.unumber = va_arg(node.ap, unsigned int);
 //	str = ft_itoa_base(node.unumber, 16, c);
-	str = (node.size == H) ? ft_itoa_base((short)node.unumber, 16, c) :
-			(node.size == HH ? ft_itoa_base((char)node.unumber, 16, c) :
+	str = (node.size == H) ? ft_itoa_base((unsigned short)node.unumber, 16, c) :
+			(node.size == HH ? ft_itoa_base((unsigned char)node.unumber, 16, c) :
 			ft_itoa_base(node.unumber, 16 , c));
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))));

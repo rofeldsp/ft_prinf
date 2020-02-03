@@ -60,7 +60,8 @@ SOURCES = ft_printf.c \
           parse_hexodecimal.c \
           ft_putstr_printf.c \
           parse_octal.c \
-          parse_udecimal.c
+          parse_udecimal.c \
+          parse_pointer.c
 
 SRCS = $(addprefix $(DIR_S)/,$(SOURCES))
 

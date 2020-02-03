@@ -79,5 +79,5 @@ t_print		get_type(t_print node)
 	}
 	else if (*node.input == 'p')
 		return(parse_pointer(node));
-	return(parse_decimal(node));
+	return(node);
 }
