@@ -2013,6 +2013,33 @@ parse_hexodecimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.s
 .PHONY : parse_hexodecimal.c.s
 
+parse_octal.o: parse_octal.c.o
+
+.PHONY : parse_octal.o
+
+# target to build an object file
+parse_octal.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_octal.c.o
+.PHONY : parse_octal.c.o
+
+parse_octal.i: parse_octal.c.i
+
+.PHONY : parse_octal.i
+
+# target to preprocess a source file
+parse_octal.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_octal.c.i
+.PHONY : parse_octal.c.i
+
+parse_octal.s: parse_octal.c.s
+
+.PHONY : parse_octal.s
+
+# target to generate assembly for a file
+parse_octal.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_octal.c.s
+.PHONY : parse_octal.c.s
+
 parse_percent.o: parse_percent.c.o
 
 .PHONY : parse_percent.o
@@ -2040,6 +2067,33 @@ parse_percent.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_percent.c.s
 .PHONY : parse_percent.c.s
 
+parse_pointer.o: parse_pointer.c.o
+
+.PHONY : parse_pointer.o
+
+# target to build an object file
+parse_pointer.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_pointer.c.o
+.PHONY : parse_pointer.c.o
+
+parse_pointer.i: parse_pointer.c.i
+
+.PHONY : parse_pointer.i
+
+# target to preprocess a source file
+parse_pointer.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_pointer.c.i
+.PHONY : parse_pointer.c.i
+
+parse_pointer.s: parse_pointer.c.s
+
+.PHONY : parse_pointer.s
+
+# target to generate assembly for a file
+parse_pointer.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_pointer.c.s
+.PHONY : parse_pointer.c.s
+
 parse_string.o: parse_string.c.o
 
 .PHONY : parse_string.o
@@ -2066,6 +2120,33 @@ parse_string.s: parse_string.c.s
 parse_string.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_string.c.s
 .PHONY : parse_string.c.s
+
+parse_udecimal.o: parse_udecimal.c.o
+
+.PHONY : parse_udecimal.o
+
+# target to build an object file
+parse_udecimal.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_udecimal.c.o
+.PHONY : parse_udecimal.c.o
+
+parse_udecimal.i: parse_udecimal.c.i
+
+.PHONY : parse_udecimal.i
+
+# target to preprocess a source file
+parse_udecimal.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_udecimal.c.i
+.PHONY : parse_udecimal.c.i
+
+parse_udecimal.s: parse_udecimal.c.s
+
+.PHONY : parse_udecimal.s
+
+# target to generate assembly for a file
+parse_udecimal.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_udecimal.c.s
+.PHONY : parse_udecimal.c.s
 
 # Help Target
 help:
@@ -2286,12 +2367,21 @@ help:
 	@echo "... parse_hexodecimal.o"
 	@echo "... parse_hexodecimal.i"
 	@echo "... parse_hexodecimal.s"
+	@echo "... parse_octal.o"
+	@echo "... parse_octal.i"
+	@echo "... parse_octal.s"
 	@echo "... parse_percent.o"
 	@echo "... parse_percent.i"
 	@echo "... parse_percent.s"
+	@echo "... parse_pointer.o"
+	@echo "... parse_pointer.i"
+	@echo "... parse_pointer.s"
 	@echo "... parse_string.o"
 	@echo "... parse_string.i"
 	@echo "... parse_string.s"
+	@echo "... parse_udecimal.o"
+	@echo "... parse_udecimal.i"
+	@echo "... parse_udecimal.s"
 .PHONY : help
 
 

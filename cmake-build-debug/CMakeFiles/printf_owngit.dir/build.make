@@ -993,6 +993,45 @@ CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/ft_putstr_printf.c -o CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.s
 
+CMakeFiles/printf_owngit.dir/parse_octal.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_octal.c.o: ../parse_octal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/printf_owngit.dir/parse_octal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_octal.c.o   -c /Users/rofeldsp/printf_owngit/parse_octal.c
+
+CMakeFiles/printf_owngit.dir/parse_octal.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_octal.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_octal.c > CMakeFiles/printf_owngit.dir/parse_octal.c.i
+
+CMakeFiles/printf_owngit.dir/parse_octal.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_octal.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_octal.c -o CMakeFiles/printf_owngit.dir/parse_octal.c.s
+
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: ../parse_udecimal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/printf_owngit.dir/parse_udecimal.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_udecimal.c.o   -c /Users/rofeldsp/printf_owngit/parse_udecimal.c
+
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_udecimal.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_udecimal.c > CMakeFiles/printf_owngit.dir/parse_udecimal.c.i
+
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_udecimal.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_udecimal.c -o CMakeFiles/printf_owngit.dir/parse_udecimal.c.s
+
+CMakeFiles/printf_owngit.dir/parse_pointer.c.o: CMakeFiles/printf_owngit.dir/flags.make
+CMakeFiles/printf_owngit.dir/parse_pointer.c.o: ../parse_pointer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/printf_owngit.dir/parse_pointer.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/printf_owngit.dir/parse_pointer.c.o   -c /Users/rofeldsp/printf_owngit/parse_pointer.c
+
+CMakeFiles/printf_owngit.dir/parse_pointer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/printf_owngit.dir/parse_pointer.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/rofeldsp/printf_owngit/parse_pointer.c > CMakeFiles/printf_owngit.dir/parse_pointer.c.i
+
+CMakeFiles/printf_owngit.dir/parse_pointer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/printf_owngit.dir/parse_pointer.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/rofeldsp/printf_owngit/parse_pointer.c -o CMakeFiles/printf_owngit.dir/parse_pointer.c.s
+
 # Object files for target printf_owngit
 printf_owngit_OBJECTS = \
 "CMakeFiles/printf_owngit.dir/libft/ft_atoi.c.o" \
@@ -1066,7 +1105,10 @@ printf_owngit_OBJECTS = \
 "CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o" \
 "CMakeFiles/printf_owngit.dir/parse_percent.c.o" \
 "CMakeFiles/printf_owngit.dir/parse_string.c.o" \
-"CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o"
+"CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_octal.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_udecimal.c.o" \
+"CMakeFiles/printf_owngit.dir/parse_pointer.c.o"
 
 # External object files for target printf_owngit
 printf_owngit_EXTERNAL_OBJECTS =
@@ -1143,9 +1185,12 @@ printf_owngit: CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/parse_percent.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/parse_string.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/ft_putstr_printf.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_octal.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_udecimal.c.o
+printf_owngit: CMakeFiles/printf_owngit.dir/parse_pointer.c.o
 printf_owngit: CMakeFiles/printf_owngit.dir/build.make
 printf_owngit: CMakeFiles/printf_owngit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Linking C executable printf_owngit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking C executable printf_owngit"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/printf_owngit.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

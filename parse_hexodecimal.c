@@ -28,10 +28,10 @@ char 		*ft_itoa_base(__uint64_t nb, int base, char c)
 
 //	if (!(hex = (char *)malloc(sizeof(char) * 17)))
 //		exit(-1);
-	if (c == 'f')
-		hex = "0123456789abcdef";
-	else
+	if (c == 'F')
 		hex = "0123456789ABCDEF";
+	else
+		hex = "0123456789abcdef";
 	i = 0;
 	if ((str = ft_memalloc(60)) == NULL)
 		exit (-1);
@@ -46,31 +46,31 @@ char 		*ft_itoa_base(__uint64_t nb, int base, char c)
 	return(ft_itoa_base2(i, &str));
 }
 
-char 		*llft_itoa_base(long long int nb, int base, char c)
-{
-	char 	*str;
-	int 	i;
-	char 	*hex;
-
-//	if (!(hex = (char *)malloc(sizeof(char) * 17)))
-//		exit(-1);
-	if (c == 'f')
-		hex = "0123456789abcdef";
-	else
-		hex = "0123456789ABCDEF";
-	i = 0;
-	if ((str = ft_memalloc(60)) == NULL)
-		exit (-1);
-	while (nb / base != 0)
-	{
-		str[i++] = hex[nb % base];
-		nb /= base;
-	}
-	str[i++] = hex[nb % base];
-	str[i] = '\0';
-//	free(hex);
-	return(ft_itoa_base2(i, &str));
-}
+//char 		*llft_itoa_base(long long int nb, int base, char c)
+//{
+//	char 	*str;
+//	int 	i;
+//	char 	*hex;
+//
+////	if (!(hex = (char *)malloc(sizeof(char) * 17)))
+////		exit(-1);
+//	if (c == 'f')
+//		hex = "0123456789abcdef";
+//	else
+//		hex = "0123456789ABCDEF";
+//	i = 0;
+//	if ((str = ft_memalloc(60)) == NULL)
+//		exit (-1);
+//	while (nb / base != 0)
+//	{
+//		str[i++] = hex[nb % base];
+//		nb /= base;
+//	}
+//	str[i++] = hex[nb % base];
+//	str[i] = '\0';
+////	free(hex);
+//	return(ft_itoa_base2(i, &str));
+//}
 
 t_print 	parse_hexodecimal(t_print node, char c)
 {

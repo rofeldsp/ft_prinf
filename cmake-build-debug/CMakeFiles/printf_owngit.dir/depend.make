@@ -223,11 +223,23 @@ CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: /Users/rofeldsp/libft/libft.
 CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_hexodecimal.c.o: ../parse_hexodecimal.c
 
+CMakeFiles/printf_owngit.dir/parse_octal.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_octal.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_octal.c.o: ../parse_octal.c
+
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_percent.c.o: ../parse_percent.c
 
+CMakeFiles/printf_owngit.dir/parse_pointer.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_pointer.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_pointer.c.o: ../parse_pointer.c
+
 CMakeFiles/printf_owngit.dir/parse_string.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_string.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_string.c.o: ../parse_string.c
+
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: ../parse_udecimal.c
 

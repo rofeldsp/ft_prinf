@@ -10,12 +10,19 @@ t_print		get_type(t_print node)
 		return(parse_char(node));
 	else if (*node.input == 's')
 		return(parse_string(node));
-	else if (*node.input == 'd')
+	else if (*node.input == 'd' || *node.input == 'i')
 	{
 		node.number = (node.size & L) ? va_arg(node.ap, long int) :
 					  ((node.size & LL) ? va_arg(node.ap, long long int) :
 					   va_arg(node.ap, int));
 		return (parse_decimal(node));
+	}
+	else if (*node.input == 'u')
+	{
+		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
+					  ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
+					   va_arg(node.ap, unsigned int));
+		return (parse_udecimal(node));
 	}
 //	else if (*node.input == 'd')
 //	{
@@ -63,5 +70,14 @@ t_print		get_type(t_print node)
 //////			node.number = va_arg(node.ap, int);
 ////		return(parse_hexodecimal(node, 'F'));
 //	}
+	else if (*node.input == 'o')
+	{
+		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
+					   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
+						va_arg(node.ap, unsigned int));
+		return (parse_octal(node, 'a'));
+	}
+	else if (*node.input == 'p')
+		return(parse_pointer(node));
 	return(parse_decimal(node));
 }
