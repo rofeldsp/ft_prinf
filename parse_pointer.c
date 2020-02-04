@@ -20,6 +20,7 @@ t_print		parse_pointer(t_print node)
 		node.pointer += node.empty_space - 2;
 	node.buffer[node.pointer++] = '0';
 	node.buffer[node.pointer++] = 'x';
+	adjust_to_precision2(&node, &str);
 	while (str[i])
 		node.buffer[node.pointer++] = str[i++];
 	if (node.flag & MINUS)

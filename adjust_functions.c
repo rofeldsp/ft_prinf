@@ -188,6 +188,8 @@ void	 	adjust_to_precision2(t_print *node, char **str)
 		if (node->precision == -1)
 		{
 			str2[0] = '\0';
+			*str = str2;
+			free(str2);
 			return ;
 		}
 		while (len > node->precision && len - 1 >= 0)
