@@ -72,6 +72,7 @@ t_print				get_width(t_print node);
 t_print				get_precision(t_print node);
 t_print				get_size(t_print node);
 t_print				adjust_to_width(t_print node, int len);
+t_print				adjust_to_width2(t_print node, int len);
 t_print				adjust_to_precision(t_print node, int len, char **str);
 t_print				adjust_to_precision3(t_print node, int len, char **str);
 t_print				adjust_to_flag(t_print node, int len);

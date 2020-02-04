@@ -13,7 +13,7 @@ t_print 	parse_string(t_print node)
 	str = va_arg(node.ap, char *);
 	if (str == NULL)
 		str = "(null)";
-	node = adjust_to_width(node, ft_strlen(str));
+	node = adjust_to_width2(node, ft_strlen(str));
 	node = adjust_to_flag(node, ft_strlen(str));
 	node.pointer += node.empty_space;
 	adjust_to_precision2(&node, &str);

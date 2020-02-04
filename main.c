@@ -16,8 +16,8 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("{%-13p}", &a);
-	printf("\n{%-13p}", &a);
+	ft_printf("%15.4s", "42 is the answer");
+	printf("\n%15.4s", "42 is the answer");
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }
