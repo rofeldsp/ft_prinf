@@ -212,7 +212,7 @@ t_print 	adjust_to_precision3(t_print node, int len, char **str)
 {
 	int	pointer_buff;
 
-	if (node.precision == -1 && (node.unumber == 0 || node.number == 0))
+	if (node.precision == -1 && ((node.unumber == 0 || node.number == 0) || (node.number == 1 && node.unumber == 1)))
 		*(str[0]) = '\0';
 	if (node.precision < node.width && ((node.flag & MINUS) != MINUS) && node.precision >= 0)
 	{

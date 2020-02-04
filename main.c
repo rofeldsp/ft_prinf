@@ -16,8 +16,8 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%.0p, %.p", 0, 0);
-	printf("\n%.0p, %.p", 0, 0);
+	ft_printf("%#.3o", 1);
+	printf("\n%#.3o", 1);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }

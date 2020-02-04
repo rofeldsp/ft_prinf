@@ -32,6 +32,8 @@ t_print 	parse_octal(t_print node, char c)
 	if (node.flag & OCTO)// && node.unumber != 0)
 	{
 		node.buffer[node.pointer++] = '0';
+		if (node.precision > 0)
+			node.precision--;
 		if (str[i] == '0')
 			str[i] = '\0';
 //		node.buffer[node.pointer++] = (c == 'F' ? 'X' : 'x');
