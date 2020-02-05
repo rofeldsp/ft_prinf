@@ -16,8 +16,8 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%+5.0d", 0);
-	printf("\n%+5.0d", 0);
+	ft_printf("%5.2x", 5427);
+	printf("\n123");
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }
