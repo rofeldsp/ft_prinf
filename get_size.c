@@ -25,6 +25,11 @@ t_print		get_size(t_print node)
 		}
 		node.input++;
 	}
+	else if (*node.input == 'L')
+	{
+		node.size |= FLOAT_L;
+		node.input++;
+	}
 //	(*(node.input + 1) == 'l') ? (node.size = LL) : (node.size = L);
 //	if (*node.input == 'h')
 //		(*(node.input + 1) == 'h') ? (node.size = HH) : (node.size = H);

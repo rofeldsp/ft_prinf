@@ -135,10 +135,15 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 		{
 			if (node.number >= 0)
 			{
-				if (node.flag & ZERO)
-					node.buffer[node.field_start] = '+';
-				else
-					node.buffer[--node.pointer] = '+';
+//				if (node.flag & ZERO)
+//					node.buffer[node.field_start] = '+';
+//				else
+//				{
+					if (node.pointer == node.field_start)
+						node.buffer[pointer_buff++] = '+';
+					else
+						node.buffer[--node.pointer] = '+';
+//				}
 			}
 		}
 //		if (node.number < 0 && node.precision >= 0 && !(node.flag & HH) && !(node.flag & H))
@@ -155,7 +160,12 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 			if (node.number >= 0)
 			{
 				if (node.flag & ZERO && node.width > len)
-					node.buffer[node.field_start] = '+';
+				{
+					if (node.pointer == node.field_start)
+						node.buffer[node.pointer++] = '+';
+					else
+						node.buffer[node.field_start] = '+';
+				}
 				else
 					node.buffer[node.pointer++] = '+';
 			}
@@ -163,8 +173,7 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 //		pointer_buff = node.pointer;
 		while ((node.precision--) - len > 0)
 		{
-			if ((node.pointer + 1) % BUFF_SIZE == 1)
-				node.buffer = increase_buffer(&node.buffer, &node);
+			check_overflow(&node);
 			node.buffer[node.pointer++] = '0';
 		}
 //		if (node.number < 0 && node.precision >= 0 && !(node.flag & HH) && !(node.flag & H))

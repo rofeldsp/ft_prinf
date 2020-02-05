@@ -1986,6 +1986,33 @@ parse_decimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_decimal.c.s
 .PHONY : parse_decimal.c.s
 
+parse_float.o: parse_float.c.o
+
+.PHONY : parse_float.o
+
+# target to build an object file
+parse_float.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_float.c.o
+.PHONY : parse_float.c.o
+
+parse_float.i: parse_float.c.i
+
+.PHONY : parse_float.i
+
+# target to preprocess a source file
+parse_float.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_float.c.i
+.PHONY : parse_float.c.i
+
+parse_float.s: parse_float.c.s
+
+.PHONY : parse_float.s
+
+# target to generate assembly for a file
+parse_float.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_float.c.s
+.PHONY : parse_float.c.s
+
 parse_hexodecimal.o: parse_hexodecimal.c.o
 
 .PHONY : parse_hexodecimal.o
@@ -2364,6 +2391,9 @@ help:
 	@echo "... parse_decimal.o"
 	@echo "... parse_decimal.i"
 	@echo "... parse_decimal.s"
+	@echo "... parse_float.o"
+	@echo "... parse_float.i"
+	@echo "... parse_float.s"
 	@echo "... parse_hexodecimal.o"
 	@echo "... parse_hexodecimal.i"
 	@echo "... parse_hexodecimal.s"

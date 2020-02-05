@@ -42,6 +42,11 @@ t_print		parse_char(t_print node)
 	node.buffer[node.pointer++] = c;
 	if (c == 0)
 		node.count_nulls++;
+	if (node.flag & MINUS)
+	{
+		if ((node.empty_space = (node.width > 1 ? node.width - 1 : 0)) != 0)
+			node.pointer += node.empty_space;
+	}
 	node.input++;
 	return (node);
 }

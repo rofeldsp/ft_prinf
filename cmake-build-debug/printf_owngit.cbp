@@ -297,6 +297,9 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_decimal.c">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/parse_float.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_hexodecimal.c">
 			<Option target="printf_owngit"/>
 		</Unit>

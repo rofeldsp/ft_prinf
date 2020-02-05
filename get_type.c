@@ -79,5 +79,10 @@ t_print		get_type(t_print node)
 	}
 	else if (*node.input == 'p')
 		return(parse_pointer(node));
+	else if (*node.input == 'f')
+	{
+		node.fnumber = (node.size & FLOAT_L ? va_arg(node.ap, long double) : va_arg(node.ap, double));
+		return(parse_float(node));
+	}
 	return(node);
 }

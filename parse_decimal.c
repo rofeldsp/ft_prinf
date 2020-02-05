@@ -17,20 +17,21 @@ t_print 	parse_decimal(t_print node)
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
 	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)), '0', str);
-	if ((node.flag & ZERO && node.number < 0))// || /)
+	if ((node.flag & ZERO && node.number < 0 && node.precision == -2))// || /)
 	{
 		node.buffer[node.field_start] = '-';
 		str = ft_strcpy(str, &(str[1]));
 		if (node.pointer == node.field_start)
 			node.pointer++;
 	}
-	else if (node.number < 0 && node.precision >= 0 && !(node.flag & HH) && !(node.flag & H))
+	else if (node.number < 0 && node.precision >= 0 && !(node.size & HH) && !(node.size & H))
 	{
 		str = ft_strcpy(str, &(str[1]));
 		node.pointer++;
 //		pointer_buf = node.pointer - 1;
 	}
 	node.pointer += node.empty_space;
+	node.pointer -= (node.empty_space != 0 && (node.flag & PLUS) != 0 && node.precision == -2) ? 1 : 0;
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
 	{
 		if (node.flag & ZERO)
@@ -48,7 +49,7 @@ t_print 	parse_decimal(t_print node)
 	}
 //	node.pointer += node.empty_space;
 	node = adjust_to_precision(node, ft_strlen(str), &str);
-	if (node.number < 0 && node.precision >= 0 && !(node.flag & HH) && !(node.flag & H) && !(node.flag & ZERO))
+	if (node.number < 0 && node.precision >= 0 && !(node.size & HH) && !(node.size & H) && !(node.size & ZERO))
 	{
 		pointer_buf = node.pointer - 1;
 		while (node.buffer[pointer_buf] != ' ' && node.buffer[pointer_buf] != '\0')

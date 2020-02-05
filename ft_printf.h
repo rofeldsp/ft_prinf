@@ -38,6 +38,7 @@
 # define HH			(1 << 1)
 # define L			(1 << 2)
 # define LL			(1 << 3)
+# define FLOAT_L		(1 << 4)
 
 typedef struct	print
 {
@@ -49,6 +50,7 @@ typedef struct	print
 	unsigned int	size;
 	__int64_t		number;
 	__uint64_t		unumber;
+	long double 	fnumber;
 	int 			empty_space;
 	int 			width;
 	int 			precision;
@@ -90,5 +92,8 @@ int 				ft_putstr_printf(char *str, int a);
 t_print 			parse_octal(t_print node, char c);
 char 				*ft_uitoa(uint64_t n);
 t_print				parse_pointer(t_print node);
+t_print 			parse_float(t_print node);
+__uint64_t			ft_power(int base, int power);
+char 				*ft_itoa_float(__int64_t residual, __int64_t num);
 
 #endif

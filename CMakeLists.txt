@@ -79,4 +79,4 @@ add_executable(printf_owngit
     parse_decimal.c
     parse_hexodecimal.c
     parse_percent.c
-    parse_string.c ft_putstr_printf.c parse_octal.c parse_udecimal.c parse_pointer.c)
+    parse_string.c ft_putstr_printf.c parse_octal.c parse_udecimal.c parse_pointer.c parse_float.c)
