@@ -13,9 +13,7 @@ int		ft_putstr_printf(char *str, int a)
 	{
 		if (str[i] == '\0')
 			a--;
-		else
-			ft_putchar(str[i]);
-		i++;
+		ft_putchar(str[i++]);
 	}
 	return (i);
 }
