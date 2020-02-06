@@ -19,12 +19,12 @@ int		ft_printf(const char *str, ...)
 
 	node.pointer = 0;
 	node.count_nulls = 0;
-	node.buffer_size = 0;
+//	node.buffer_size = 0;
 //	if(!(node.buffer = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1))))
 //		return ;
 //	ft_bzero(node.buffer, BUFF_SIZE);
 	node.empty_space = 0;
-	if(!(node.buffer = ft_memalloc(BUFF_SIZE)) && !(node.size = BUFF_SIZE))
+	if(!(node.buffer = ft_strnew(node.buffer_size = BUFF_SIZE)))
 		exit(-1);
 	va_start(node.ap, str);
 	node.input = (char *)str;
@@ -81,7 +81,7 @@ char 		*increase_buffer(char **str, t_print *node)
 	int 	i;
 
 	i = 0;
-	if(!(dest = ft_memalloc(node->buffer_size + BUFF_SIZE)))
+	if(!(dest = ft_strnew(node->buffer_size + BUFF_SIZE)))
 		exit(33);
 	dest = ft_strcpy_special_edition(dest, *str);
 //	while (i < ft_strlen(*str))
@@ -114,7 +114,8 @@ char	*ft_strcpy_special_edition(char *dest, const char *src)
 
 	a = 0;
 	s = (char*)src;
-	i = ft_strlen(s) + 2;
+	i = ft_strlen(s);
+//	i += 2;
 	while (a < i)
 	{
 		*(dest + a) = *(s + a);

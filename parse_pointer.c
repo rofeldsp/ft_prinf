@@ -30,5 +30,6 @@ t_print		parse_pointer(t_print node)
 			node.pointer += node.empty_space;
 	}
 	node.input++;
+	free(str);
 	return (node);
 }

@@ -171,6 +171,8 @@ t_print 	adjust_to_precision(t_print node, int len, char **str)
 			}
 		}
 //		pointer_buff = node.pointer;
+		if (node.pointer != node.field_start && node.buffer[node.pointer - 1] == '\0')
+			node.buffer[node.pointer - 1] = ' ';
 		while ((node.precision--) - len > 0)
 		{
 			check_overflow(&node);
