@@ -57,6 +57,7 @@ typedef struct	print
 	int 			end_of_field;
 	int 			field_start;
 	int 			count_nulls;
+	int 			buffer_size;
 }				t_print;
 
 /*
@@ -95,5 +96,6 @@ t_print				parse_pointer(t_print node);
 t_print 			parse_float(t_print node);
 __uint64_t			ft_power(int base, int power);
 char 				*ft_itoa_float(__int64_t residual, __int64_t num);
+char				*ft_strcpy_special_edition(char *dest, const char *src);
 
 #endif

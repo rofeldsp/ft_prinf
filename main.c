@@ -13,11 +13,23 @@ int main(void)
 	unsigned int		d;
 	uint64_t 			e;
 	uint32_t 			f;
+	char 				a01;
+	char 				a02;
+	char 				a03;
+	char 				a04;
+	char 				a05;
+	char 				a06;
+	char 				a07;
+	char 				a08;
+	char 				a09;
+	char 				a10;
+	char 				a11;
+	char 				a12;
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%5.2x", 5427);
-	printf("\n123");
+	ft_printf("@moulitest: %.10d", -42);
+	printf("\n@moulitest: %5.x %5.0x", 0, 0);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }

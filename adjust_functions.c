@@ -20,7 +20,7 @@ t_print		adjust_to_width(t_print node, int len)
 	while (len2 > 0)
 	{
 		check_overflow(&node);
-		node.buffer[node.pointer + len2 - 1] = ' ';
+		node.buffer[node.pointer + node.width - len2] = ' ';
 		len2--;
 	}
 	return(node);
@@ -44,7 +44,7 @@ t_print		adjust_to_width2(t_print node, int len)
 	while (len2 > 0)
 	{
 		check_overflow(&node);
-		node.buffer[node.pointer + len2 - 1] = ' ';
+		node.buffer[node.pointer + node.width - len2] = ' ';
 		len2--;
 	}
 	return(node);
