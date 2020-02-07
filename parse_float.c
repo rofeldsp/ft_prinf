@@ -15,6 +15,7 @@ t_print		parse_float(t_print node)
 	int pres;
 	int a;
 	int b;
+	int sign;
 
 	num = (__int64_t)node.fnumber;
 	node.fnumber -= num;
@@ -23,6 +24,7 @@ t_print		parse_float(t_print node)
 		node.precision = 6;
 
 	a = 0;
+	sign = node.fnumber < 0 ? -1 : 1;
 	node.fnumber *= node.fnumber < 0 ? -1 : 1;
 	str2 = ft_strnew(node.precision + 1);
 	pres = node.precision;
@@ -55,7 +57,10 @@ t_print		parse_float(t_print node)
 //	while (num_length(residual) < node.precision && residual != 0)
 //		residual *= 10;
 //	str = ft_itoa_float(residual, num);
-	str = ft_itoa(num);
+	if (num == 0 && sign == -1)
+		str = ft_strjoin("-", ft_itoa(num));
+	else
+		str = ft_itoa(num);
 	tmp = ft_strjoin(str, ".");
 	free(str);
 	str = ft_strjoin(tmp, str2);
