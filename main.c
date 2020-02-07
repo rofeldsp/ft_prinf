@@ -28,7 +28,7 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%f", 23.00041);
+	ft_printf("%f", -3.85);
 	printf("\n%f", 1.0);
 //	ft_printf("%c%s", letter, string);
 	return(0);
