@@ -28,8 +28,8 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%#3o", 0);
-	printf("\n%#3o", 0);
+	ft_printf("%#03o", 0);
+	printf("\n%#03o", 0);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }

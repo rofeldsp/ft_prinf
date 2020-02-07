@@ -80,8 +80,8 @@ t_print 	parse_hexodecimal(t_print node, char c)
 //	node.unumber = va_arg(node.ap, unsigned int);
 //	str = ft_itoa_base(node.unumber, 16, c);
 	node.field_start = node.pointer;
-	str = (node.size == H) ? ft_itoa_base((unsigned short)node.unumber, 16, c) :
-			(node.size == HH ? ft_itoa_base((unsigned char)node.unumber, 16, c) :
+	str = (node.size & H) ? ft_itoa_base((unsigned short)node.unumber, 16, c) :
+			(node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 16, c) :
 			ft_itoa_base(node.unumber, 16 , c));
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : (node.flag & OCTO && node.unumber != 0 ? ft_strlen(str) + 2 : ft_strlen(str))));
@@ -100,7 +100,7 @@ t_print 	parse_hexodecimal(t_print node, char c)
 	node.pointer += node.empty_space + (node.flag & OCTO && node.precision > 0 && node.empty_space != 0 && node.unumber != 0 && node.precision > (int)ft_strlen(str) ? 2 : 0);
 	if (node.flag & OCTO && node.unumber != 0)
 	{
-		if (node.precision > 0 && node.empty_space != 0 && node.precision > (int)ft_strlen(str))
+		if (node.empty_space != 0 && node.precision > (int)ft_strlen(str))
 		{
 			node.buffer[node.pointer - (node.precision - ft_strlen(str)) - 2] = '0';
 			node.buffer[node.pointer - (node.precision - ft_strlen(str)) - 1] = (c == 'f' ? 'x' : 'X');
