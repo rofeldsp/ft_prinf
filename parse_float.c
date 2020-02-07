@@ -43,6 +43,8 @@ t_print		parse_float(t_print node)
 		{
 			if (str2[a] > '9')
 			{
+				if (a == 0)
+					num += num > 0 ? 1 : -1;
 				str2[a - 1] += str2[a] - '9';
 				str2[a] = '0';
 			}
@@ -58,14 +60,20 @@ t_print		parse_float(t_print node)
 //		residual *= 10;
 //	str = ft_itoa_float(residual, num);
 	if (num == 0 && sign == -1)
-		str = ft_strjoin("-", ft_itoa(num));
+	{
+		str = ft_strjoin("-", tmp = ft_itoa(num));
+		free(tmp);
+	}
 	else
 		str = ft_itoa(num);
-	tmp = ft_strjoin(str, ".");
-	free(str);
-	str = ft_strjoin(tmp, str2);
-	free(tmp);
-	free(str2);
+	if (node.precision > 0)
+	{
+		tmp = ft_strjoin(str, ".");
+		free(str);
+		str = ft_strjoin(tmp, str2);
+		free(tmp);
+		free(str2);
+	}
 
 	i = 0;
 	while (str[i])
