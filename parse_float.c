@@ -23,6 +23,7 @@ t_print		parse_float(t_print node)
 	if (node.precision == -2)
 		node.precision = 6;
 
+	node.field_start = node.pointer;
 	a = 0;
 	sign = node.fnumber < 0 ? -1 : 1;
 	node.fnumber *= node.fnumber < 0 ? -1 : 1;
@@ -81,6 +82,65 @@ t_print		parse_float(t_print node)
 	}
 
 	i = 0;
+	node = adjust_to_width(node, (ft_strlen(str)));
+	node = adjust_to_flag2(node, (ft_strlen(str)), '0', str);
+
+	if ((node.flag & ZERO && node.number < 0 && node.precision == -2))// || /)
+	{
+		node.buffer[node.field_start] = '-';
+		str = ft_strcpy(str, &(str[1]));
+		if (node.pointer == node.field_start)
+			node.pointer++;
+	}
+	else if (node.number < 0 && node.precision >= 0 && !(node.size & HH) && !(node.size & H))
+	{
+		str = ft_strcpy(str, &(str[1]));
+		node.pointer++;
+//		pointer_buf = node.pointer - 1;
+	}
+	node.pointer += node.empty_space;
+//	node.pointer -= (node.empty_space != 0 && (node.flag & PLUS) != 0 && node.precision < 0) ? 1 : 0;
+	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
+	{
+		if (node.pointer == node.field_start)
+			node.buffer[node.pointer++] = ' ';
+		else
+		{
+			if (node.flag & ZERO)
+			{
+				node.buffer[node.field_start] = ' ';
+				node.empty_space = 0;
+			}
+			else
+				node.buffer[node.pointer - 1] = ' ';
+		}
+	}
+	if (node.flag & PLUS && num >= 0)
+	{
+		if (node.number >= 0)
+		{
+			if (node.flag & ZERO && node.width > (int)ft_strlen(str))
+			{
+				if (node.pointer == node.field_start)
+					node.buffer[node.pointer++] = '+';
+				else
+					node.buffer[node.field_start] = '+';
+			}
+			else
+				node.buffer[node.pointer++] = '+';
+		}
+	}
+	if (node.flag & ZERO)
+	{
+		int a = node.pointer;
+		while (a-- >= node.field_start)
+		{
+			node.buffer[node.pointer] = '0';
+		}
+	}
+
+
+//	node.pointer += node.empty_space;
 	while (str[i])
 	{
 		node.buffer[node.pointer++] = str[i++];
@@ -88,6 +148,11 @@ t_print		parse_float(t_print node)
 	node.input++;
 	free(str);
 	return (node);
+}
+
+t_print adjust_float(t_print node)
+{
+	return(node);
 }
 
 int 		num_length(int64_t residual)

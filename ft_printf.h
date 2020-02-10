@@ -99,5 +99,6 @@ char 				*ft_itoa_float(__int64_t residual, __int64_t num, int len);
 char				*ft_strcpy_special_edition(char *dest, const char *src);
 void				adjust_float_length(char **str, int len);
 int 				num_length(__int64_t residual);
+t_print				adjust_float(t_print node);
 
 #endif
