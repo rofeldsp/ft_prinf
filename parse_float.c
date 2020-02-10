@@ -27,7 +27,7 @@ t_print		parse_float(t_print node)
 	sign = node.fnumber < 0 ? -1 : 1;
 	node.fnumber *= node.fnumber < 0 ? -1 : 1;
 	str2 = ft_strnew(node.precision + 1);
-	pres = node.precision;
+	pres = node.precision != -1 ? node.precision : 0;
 	while (pres-- >= 0)
 	{
 		str2[a++] = (int)(node.fnumber * 10) + '0';
@@ -35,10 +35,15 @@ t_print		parse_float(t_print node)
 		node.fnumber -= (int64_t )node.fnumber;
 	}
 	b = a - 1;
+	if (a == 0)
+		a = 1;
 	if (str2[--a] >= '5')
 	{
 		a--;
-		str2[a]++;
+		if (a >= 0)
+			str2[a]++;
+		else
+			num += num > 0 ? 1 : -1;
 		while (a >= 0)
 		{
 			if (str2[a] > '9')
@@ -66,7 +71,7 @@ t_print		parse_float(t_print node)
 	}
 	else
 		str = ft_itoa(num);
-	if (node.precision > 0)
+	if (node.precision > 0 || (node.flag & OCTO))
 	{
 		tmp = ft_strjoin(str, ".");
 		free(str);
