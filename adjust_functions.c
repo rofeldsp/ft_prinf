@@ -116,6 +116,54 @@ t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
 	return (node);
 }
 
+t_print 	adjust_to_flag3(t_print node, int len, char *str)
+{
+	int	len_width;
+//	int buf;
+
+//	len_width = node.width;
+	node.empty_space = (node.width > len) ? node.width - len : 0;
+	if (node.flag & MINUS)
+		node.empty_space = 0;
+	len_width = node.empty_space;
+	if (str[0] == '-')
+	{
+		len_width++; // поменял на --
+//		node.pointer++;
+	}
+/*	if (node.flag & ZERO && node.precision < 0)
+	{
+		if (node.flag & OCTO && node.unumber != 0 && (c == 'F' || c == 'f'))
+		{
+			node.buffer[node.pointer++] = '0';
+			node.buffer[node.pointer++] = (c == 'F' ? 'X' : 'x');
+			node.flag ^= OCTO;
+		}
+//		buf = node.pointer;
+		while (len_width-- > 0)
+		{
+			check_overflow(&node);
+			node.buffer[node.pointer++] = '0';
+		}
+//		node.pointer = buf;
+		node.empty_space = 0;
+	} */
+//	if (node.flag & PLUS)
+//	{
+//		if (node.number >= 0)
+//		{
+//			if (node.flag & ZERO)
+//				node.buffer[node.field_start] = '+';
+//			else
+//				node.buffer[node.pointer++] = '+';
+//		}
+//	}
+//	if ((node.flag & SPACE) && (!(node.flag & PLUS)))
+//		while (len_width-- > len)
+//			node.buffer[node.pointer++] = ' ';
+	return (node);
+}
+
 t_print 	adjust_to_precision(t_print node, int len, char **str)
 {
 	int	pointer_buff;

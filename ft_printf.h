@@ -82,6 +82,7 @@ t_print				adjust_to_flag(t_print node, int len);
 t_print 			parse_decimal(t_print node);
 t_print 			parse_udecimal(t_print node);
 t_print				adjust_to_flag2(t_print node, int len, char c, char *str);
+t_print				adjust_to_flag3(t_print node, int len, char *str);
 void				free_flags(t_print *node);
 t_print 			parse_percent(t_print node);
 t_print 			parse_hexodecimal(t_print node, char c);
