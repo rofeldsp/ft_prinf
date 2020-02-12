@@ -15,13 +15,17 @@ t_print		parse_float(t_print node)
 	int pres;
 	int a;
 	int b;
+	int last_char;
 	int sign;
+	uint64_t floatnbr;
+	int pres2;
+
 
 	num = (__int64_t)node.fnumber;
 	node.fnumber -= num;
 
-	long double h = 0.87650894255l;
-	h = h * ft_power(10, 11);
+//	long double h = 0.87650894255l;
+//	h = h * ft_power(10, 11);
 	if (node.precision == -2)
 		node.precision = 6;
 
@@ -29,14 +33,37 @@ t_print		parse_float(t_print node)
 	a = 0;
 	sign = node.fnumber < 0 ? -1 : 1;
 	node.fnumber *= node.fnumber < 0 ? -1 : 1;
-	str2 = ft_strnew(node.precision + 1);
 	pres = node.precision != -1 ? node.precision : 0;
-	while (pres-- >= 0)
+	str2 = ft_strnew(pres + 1);
+	while (pres >= 0)
 	{
-		str2[a++] = (int)(node.fnumber * 10) + '0';
-		node.fnumber *= 10;
-		node.fnumber -= (int64_t )node.fnumber;
+		if (pres > 18)
+		{
+			pres2 = 18;
+//			pres -= (pres2 + 1);
+		}
+		else
+			pres2 = pres;
+		floatnbr = node.fnumber * ft_power(10, pres2 + 1);
+		node.fnumber *= ft_power(10, pres2 + 1);
+		node.fnumber -= (uint64_t )node.fnumber;
+		a += pres2 + 1;
+		last_char = a - 1;
+		while (pres2-- >= 0)
+		{
+			str2[last_char--] = floatnbr % 10 + '0';
+			floatnbr /= 10;
+		}
+		pres = pres > 18 ? (pres - 18 - 1) : pres2;
 	}
+//	str2 = ft_strnew(node.precision + 1);
+//	pres = node.precision != -1 ? node.precision : 0;
+//	while (pres-- >= 0)
+//	{
+//		str2[a++] = (int)(node.fnumber * 10) + '0';
+//		node.fnumber *= 10;
+//		node.fnumber -= (int64_t )node.fnumber;
+//	}
 	b = a - 1;
 	if (a == 0)
 		a = 1;
@@ -87,7 +114,7 @@ t_print		parse_float(t_print node)
 	node = adjust_to_width(node, (ft_strlen(str)));
 	node = adjust_to_flag3(node, (ft_strlen(str)), str);
 
-	if ((node.flag & ZERO && node.number < 0 && node.precision == -2))// || /)
+	if ((node.flag & ZERO && num < 0 && node.precision == -2))// || /)
 	{
 		node.buffer[node.field_start] = '-';
 		str = ft_strcpy(str, &(str[1]));

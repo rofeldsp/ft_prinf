@@ -28,8 +28,8 @@ int main(void)
 	char 				letter = 42;
 	char 				*string = "Hello";
 
-	ft_printf("%.10Lf", 0.87650894255l);
-	printf("\n%.10Lf", 0.87650894255l);
+	ft_printf("%.20f",        1.025978542436587568678);
+	printf("\n%.20f",        1.025978542436587568678);
 //	ft_printf("%c%s", letter, string);
 	return(0);
 }
