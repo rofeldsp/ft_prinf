@@ -211,6 +211,10 @@ CMakeFiles/printf_owngit.dir/main.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/main.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/main.c.o: ../main.c
 
+CMakeFiles/printf_owngit.dir/parse_binary.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/parse_binary.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/parse_binary.c.o: ../parse_binary.c
+
 CMakeFiles/printf_owngit.dir/parse_char.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_char.c.o: ../parse_char.c

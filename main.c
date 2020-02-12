@@ -26,7 +26,7 @@ int main(void)
 	char 				a11;
 	char 				a12;
 	char 				letter = 42;
-	char 				*string = "Hello";
+	char 				*string = NULL;
 	static char 		ch_pos_1 = 100, ch_neg_1 = -87;
 	static short		sh_pos_1 = 3047, sh_neg_1 = -8875;
 	static int			i_pos_1 = 878023;
@@ -45,9 +45,9 @@ int main(void)
 	static unsigned long  		ulmax = 9223372036854775807;
 
 //	ft_printf("%S\n", L"ݗݜशব");
-//	ft_printf("%p", NULL);
-	ft_printf("%{green}s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li    %25.16f","abc",sh_neg_1,
-			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1, -356.123456789101112897675);
+	ft_printf("%llb", 456987234987156);
+//	ft_printf("%{green}s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li    %25.16f","abc",sh_neg_1,
+//			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1, -356.123456789101112897675);
 	printf("\n%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li","abc",sh_neg_1,
 		   ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);
 //	printf("%p", NULL);

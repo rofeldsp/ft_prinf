@@ -291,6 +291,9 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/main.c">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/parse_binary.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_char.c">
 			<Option target="printf_owngit"/>
 		</Unit>

@@ -78,6 +78,7 @@ t_print				get_type(t_print node);
 char 				*increase_buffer(char **str, t_print *node);
 t_print				parse_char(t_print node);
 t_print				parse_string(t_print node);
+t_print				parse_string_binary(t_print node);
 t_print				get_flag(t_print node);
 t_print				get_width(t_print node);
 t_print				get_precision(t_print node);
@@ -110,5 +111,6 @@ void				adjust_float_length(char **str, int len);
 int 				num_length(__int64_t residual);
 t_print				adjust_float(t_print node);
 t_print				print_color(t_print node);
+t_print 			parse_binary(t_print node, char c);
 
 #endif

@@ -1932,6 +1932,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/main.c.s
 .PHONY : main.c.s
 
+parse_binary.o: parse_binary.c.o
+
+.PHONY : parse_binary.o
+
+# target to build an object file
+parse_binary.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_binary.c.o
+.PHONY : parse_binary.c.o
+
+parse_binary.i: parse_binary.c.i
+
+.PHONY : parse_binary.i
+
+# target to preprocess a source file
+parse_binary.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_binary.c.i
+.PHONY : parse_binary.c.i
+
+parse_binary.s: parse_binary.c.s
+
+.PHONY : parse_binary.s
+
+# target to generate assembly for a file
+parse_binary.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_binary.c.s
+.PHONY : parse_binary.c.s
+
 parse_char.o: parse_char.c.o
 
 .PHONY : parse_char.o
@@ -2412,6 +2439,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parse_binary.o"
+	@echo "... parse_binary.i"
+	@echo "... parse_binary.s"
 	@echo "... parse_char.o"
 	@echo "... parse_char.i"
 	@echo "... parse_char.s"

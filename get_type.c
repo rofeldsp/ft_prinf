@@ -54,6 +54,16 @@ t_print		get_type(t_print node)
 //			node.number = va_arg(node.ap, int);
 		return(parse_hexodecimal(node, 'f'));
 	}
+	else if (*node.input == 'b')
+	{
+		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
+					   ((node.size & LL) ? va_arg(node.ap,
+												  unsigned long long int) :
+						va_arg(node.ap, unsigned int));
+		return (parse_binary(node, 'f'));
+	}
+	else if (*node.input == 'B')
+		return(parse_string_binary(node));
 //	else if (*node.input == 'X')
 //	{
 //		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :

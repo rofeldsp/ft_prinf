@@ -66,6 +66,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/libft/ft_tolower.c.o"
   "CMakeFiles/printf_owngit.dir/libft/ft_toupper.c.o"
   "CMakeFiles/printf_owngit.dir/main.c.o"
+  "CMakeFiles/printf_owngit.dir/parse_binary.c.o"
   "CMakeFiles/printf_owngit.dir/parse_char.c.o"
   "CMakeFiles/printf_owngit.dir/parse_decimal.c.o"
   "CMakeFiles/printf_owngit.dir/parse_float.c.o"

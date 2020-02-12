@@ -84,4 +84,4 @@ add_executable(printf_owngit
         parse_percent.c
         parse_pointer.c
         parse_string.c
-        parse_udecimal.c print_color.c)
+        parse_udecimal.c print_color.c parse_binary.c)
