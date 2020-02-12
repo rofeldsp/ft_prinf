@@ -80,6 +80,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/rofeldsp/printf_owngit/parse_pointer.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_pointer.c.o"
   "/Users/rofeldsp/printf_owngit/parse_string.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_string.c.o"
   "/Users/rofeldsp/printf_owngit/parse_udecimal.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/parse_udecimal.c.o"
+  "/Users/rofeldsp/printf_owngit/print_color.c" "/Users/rofeldsp/printf_owngit/cmake-build-debug/CMakeFiles/printf_owngit.dir/print_color.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

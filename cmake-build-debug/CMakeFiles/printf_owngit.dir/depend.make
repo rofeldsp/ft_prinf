@@ -247,3 +247,7 @@ CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: /Users/rofeldsp/libft/libft.h
 CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: ../ft_printf.h
 CMakeFiles/printf_owngit.dir/parse_udecimal.c.o: ../parse_udecimal.c
 
+CMakeFiles/printf_owngit.dir/print_color.c.o: /Users/rofeldsp/libft/libft.h
+CMakeFiles/printf_owngit.dir/print_color.c.o: ../ft_printf.h
+CMakeFiles/printf_owngit.dir/print_color.c.o: ../print_color.c
+

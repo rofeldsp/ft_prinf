@@ -55,6 +55,8 @@ int		ft_printf(const char *str, ...)
 t_print		print_arg(t_print node)
 {
 	node.input++;
+	if (*node.input == '{')
+		node = print_color(node);
 	if (*node.input == '%')
 	{
 		node.buffer[node.pointer++] = '%';

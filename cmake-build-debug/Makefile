@@ -2175,6 +2175,33 @@ parse_udecimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_udecimal.c.s
 .PHONY : parse_udecimal.c.s
 
+print_color.o: print_color.c.o
+
+.PHONY : print_color.o
+
+# target to build an object file
+print_color.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/print_color.c.o
+.PHONY : print_color.c.o
+
+print_color.i: print_color.c.i
+
+.PHONY : print_color.i
+
+# target to preprocess a source file
+print_color.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/print_color.c.i
+.PHONY : print_color.c.i
+
+print_color.s: print_color.c.s
+
+.PHONY : print_color.s
+
+# target to generate assembly for a file
+print_color.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/print_color.c.s
+.PHONY : print_color.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2412,6 +2439,9 @@ help:
 	@echo "... parse_udecimal.o"
 	@echo "... parse_udecimal.i"
 	@echo "... parse_udecimal.s"
+	@echo "... print_color.o"
+	@echo "... print_color.i"
+	@echo "... print_color.s"
 .PHONY : help
 
 

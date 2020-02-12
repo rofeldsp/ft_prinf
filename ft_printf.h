@@ -27,6 +27,14 @@
 ** Node desc and macros
 */
 
+# define RED		"\e[31m"
+# define GREEN		"\e[32m"
+# define YELLOW		"\e[33m"
+# define BLUE		"\e[34m"
+# define PURPLE		"\e[35m"
+# define CYAN		"\e[36m"
+# define EOC		"\e[0m"
+
 # define BUFF_SIZE	100
 # define MINUS		1
 # define PLUS		(1 << 1)
@@ -101,5 +109,6 @@ char				*ft_strcpy_special_edition(char *dest, const char *src);
 void				adjust_float_length(char **str, int len);
 int 				num_length(__int64_t residual);
 t_print				adjust_float(t_print node);
+t_print				print_color(t_print node);
 
 #endif

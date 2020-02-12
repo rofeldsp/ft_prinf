@@ -75,6 +75,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/printf_owngit.dir/parse_pointer.c.o"
   "CMakeFiles/printf_owngit.dir/parse_string.c.o"
   "CMakeFiles/printf_owngit.dir/parse_udecimal.c.o"
+  "CMakeFiles/printf_owngit.dir/print_color.c.o"
   "printf_owngit"
   "printf_owngit.pdb"
 )
