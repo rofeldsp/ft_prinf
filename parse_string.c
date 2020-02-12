@@ -23,8 +23,7 @@ t_print 	parse_string(t_print node)
 //		node.pointer += (node.width - ft_strlen(str));
 	while (str[i])
 	{
-		if ((node.pointer + 1) % BUFF_SIZE == 0)
-			node.buffer = increase_buffer(&node.buffer, &node);
+		check_overflow(&node);
 		node.buffer[node.pointer] = str[i];
 		i++;
 		node.pointer++;

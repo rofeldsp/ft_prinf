@@ -59,26 +59,30 @@ t_print 	parse_binary(t_print node, char c)
 t_print 	parse_string_binary(t_print node)
 {
 	char 	*str;
+	char	*byte_str;
 	int		i;
+	int		j;
 
 	i = 0;
 	str = va_arg(node.ap, char *);
 //	str = ft_strdup(str);
 	if (str == NULL)
 		str = "(null)";
-	node = adjust_to_width2(node, ft_strlen(str));
-	node = adjust_to_flag(node, ft_strlen(str));
-	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) && node.flag ^ MINUS ? node.width - node.precision : 0));
+	node = adjust_to_width2(node, ft_strlen(str) * 8);
+	node = adjust_to_flag(node, ft_strlen(str) * 8);
+	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) * 8 && node.flag ^ MINUS ? node.width - node.precision : 0));
 	adjust_to_precision2(&node, &str);
 //	if (node.precision >= 0 && node.width != (int)ft_strlen(str))
 //		node.pointer += (node.width - ft_strlen(str));
 	while (str[i])
 	{
-		if ((node.pointer + 1) % BUFF_SIZE == 0)
-			node.buffer = increase_buffer(&node.buffer, &node);
-		node.buffer[node.pointer] = str[i];
-		i++;
-		node.pointer++;
+		j = 0;
+		check_overflow(&node);
+		byte_str = ft_itoa_base(str[i++] - 0, 2, 'a');
+		while (byte_str[j])
+			node.buffer[node.pointer++] = byte_str[j++];
+		node.buffer[node.pointer++] = '|';
+		free(byte_str);
 	}
 	node.input++;
 	if (node.flag & MINUS)
