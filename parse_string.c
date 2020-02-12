@@ -7,10 +7,12 @@
 t_print 	parse_string(t_print node)
 {
 	char 	*str;
+//	char 	*str2;
 	int		i;
 
 	i = 0;
 	str = va_arg(node.ap, char *);
+//	str = ft_strdup(str);
 	if (str == NULL)
 		str = "(null)";
 	node = adjust_to_width2(node, ft_strlen(str));
@@ -30,6 +32,7 @@ t_print 	parse_string(t_print node)
 	node.input++;
 	if (node.flag & MINUS)
 		node.pointer = node.end_of_field;
+	free(str);
 	return (node);
 }
 

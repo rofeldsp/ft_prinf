@@ -70,6 +70,7 @@ t_print 	parse_decimal(t_print node)
 			node.pointer += node.empty_space;
 	}
 	node.input++;
+	free(str);
 	return (node);
 
 	/*int num;

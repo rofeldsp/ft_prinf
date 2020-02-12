@@ -44,8 +44,10 @@ int main(void)
 	static unsigned long long  ullmax = 9223372036854775807;
 	static unsigned long  		ulmax = 9223372036854775807;
 
-	ft_printf("%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li","abc",sh_neg_1,
-			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);
+//	ft_printf("%S\n", L"ݗݜशব");
+//	ft_printf("%p", NULL);
+	ft_printf("%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li    %25.16f","abc",sh_neg_1,
+			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1, -356.123456789101112897675);
 	printf("\n%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li","abc",sh_neg_1,
 		   ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);
 //	ft_printf("%c%s", letter, string);

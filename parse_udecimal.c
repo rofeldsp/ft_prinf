@@ -45,6 +45,7 @@ t_print 	parse_udecimal(t_print node) {
 	}
 	node.input++;
 	node.pointer = node.end_of_field > node.pointer ? node.end_of_field : node.pointer;
+	free(str);
 	return (node);
 }
 
