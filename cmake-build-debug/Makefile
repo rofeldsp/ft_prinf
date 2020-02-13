@@ -2202,6 +2202,33 @@ parse_udecimal.c.s:
 	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_udecimal.c.s
 .PHONY : parse_udecimal.c.s
 
+parse_unicode.o: parse_unicode.c.o
+
+.PHONY : parse_unicode.o
+
+# target to build an object file
+parse_unicode.c.o:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_unicode.c.o
+.PHONY : parse_unicode.c.o
+
+parse_unicode.i: parse_unicode.c.i
+
+.PHONY : parse_unicode.i
+
+# target to preprocess a source file
+parse_unicode.c.i:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_unicode.c.i
+.PHONY : parse_unicode.c.i
+
+parse_unicode.s: parse_unicode.c.s
+
+.PHONY : parse_unicode.s
+
+# target to generate assembly for a file
+parse_unicode.c.s:
+	$(MAKE) -f CMakeFiles/printf_owngit.dir/build.make CMakeFiles/printf_owngit.dir/parse_unicode.c.s
+.PHONY : parse_unicode.c.s
+
 print_color.o: print_color.c.o
 
 .PHONY : print_color.o
@@ -2469,6 +2496,9 @@ help:
 	@echo "... parse_udecimal.o"
 	@echo "... parse_udecimal.i"
 	@echo "... parse_udecimal.s"
+	@echo "... parse_unicode.o"
+	@echo "... parse_unicode.i"
+	@echo "... parse_unicode.s"
 	@echo "... print_color.o"
 	@echo "... print_color.i"
 	@echo "... print_color.s"

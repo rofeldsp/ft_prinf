@@ -12,8 +12,9 @@ t_print 	parse_decimal(t_print node)
 
 //	node.number = va_arg(node.ap, int);
 	node.field_start = node.pointer;
-	str = (node.size == H) ? ft_itoa((short)node.number) : (node.size == HH ?
-			ft_itoa((char)node.number) : ft_itoa(node.number));
+	if (!(str = (node.size == H) ? ft_itoa((short)node.number) : (node.size == HH ?
+			ft_itoa((char)node.number) : ft_itoa(node.number))))
+		exit (-1);
 	i = 0;
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
 	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)), '0', str);

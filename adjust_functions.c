@@ -243,11 +243,13 @@ void	 	adjust_to_precision2(t_print *node, char **str)
 	if (node->precision > -2)
 	{
 		len = ft_strlen(*str);
-		str2 = ft_strdup(*str);
+		if (!(str2 = ft_strdup(*str)))
+			exit(-1);
 		if (node->precision == -1)
 		{
 			str2[0] = '\0';
-			*str = ft_strdup(str2);
+			if (!(*str = ft_strdup(str2)))
+				exit(-1);
 //			*str = str2;
 			free(str2);
 			return ;
@@ -263,12 +265,14 @@ void	 	adjust_to_precision2(t_print *node, char **str)
 			node->pointer += ft_strlen(*str) - ft_strlen(str2);
 		if (node->width == (int)ft_strlen(*str))
 			node->end_of_field -= (ft_strlen(*str) - ft_strlen(str2));
-		*str = ft_strdup(str2);
+		if (!(*str = ft_strdup(str2)))
+			exit(-1);
 //		*str = str2;
 		free(str2);
 	}
 	else
-		*str = ft_strdup(*str);
+		if (!(*str = ft_strdup(*str)))
+			exit(-1);
 }
 
 t_print 	adjust_to_precision3(t_print node, int len, char **str)

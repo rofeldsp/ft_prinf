@@ -321,6 +321,9 @@
 		<Unit filename="/Users/rofeldsp/printf_owngit/parse_udecimal.c">
 			<Option target="printf_owngit"/>
 		</Unit>
+		<Unit filename="/Users/rofeldsp/printf_owngit/parse_unicode.c">
+			<Option target="printf_owngit"/>
+		</Unit>
 		<Unit filename="/Users/rofeldsp/printf_owngit/print_color.c">
 			<Option target="printf_owngit"/>
 		</Unit>

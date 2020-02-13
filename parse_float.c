@@ -96,16 +96,22 @@ t_print		parse_float(t_print node)
 //	str = ft_itoa_float(residual, num);
 	if (num == 0 && sign == -1)
 	{
-		str = ft_strjoin("-", tmp = ft_itoa(num));
+		if (!(str = ft_strjoin("-", tmp = ft_itoa(num))))
+			exit(-1);
 		free(tmp);
 	}
 	else
-		str = ft_itoa(num);
+	{
+		if(!(str = ft_itoa(num)))
+			exit(-1);
+	}
 	if (node.precision > 0 || (node.flag & OCTO))
 	{
-		tmp = ft_strjoin(str, ".");
+		if (!(tmp = ft_strjoin(str, ".")))
+			exit(-1);
 		free(str);
-		str = ft_strjoin(tmp, str2);
+		if (!(str = ft_strjoin(tmp, str2)))
+			exit(-1);
 		free(tmp);
 		free(str2);
 	}
@@ -250,23 +256,27 @@ void		adjust_float_length(char **str, int len)
 	int dif;
 	char *tmp;
 
-	ret = ft_strnew(len);
+	if (!(ret = ft_strnew(len)))
+		exit (-1);
 	i = 0;
 	if ((*(*str)) == '0')
 	{
 		while (len-- > 0)
 			ret[i++] = '0';
 		free(*str);
-		*str = ft_strdup(ret);
+		if (!(*str = ft_strdup(ret)))
+			exit(-1);
 		return ;
 	}
 	dif = len - ft_strlen(*str);
 	while (dif-- > 0)
 		ret[i++] = '0';
-	tmp = ft_strjoin(ret, *str);
+	if (!(tmp = ft_strjoin(ret, *str)))
+		exit (-1);
 	free(ret);
 	free(*str);
-	*str = ft_strdup(tmp);
+	if (!(*str = ft_strdup(tmp)))
+		exit(-1);
 }
 
 __uint64_t	ft_power(int base, int power)

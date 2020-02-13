@@ -61,9 +61,8 @@ static char		*cut(uint64_t j, uint64_t n)
 		j++;
 		b = b / 10;
 	}
-	dst = (char*)malloc(sizeof(char) * (j + 1));
-	if (dst == NULL)
-		return (NULL);
+	if (!(dst = (char*)malloc(sizeof(char) * (j + 1))))
+		exit (-1);
 	dst[j] = '\0';
 	j--;
 	while (n / 10 > 0)

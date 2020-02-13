@@ -34,12 +34,14 @@ int		ft_printf(const char *str, ...)
 			node.buffer = increase_buffer(&node.buffer, &node);
 		if (*node.input == '%')
 			node = print_arg(node);
-		else
+		else if (*node.input != '{')
 		{
 			node.buffer[node.pointer] = *node.input;
 			node.pointer++;
 			node.input++;
 		}
+		if (*node.input == '{')
+			node = print_color(node);
 	}
 	va_end(node.ap);
 //	i = -1;
@@ -55,8 +57,6 @@ int		ft_printf(const char *str, ...)
 t_print		print_arg(t_print node)
 {
 	node.input++;
-	if (*node.input == '{')
-		node = print_color(node);
 	if (*node.input == '%')
 	{
 		node.buffer[node.pointer++] = '%';
@@ -84,7 +84,7 @@ char 		*increase_buffer(char **str, t_print *node)
 
 	i = 0;
 	if(!(dest = ft_strnew(node->buffer_size + BUFF_SIZE)))
-		exit(33);
+		exit(-1);
 	dest = ft_strcpy_special_edition(dest, *str);
 //	while (i < ft_strlen(*str))
 //	{

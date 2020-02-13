@@ -99,9 +99,8 @@ t_print 	parse_octal(t_print node, char c)
 	while (str[i])
 	{
 		check_overflow(&node);
-		node.buffer[node.pointer] = str[i];
+		node.buffer[node.pointer++] = str[i];
 		i++;
-		node.pointer++;
 	}
 	node.input++;
 	if (node.buffer[node.pointer] != '\0')

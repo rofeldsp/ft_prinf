@@ -112,5 +112,7 @@ int 				num_length(__int64_t residual);
 t_print				adjust_float(t_print node);
 t_print				print_color(t_print node);
 t_print 			parse_binary(t_print node, char c);
+void 				buffer_color(t_print *node, const char *color);
+t_print 			parse_unicode(t_print node);
 
 #endif
