@@ -44,7 +44,7 @@ DIR_S = sources
 
 DIR_O = temporary
 
-HEADER = include
+HEADER = include // добавить phony
 
 SOURCES = ft_printf.c \
           get_flag.c \
