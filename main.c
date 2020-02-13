@@ -47,10 +47,10 @@ int main(int argc, char **argv)
 	int fd;
 
 
-	fd = open(argv[1], O_RDONLY);
-	ft_dprintf(fd, "check %Ud", 68394);
-	close(fd);
-//	ft_printf("check");
+//	fd = open("check.txt", O_RDWR);
+//	ft_dprintf(fd, "check %Ud", 68394);
+//	close(fd);
+	ft_printf("%bf", 36.45645);
 //	write(1, "^C", 2);
 //	ft_printf("%B", "Hello World!");
 //	ft_printf("{green}%s%hihello%-17.14llu%lli%08hu%s%17ssom{red}estuff%s%hi%i%.24lu%llu%u%.2s{{eoc}%li%150B    %25.16f","abc",sh_neg_1,

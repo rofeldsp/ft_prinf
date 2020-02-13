@@ -58,11 +58,24 @@ t_print 	parse_binary(t_print node, char c)
 
 void		parse_bits(void *nbr, int size, t_print *node)
 {
-	char	*str;
+	unsigned char	*c;
+	int 	bit;
 
-	if (!(str = ft_memalloc(size * 10)))
-		exit (-1);
-
+	c = (unsigned char *)nbr + size;
+	while (--c >= (unsigned char *)nbr)
+	{
+		bit = 128;
+		while (bit >= 1)
+		{
+			node->buffer[node->pointer] = '0';
+			if (*c & bit)
+				node->buffer[node->pointer] = '1';
+			node->pointer++;
+			if ((bit >>= 1) == 8 || (bit == 0 && c != (unsigned char *)nbr))
+				node->buffer[node->pointer++] = ' ';
+		}
+	}
+	node->input += (*(node->input + 1) == 'f' ? 2 : 1);
 }
 
 t_print 	parse_string_binary(t_print node)
