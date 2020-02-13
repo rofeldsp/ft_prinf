@@ -56,37 +56,70 @@ t_print 	parse_binary(t_print node, char c)
 	return (node);
 }
 
+void		parse_bits(void *nbr, int size, t_print *node)
+{
+	char	*str;
+
+	if (!(str = ft_memalloc(size * 10)))
+		exit (-1);
+
+}
+
 t_print 	parse_string_binary(t_print node)
 {
-	char 	*str;
-	char	*byte_str;
-	int		i;
-	int		j;
+	long double a;
+	double c;
+	int64_t b;
 
-	i = 0;
-	str = va_arg(node.ap, char *);
-//	str = ft_strdup(str);
-	if (str == NULL)
-		str = "(null)";
-	node = adjust_to_width2(node, ft_strlen(str) * 8);
-	node = adjust_to_flag(node, ft_strlen(str) * 8);
-	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) * 8 && node.flag ^ MINUS ? node.width - node.precision : 0));
-	adjust_to_precision2(&node, &str);
-//	if (node.precision >= 0 && node.width != (int)ft_strlen(str))
-//		node.pointer += (node.width - ft_strlen(str));
-	while (str[i])
+	if ((*node.input + 1) == 'f')
+		a = va_arg(node.ap, long double);
+	else
+		b = va_arg(node.ap, int64_t);
+	if ((*node.input + 1) == 'f' && node.size & FLOAT_L)
+		parse_bits(&a, 10, &node);
+	else if ((*node.input + 1) == 'f')
 	{
-		j = 0;
-		check_overflow(&node);
-		byte_str = ft_itoa_base(str[i++] - 0, 2, 'a');
-		while (byte_str[j])
-			node.buffer[node.pointer++] = byte_str[j++];
-		node.buffer[node.pointer++] = '|';
-		free(byte_str);
+		c = (double)a;
+		parse_bits(&c, sizeof(double), &node);
 	}
-	node.input++;
-	if (node.flag & MINUS)
-		node.pointer = node.end_of_field;
-	free(str);
+	else if (node.size & H)
+		parse_bits(&b, sizeof(short), &node);
+	else if (node.size & HH)
+		parse_bits(&b, sizeof(char), &node);
+	else if (node.size & L || node.size & LL)
+		parse_bits(&b, sizeof(int64_t), &node);
+	else
+		parse_bits(&b, sizeof(int), &node);
 	return (node);
 }
+//	char 	*str;
+//	char	*byte_str;
+//	int		i;
+//	int		j;
+//
+//	i = 0;
+//	str = va_arg(node.ap, char *);
+////	str = ft_strdup(str);
+//	if (str == NULL)
+//		str = "(null)";
+//	node = adjust_to_width2(node, ft_strlen(str) * 8);
+//	node = adjust_to_flag(node, ft_strlen(str) * 8);
+//	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) * 8 && node.flag ^ MINUS ? node.width - node.precision : 0));
+//	adjust_to_precision2(&node, &str);
+////	if (node.precision >= 0 && node.width != (int)ft_strlen(str))
+////		node.pointer += (node.width - ft_strlen(str));
+//	while (str[i])
+//	{
+//		j = 0;
+//		check_overflow(&node);
+//		byte_str = ft_itoa_base(str[i++] - 0, 2, 'a');
+//		while (byte_str[j])
+//			node.buffer[node.pointer++] = byte_str[j++];
+//		node.buffer[node.pointer++] = '|';
+//		free(byte_str);
+//	}
+//	node.input++;
+//	if (node.flag & MINUS)
+//		node.pointer = node.end_of_field;
+//	free(str);//	return (node);
+////}

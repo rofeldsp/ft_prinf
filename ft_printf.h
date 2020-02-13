@@ -15,6 +15,9 @@
 # include "limits.h" //можно такую?
 # include <string.h> // убрать потом
 # include <stdio.h> //убрать потом
+# include <sys/stat.h>
+# include <sys/types.h>
+# include <fcntl.h>
 
 /*
 ** ----------Standard libraries-------------------
@@ -46,7 +49,8 @@
 # define HH			(1 << 1)
 # define L			(1 << 2)
 # define LL			(1 << 3)
-# define FLOAT_L		(1 << 4)
+# define FLOAT_L	(1 << 4)
+# define UNICODE	(1 << 5)
 
 typedef struct	print
 {
@@ -73,6 +77,7 @@ typedef struct	print
 */
 
 int					ft_printf(const char *str, ...);
+int					ft_dprintf(int fd, const char *str, ...);
 t_print				print_arg(t_print node);
 t_print				get_type(t_print node);
 char 				*increase_buffer(char **str, t_print *node);
@@ -100,6 +105,7 @@ char 				*ft_itoa_base2(int i, char **str);
 void				check_overflow(t_print *node);
 void	 			adjust_to_precision2(t_print *node, char **str);
 int 				ft_putstr_printf(char *str, int a);
+int 				ft_putstr_dprintf(int fd, char *str, int a);
 t_print 			parse_octal(t_print node, char c);
 char 				*ft_uitoa(uint64_t n);
 t_print				parse_pointer(t_print node);
@@ -114,5 +120,6 @@ t_print				print_color(t_print node);
 t_print 			parse_binary(t_print node, char c);
 void 				buffer_color(t_print *node, const char *color);
 t_print 			parse_unicode(t_print node);
+void				parse_bits(void *nbr, int size, t_print *node);
 
 #endif

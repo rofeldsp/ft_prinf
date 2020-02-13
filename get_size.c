@@ -25,9 +25,9 @@ t_print		get_size(t_print node)
 		}
 		node.input++;
 	}
-	else if (*node.input == 'L')
+	else if (*node.input == 'L' || *node.input == 'U')
 	{
-		node.size |= FLOAT_L;
+		node.size |= (*node.input == 'L' ? FLOAT_L : UNICODE);
 		node.input++;
 	}
 //	(*(node.input + 1) == 'l') ? (node.size = LL) : (node.size = L);

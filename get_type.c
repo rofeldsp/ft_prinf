@@ -12,6 +12,8 @@ t_print		get_type(t_print node)
 		return(parse_string(node));
 	else if (*node.input == 'd' || *node.input == 'i')
 	{
+		if (node.size & UNICODE)
+			return(parse_unicode(node));
 		node.number = (node.size & L) ? va_arg(node.ap, long int) :
 					  ((node.size & LL) ? va_arg(node.ap, long long int) :
 					   va_arg(node.ap, int));
@@ -94,7 +96,5 @@ t_print		get_type(t_print node)
 		node.fnumber = (node.size & FLOAT_L ? va_arg(node.ap, long double) : va_arg(node.ap, double));
 		return(parse_float(node));
 	}
-	else if (*node.input == 'j')
-		return(parse_unicode(node));
 	return(node);
 }

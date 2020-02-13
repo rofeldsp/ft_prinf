@@ -64,7 +64,8 @@ SOURCES = ft_printf.c \
           parse_pointer.c \
           parse_float.c \
           print_color.c \
-          parse_binary.c
+          parse_binary.c \
+          parse_unicode.c
 
 SRCS = $(addprefix $(DIR_S)/,$(SOURCES))
 

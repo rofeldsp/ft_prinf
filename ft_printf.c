@@ -54,6 +54,48 @@ int		ft_printf(const char *str, ...)
 	return(i);
 }
 
+int		ft_dprintf(int fd, const char *str, ...)
+{
+	t_print		node;
+	int		i;
+
+	node.pointer = 0;
+	node.count_nulls = 0;
+//	node.buffer_size = 0;
+//	if(!(node.buffer = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1))))
+//		return ;
+//	ft_bzero(node.buffer, BUFF_SIZE);
+	node.empty_space = 0;
+	if(!(node.buffer = ft_strnew(node.buffer_size = BUFF_SIZE)))
+		exit(-1);
+	va_start(node.ap, str);
+	node.input = (char *)str;
+	while (*node.input)
+	{
+		if ((node.pointer + 1) % BUFF_SIZE == 0)
+			node.buffer = increase_buffer(&node.buffer, &node);
+		if (*node.input == '%')
+			node = print_arg(node);
+		else if (*node.input != '{')
+		{
+			node.buffer[node.pointer] = *node.input;
+			node.pointer++;
+			node.input++;
+		}
+		if (*node.input == '{')
+			node = print_color(node);
+	}
+	va_end(node.ap);
+//	i = -1;
+//	while (++i < node.pointer)
+//		ft_putchar(node.buffer[i]);
+//	ft_putstr(node.buffer);
+//	node.pointer = ft_strlen(node.buffer);
+	i = ft_putstr_dprintf(fd, node.buffer, node.count_nulls);
+	free(node.buffer);
+	return(i);
+}
+
 t_print		print_arg(t_print node)
 {
 	node.input++;
