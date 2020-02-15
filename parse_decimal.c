@@ -10,6 +10,9 @@ t_print 	parse_decimal(t_print node)
 	int		i;
 	int 	pointer_buf;
 
+	node.number = (node.size & L) ? va_arg(node.ap, long int) :
+				  ((node.size & LL) ? va_arg(node.ap, long long int) :
+				   va_arg(node.ap, int));
 	node.field_start = node.pointer;
 	if (!(str = (node.size == H) ? ft_itoa((short)node.number) : (node.size == HH ?
 			ft_itoa((char)node.number) : ft_itoa(node.number))))

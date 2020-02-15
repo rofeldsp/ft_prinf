@@ -9,6 +9,9 @@ t_print 	parse_octal(t_print node, char c)
 	char	*str;
 	int		i;
 
+	node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
+				   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
+					va_arg(node.ap, unsigned int));
 	node.field_start = node.pointer;
 	str = (node.size & H) ? ft_itoa_base((unsigned short)node.unumber, 8, c):
 		  (node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 8, c):

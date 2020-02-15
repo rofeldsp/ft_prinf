@@ -8,6 +8,9 @@ t_print 	parse_udecimal(t_print node) {
 	char *str;
 	int i;
 
+	node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
+				   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
+					va_arg(node.ap, unsigned int));
 	node.field_start = node.pointer;
 	str = (node.size == H) ? ft_uitoa((unsigned short) node.unumber) : (node.size == HH ?
 			 ft_uitoa((unsigned char) node.unumber) : ft_uitoa(node.unumber));

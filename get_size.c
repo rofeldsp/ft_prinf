@@ -44,7 +44,7 @@ t_print		get_size(t_print node)
 		get_size2(&node);
 	else if (*node.input == 'L' || *node.input == 'U')
 	{
-		node.size |= (*node.input == 'L' ? FLOAT_L : UNICODE);
+		node.size |= (*node.input == 'L' ? FLOAT_L : UNIC);
 		node.input++;
 	}
 	return (get_type(node));

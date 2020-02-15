@@ -1,55 +1,42 @@
-//
-// Created by Rosanne Feldspar on 21/01/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_type.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/15 14:51:02 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/15 14:51:04 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
 t_print		get_type(t_print node)
 {
 	if (*node.input == 'c')
-		return(parse_char(node));
+		return (parse_char(node));
 	else if (*node.input == 's')
-		return(parse_string(node));
+		return (parse_string(node));
 	else if (*node.input == 'd' || *node.input == 'i')
-	{
-		if (node.size & UNICODE)
-			return(parse_unicode(node));
-		node.number = (node.size & L) ? va_arg(node.ap, long int) :
-					  ((node.size & LL) ? va_arg(node.ap, long long int) :
-					   va_arg(node.ap, int));
-		return (parse_decimal(node));
-	}
+		return (node.size & UNIC ? parse_unicode(node) : parse_decimal(node));
 	else if (*node.input == 'u')
-	{
-		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
-					  ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
-					   va_arg(node.ap, unsigned int));
 		return (parse_udecimal(node));
-	}
 	else if (*node.input == '%')
 		return (parse_percent(node));
 	else if (*node.input == 'x' || *node.input == 'X')
-	{
-		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
-				((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
-					   va_arg(node.ap, unsigned int));
 		return (parse_hexodecimal(node, (*node.input == 'x' ? 'f' : 'F')));
-	}
 	else if (*node.input == 'b')
 		return (parse_string_binary(node));
 	else if (*node.input == 'o')
-	{
-		node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
-					   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
-						va_arg(node.ap, unsigned int));
 		return (parse_octal(node, 'a'));
-	}
 	else if (*node.input == 'p')
-		return(parse_pointer(node));
+		return (parse_pointer(node));
 	else if (*node.input == 'f')
 	{
-		node.fnumber = (node.size & FLOAT_L ? va_arg(node.ap, long double) : va_arg(node.ap, double));
-		return(parse_float(node));
+		node.fnumber = (node.size & FLOAT_L ?
+		va_arg(node.ap, long double) : va_arg(node.ap, double));
+		return (parse_float(node));
 	}
-	return(node);
+	return (node);
 }

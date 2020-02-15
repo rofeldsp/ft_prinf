@@ -50,7 +50,7 @@
 # define L			(1 << 2)
 # define LL			(1 << 3)
 # define FLOAT_L	(1 << 4)
-# define UNICODE	(1 << 5)
+# define UNIC		(1 << 5)
 
 typedef struct	print
 {
