@@ -129,9 +129,9 @@ void				parse_hexodecimal3(t_print *node, char **str, char c);
 void				parse_decimal2(t_print *node, char **str);
 void				parse_decimal3(t_print *node, char **str);
 void				parse_decimal4(t_print *node, char **str);
-void	 			parse_float2(t_print *node, int *a, char **str2);
+char	 			*parse_float2(t_print *node, int *a);
 void				parse_float3(__int64_t *num, char **str2, int *a);
-void				float_cut(char **str, __int64_t *num, char **str2, t_print *node);
+char				*float_cut(__int64_t *num, t_print *node);
 
 
 #endif
