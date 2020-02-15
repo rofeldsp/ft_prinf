@@ -27,7 +27,7 @@ t_print		get_type(t_print node)
 	else if (*node.input == 'x' || *node.input == 'X')
 		return (parse_hexodecimal(node, (*node.input == 'x' ? 'f' : 'F')));
 	else if (*node.input == 'b')
-		return (parse_string_binary(node));
+		return (parse_binary(node));
 	else if (*node.input == 'o')
 		return (parse_octal(node, 'a'));
 	else if (*node.input == 'p')
