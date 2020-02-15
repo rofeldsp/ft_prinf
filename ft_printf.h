@@ -71,6 +71,7 @@ typedef struct	print
 	int 			count_nulls;
 	int 			buffer_size;
 	int				return_status;
+	int 			pointer_buf;
 }				t_print;
 
 /*
