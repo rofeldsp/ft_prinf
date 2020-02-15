@@ -14,14 +14,12 @@ t_print		parse_pointer(t_print node)
 	str = ft_itoa_base((uint64_t)pointer, 16, 'a');
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))));
 	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : (node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str))), 'a', str);
-//	node.empty_space = (node.width > ft_strlen(str) ? node.width - ft_strlen(str) + 2 : 0);
 	i = 0;
 	if (node.empty_space != 0)
 		node.pointer += node.empty_space - 2;
 	node.buffer[node.pointer++] = '0';
 	node.buffer[node.pointer++] = 'x';
 	node = adjust_to_precision3(node, ft_strlen(str), &str);
-//	adjust_to_precision(node, ft_strlen(str), &str);
 	while (str[i])
 		node.buffer[node.pointer++] = str[i++];
 	if (node.flag & MINUS)

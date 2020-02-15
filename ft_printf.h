@@ -70,6 +70,7 @@ typedef struct	print
 	int 			field_start;
 	int 			count_nulls;
 	int 			buffer_size;
+	int				return_status;
 }				t_print;
 
 /*
@@ -121,5 +122,7 @@ t_print 			parse_binary(t_print node, char c);
 void 				buffer_color(t_print *node, const char *color);
 t_print 			parse_unicode(t_print node);
 void				parse_bits(void *nbr, int size, t_print *node);
+t_print				get_precision2(t_print node);
+void				get_size2(t_print *node);
 
 #endif

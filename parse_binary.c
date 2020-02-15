@@ -9,8 +9,6 @@ t_print 	parse_binary(t_print node, char c)
 	char	*str;
 	int		i;
 
-//	node.unumber = va_arg(node.ap, unsigned int);
-//	str = ft_itoa_base(node.unumber, 16, c);
 	node.field_start = node.pointer;
 	str = (node.size & H) ? ft_itoa_base((unsigned short)node.unumber, 2, c) :
 		  (node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 2, c) :
@@ -105,34 +103,3 @@ t_print 	parse_string_binary(t_print node)
 		parse_bits(&b, sizeof(int), &node);
 	return (node);
 }
-//	char 	*str;
-//	char	*byte_str;
-//	int		i;
-//	int		j;
-//
-//	i = 0;
-//	str = va_arg(node.ap, char *);
-////	str = ft_strdup(str);
-//	if (str == NULL)
-//		str = "(null)";
-//	node = adjust_to_width2(node, ft_strlen(str) * 8);
-//	node = adjust_to_flag(node, ft_strlen(str) * 8);
-//	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) * 8 && node.flag ^ MINUS ? node.width - node.precision : 0));
-//	adjust_to_precision2(&node, &str);
-////	if (node.precision >= 0 && node.width != (int)ft_strlen(str))
-////		node.pointer += (node.width - ft_strlen(str));
-//	while (str[i])
-//	{
-//		j = 0;
-//		check_overflow(&node);
-//		byte_str = ft_itoa_base(str[i++] - 0, 2, 'a');
-//		while (byte_str[j])
-//			node.buffer[node.pointer++] = byte_str[j++];
-//		node.buffer[node.pointer++] = '|';
-//		free(byte_str);
-//	}
-//	node.input++;
-//	if (node.flag & MINUS)
-//		node.pointer = node.end_of_field;
-//	free(str);//	return (node);
-////}

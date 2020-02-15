@@ -12,15 +12,12 @@ t_print 	parse_string(t_print node)
 
 	i = 0;
 	str = va_arg(node.ap, char *);
-//	str = ft_strdup(str);
 	if (str == NULL)
 		str = "(null)";
 	node = adjust_to_width2(node, ft_strlen(str));
 	node = adjust_to_flag(node, ft_strlen(str));
 	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) && node.flag ^ MINUS ? node.width - node.precision : 0));
 	adjust_to_precision2(&node, &str);
-//	if (node.precision >= 0 && node.width != (int)ft_strlen(str))
-//		node.pointer += (node.width - ft_strlen(str));
 	while (str[i])
 	{
 		check_overflow(&node);

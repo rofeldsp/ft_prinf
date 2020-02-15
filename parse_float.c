@@ -9,7 +9,6 @@ t_print		parse_float(t_print node)
 	char *str;
 	int i;
 	__int64_t num;
-//	long double residual;
 	char 	*str2;
 	char 	*tmp;
 	int pres;
@@ -24,8 +23,6 @@ t_print		parse_float(t_print node)
 	num = (__int64_t)node.fnumber;
 	node.fnumber -= num;
 
-//	long double h = 0.87650894255l;
-//	h = h * ft_power(10, 11);
 	if (node.precision == -2)
 		node.precision = 6;
 
@@ -40,7 +37,6 @@ t_print		parse_float(t_print node)
 		if (pres > 18)
 		{
 			pres2 = 18;
-//			pres -= (pres2 + 1);
 		}
 		else
 			pres2 = pres;
@@ -56,14 +52,6 @@ t_print		parse_float(t_print node)
 		}
 		pres = pres > 18 ? (pres - 18 - 1) : pres2;
 	}
-//	str2 = ft_strnew(node.precision + 1);
-//	pres = node.precision != -1 ? node.precision : 0;
-//	while (pres-- >= 0)
-//	{
-//		str2[a++] = (int)(node.fnumber * 10) + '0';
-//		node.fnumber *= 10;
-//		node.fnumber -= (int64_t )node.fnumber;
-//	}
 	b = a - 1;
 	if (a == 0)
 		a = 1;
@@ -88,12 +76,6 @@ t_print		parse_float(t_print node)
 	}
 	str2[b] = '\0';
 
-//	residual = node.fnumber * ft_power(10, node.precision + 1);
-//	residual = residual > 0 ? residual : -residual;
-//	residual = (int64_t)residual % 10 >= 5 ? (int64_t)residual / 10 + 1 : (__int64_t)residual / 10;
-//	while (num_length(residual) < node.precision && residual != 0)
-//		residual *= 10;
-//	str = ft_itoa_float(residual, num);
 	if (num == 0 && sign == -1)
 	{
 		if (!(str = ft_strjoin("-", tmp = ft_itoa(num))))
@@ -131,10 +113,8 @@ t_print		parse_float(t_print node)
 	{
 		str = ft_strcpy(str, &(str[1]));
 		node.pointer++;
-//		pointer_buf = node.pointer - 1;
 	}
 	node.pointer += node.empty_space;
-//	node.pointer -= (node.empty_space != 0 && (node.flag & PLUS) != 0 && node.precision < 0) ? 1 : 0;
 	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && num >= 0)
 	{
 		if (node.pointer == node.field_start)
@@ -156,18 +136,15 @@ t_print		parse_float(t_print node)
 	}
 	if (node.flag & PLUS && num >= 0)
 	{
-//		if (node.number >= 0)
-//		{
-			if (node.flag & ZERO && node.width > (int)ft_strlen(str))
-			{
-				if (node.pointer == node.field_start)
-					node.buffer[node.pointer++] = '+';
-				else
-					node.buffer[node.field_start] = '+';
-			}
+		if (node.flag & ZERO && node.width > (int)ft_strlen(str))
+		{
+			if (node.pointer == node.field_start)
+				node.buffer[node.pointer++] = '+';
 			else
-				node.buffer[node.pointer > node.field_start ? node.pointer - 1 : node.pointer++] = '+';
-//		}
+				node.buffer[node.field_start] = '+';
+		}
+		else
+			node.buffer[node.pointer > node.field_start ? node.pointer - 1 : node.pointer++] = '+';
 	}
 	if (node.flag & MINUS)
 		node.pointer = node.field_start + node.flag & PLUS && num >= 0 ? 1 : 0;
@@ -184,24 +161,7 @@ t_print		parse_float(t_print node)
 		while (node.field_start < node.pointer)
 			node.buffer[node.field_start++] = '0';
 	}
-//	if (node.flag & ZERO)
-//	{
-//		int a = node.pointer;
-//		if (num < 0)
-//		{
-//			str = ft_strcpy(str, &(str[1]));
-//			node.buffer[node.field_start] = '-';
-//			a++;
-//			node.field_start++;
-//		}
-//		while (a >= node.field_start)
-//		{
-//			node.buffer[--a] = '0';
-//		}
-//	}
 
-
-//	node.pointer += node.empty_space;
 	while (str[i])
 	{
 		node.buffer[node.pointer++] = str[i++];
