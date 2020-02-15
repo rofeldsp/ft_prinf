@@ -28,7 +28,7 @@ void		parse_decimal4(t_print *node, char **str)
 	if (node->flag & MINUS)
 	{
 		if ((node->empty_space = (node->width > (int)ft_strlen(*str) ?
-								 node->width - ft_strlen(*str) : 0)) != 0)
+					node->width - ft_strlen(*str) : 0)) != 0)
 			node->pointer += node->empty_space;
 	}
 	node->input++;
@@ -58,7 +58,7 @@ void		parse_decimal3(t_print *node, char **str)
 	{
 		node->pointer_buf = node->pointer - 1;
 		while (node->buffer[node->pointer_buf] != ' ' &&
-			   node->buffer[node->pointer_buf] != '\0')
+				node->buffer[node->pointer_buf] != '\0')
 			node->pointer_buf--;
 		node->buffer[node->pointer_buf] = '-';
 	}
@@ -66,24 +66,26 @@ void		parse_decimal3(t_print *node, char **str)
 
 void		parse_decimal2(t_print *node, char **str)
 {
-	*node = adjust_to_width(*node, (node->precision == -1 ? 0 : ft_strlen(*str)));
-	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 : ft_strlen(*str)), '0', *str);
+	*node = adjust_to_width(*node, (node->precision == -1 ? 0 :
+	ft_strlen(*str)));
+	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 :
+	ft_strlen(*str)), '0', *str);
 	if ((node->flag & ZERO && node->number < 0 && node->precision == -2))
 	{
 		node->buffer[node->field_start] = '-';
-		*str = ft_strcpy(*str, str[1]);
+		*str = ft_strcpy(*str,  &((*str)[1]));
 		if (node->pointer == node->field_start)
 			node->pointer++;
 	}
 	else if (node->number < 0 && node->precision >= 0 && !(node->size & HH)
-			 && !(node->size & H))
+							&& !(node->size & H))
 	{
-		*str = ft_strcpy(*str, str[1]);
+		*str = ft_strcpy(*str, &((*str)[1]));
 		node->pointer++;
 	}
 	node->pointer += node->empty_space;
 	node->pointer -= (node->empty_space != 0 && (node->flag & PLUS) != 0
-					 && node->precision < 0) ? 1 : 0;
+						&& node->precision < 0) ? 1 : 0;
 }
 
 t_print		parse_decimal(t_print node)
@@ -101,13 +103,11 @@ t_print		parse_decimal(t_print node)
 		if (!(str = ft_itoa((short)node.number)))
 			exit(-1);
 	}
-	else
-		if (!(str = (node.size & HH) ? ft_itoa((char)node.number)
+	else if (!(str = (node.size & HH) ? ft_itoa((char)node.number)
 				: ft_itoa(node.number)))
-			exit(-1);
+		exit(-1);
 	parse_decimal2(&node, &str);
 	parse_decimal3(&node, &str);
 	parse_decimal4(&node, &str);
 	return (node);
 }
-
