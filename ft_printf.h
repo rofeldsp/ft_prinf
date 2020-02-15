@@ -115,7 +115,7 @@ __uint64_t			ft_power(int base, int power);
 char 				*ft_itoa_float(__int64_t residual, __int64_t num, int len);
 char				*ft_strcpy_special_edition(char *dest, const char *src);
 void				adjust_float_length(char **str, int len);
-int 				num_length(__int64_t residual);
+
 t_print				adjust_float(t_print node);
 t_print				print_color(t_print node);
 t_print 			parse_binary(t_print node);
@@ -126,5 +126,12 @@ t_print				get_precision2(t_print node);
 void				get_size2(t_print *node);
 void				parse_hexodecimal2(t_print *node, char c, char *str);
 void				parse_hexodecimal3(t_print *node, char **str, char c);
+void				parse_decimal2(t_print *node, char **str);
+void				parse_decimal3(t_print *node, char **str);
+void				parse_decimal4(t_print *node, char **str);
+void	 			parse_float2(t_print *node, int *a, char **str2);
+void				parse_float3(__int64_t *num, char **str2, int *a);
+void				float_cut(char **str, __int64_t *num, char **str2, t_print *node);
+
 
 #endif

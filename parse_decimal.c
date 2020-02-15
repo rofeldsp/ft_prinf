@@ -73,7 +73,7 @@ void		parse_decimal2(t_print *node, char **str)
 	if ((node->flag & ZERO && node->number < 0 && node->precision == -2))
 	{
 		node->buffer[node->field_start] = '-';
-		*str = ft_strcpy(*str,  &((*str)[1]));
+		*str = ft_strcpy(*str, &((*str)[1]));
 		if (node->pointer == node->field_start)
 			node->pointer++;
 	}
