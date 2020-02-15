@@ -43,33 +43,49 @@ char 		*ft_itoa_base(__uint64_t nb, int base, char c)
 	return(ft_itoa_base2(i, &str));
 }
 
+void			parse_hexodecimal2(t_print *node, char c, char *str)
+{
+	int len;
+
+	if (node->precision != -1)
+		len = (node->flag & OCTO && node->unumber != 0 ? ft_strlen(str) + 2
+													   : ft_strlen(str));
+	*node = adjust_to_width(*node, (node->precision == -1 ? 0 : len));
+	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 : len), c, str);
+	if ((node->flag & SPACE) && (!(node->flag & PLUS)) && node->number >= 0)
+	{
+		check_overflow(node);
+		if (node->flag & ZERO)
+		{
+			node->buffer[node->pointer - node->empty_space] = ' ';
+			node->empty_space = 0;
+		}
+		else
+			node->buffer[node->pointer++] = ' ';
+	}
+	node->pointer += node->empty_space + (node->flag & OCTO && node->precision >
+		  0 && node->empty_space != 0 && node->unumber != 0 &&
+		  node->precision > (int)ft_strlen(str) ? 2 : 0);
+}
+
 t_print 	parse_hexodecimal(t_print node, char c)
 {
 	char	*str;
 	int		i;
 
-	node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
-				   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
-					va_arg(node.ap, unsigned int));
+	if (node.size & L)
+		node.unumber = va_arg(node.ap, unsigned long int);
+	else
+		node.unumber = ((node.size & LL) ? va_arg(node.ap,
+		unsigned long long int) : va_arg(node.ap, unsigned int));
 	node.field_start = node.pointer;
-	str = (node.size & H) ? ft_itoa_base((unsigned short)node.unumber, 16, c) :
-			(node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 16, c) :
-			ft_itoa_base(node.unumber, 16 , c));
+	if (node.size & H)
+		str = ft_itoa_base((unsigned short)node.unumber, 16, c);
+	else
+		str = (node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 16, c)
+							  : ft_itoa_base(node.unumber, 16, c));
 	i = 0;
-	node = adjust_to_width(node, (node.precision == -1 ? 0 : (node.flag & OCTO && node.unumber != 0 ? ft_strlen(str) + 2 : ft_strlen(str))));
-	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : (node.flag & OCTO && node.unumber != 0 ? ft_strlen(str) + 2 : ft_strlen(str))), c, str);
-	if ((node.flag & SPACE) && (!(node.flag & PLUS)) && node.number >= 0)
-	{
-		check_overflow(&node);
-		if (node.flag & ZERO)
-		{
-			node.buffer[node.pointer - node.empty_space] = ' ';
-			node.empty_space = 0;
-		}
-		else
-			node.buffer[node.pointer++] = ' ';
-	}
-	node.pointer += node.empty_space + (node.flag & OCTO && node.precision > 0 && node.empty_space != 0 && node.unumber != 0 && node.precision > (int)ft_strlen(str) ? 2 : 0);
+	parse_hexodecimal2(&node, c, str);
 	if (node.flag & OCTO && node.unumber != 0)
 	{
 		if (node.empty_space != 0 && node.precision > (int)ft_strlen(str))
@@ -87,8 +103,7 @@ t_print 	parse_hexodecimal(t_print node, char c)
 	while (str[i])
 	{
 		check_overflow(&node);
-		node.buffer[node.pointer++] = str[i];
-		i++;
+		node.buffer[node.pointer++] = str[i++];
 	}
 	node.input++;
 	free(str);

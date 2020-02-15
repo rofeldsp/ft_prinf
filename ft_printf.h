@@ -124,5 +124,6 @@ t_print 			parse_unicode(t_print node);
 void				parse_bits(void *nbr, int size, t_print *node);
 t_print				get_precision2(t_print node);
 void				get_size2(t_print *node);
+void				parse_hexodecimal2(t_print *node, char c, char *str);
 
 #endif
