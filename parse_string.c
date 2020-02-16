@@ -16,7 +16,7 @@ t_print 	parse_string(t_print node)
 	node = adjust_to_width2(node, ft_strlen(str));
 	node = adjust_to_flag(node, ft_strlen(str));
 	node.pointer += (node.empty_space > 0 ? node.empty_space : (node.width > node.precision && node.precision >= 0 && node.width != (int)ft_strlen(str) && node.flag ^ MINUS ? node.width - node.precision : 0));
-	adjust_to_precision2(&node, &str);
+	adjust_to_precision_v2(&node, &str);
 	while (str[i])
 	{
 		check_overflow(&node);

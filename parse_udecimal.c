@@ -18,7 +18,7 @@ t_print 	parse_udecimal(t_print node) {
 	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
 	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)),'0', str);
 	node.pointer += node.empty_space;
-	node = adjust_to_precision3(node, ft_strlen(str), &str);
+	node = adjust_to_precision_v3(node, ft_strlen(str), &str);
 	while (str[i]) {
 		if ((node.pointer + 1) % BUFF_SIZE == 0)
 			node.buffer = increase_buffer(&node.buffer, &node);

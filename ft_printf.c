@@ -15,11 +15,11 @@
 int			ft_printf(const char *str, ...)
 {
 	t_print		node;
-	int			i;
 
+	if (str == NULL)
+		exit (33);
 	node.pointer = 0;
 	node.count_nulls = 0;
-	node.empty_space = 0;
 	node.buffer_size = BUFF_SIZE;
 	if (!(node.buffer = ft_strnew(node.buffer_size)))
 		exit(-1);
@@ -36,19 +36,17 @@ int			ft_printf(const char *str, ...)
 			node = print_color(node);
 	}
 	va_end(node.ap);
-	i = ft_putstr_printf(node.buffer, node.count_nulls);
+	node.pointer = ft_putstr_printf(node.buffer, node.count_nulls);
 	free(node.buffer);
-	return (i);
+	return (node.pointer);
 }
 
 int			ft_dprintf(int fd, const char *str, ...)
 {
 	t_print		node;
-	int			i;
 
 	node.pointer = 0;
 	node.count_nulls = 0;
-	node.empty_space = 0;
 	node.buffer_size = BUFF_SIZE;
 	if (!(node.buffer = ft_strnew(node.buffer_size)))
 		exit(-1);
@@ -65,9 +63,9 @@ int			ft_dprintf(int fd, const char *str, ...)
 			node = print_color(node);
 	}
 	va_end(node.ap);
-	i = ft_putstr_dprintf(fd, node.buffer, node.count_nulls);
+	node.pointer = ft_putstr_dprintf(fd, node.buffer, node.count_nulls);
 	free(node.buffer);
-	return (i);
+	return (node.pointer);
 }
 
 t_print		print_arg(t_print node)

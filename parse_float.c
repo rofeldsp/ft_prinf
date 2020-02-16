@@ -104,19 +104,18 @@ void		parse_float4(t_print *node, char **tmp, char **str, char **str2)
 	}
 }
 
-char		*float_cut(__int64_t *num, t_print *node)
+char		*float_cut(__int64_t *num, t_print *node, int *pres, char **str2)
 {
 	char	*tmp;
 	int		a;
 	int		sign;
-	char	*str2;
 	char	*str;
 
 	a = 0;
 	sign = node->fnumber < 0 ? -1 : 1;
 	node->fnumber *= node->fnumber < 0 ? -1 : 1;
-	str2 = parse_float2(node, &a);
-	parse_float3(num, &str2, &a);
+	parse_float2(node, &a, pres, str2);
+	parse_float3(num, str2, &a);
 	if (*num == 0 && sign == -1)
 	{
 		tmp = ft_itoa(*num);
@@ -126,7 +125,7 @@ char		*float_cut(__int64_t *num, t_print *node)
 	}
 	else if (!(str = ft_itoa(*num)))
 		exit(-1);
-	parse_float4(node, &tmp, &str, &str2);
+	parse_float4(node, &tmp, &str, str2);
 	*node = adjust_to_width(*node, (ft_strlen(str)));
 	*node = adjust_to_flag3(*node, (ft_strlen(str)), str);
 	parse_float5(node, num, &str);
@@ -162,22 +161,18 @@ void		parse_float3(__int64_t *num, char **str2, int *a)
 	(*str2)[b] = '\0';
 }
 
-char		*parse_float2(t_print *node, int *a)
+void		parse_float2(t_print *node, int *a, int *pres, char **str2)
 {
-	int			pres;
 	int			last_char;
 	uint64_t	floatnbr;
 	int			pres2;
-	char		*str2;
 
-	pres = node->precision != -1 ? node->precision : 0;
-	str2 = ft_strnew(pres + 1);
-	while (pres >= 0)
+	while (*pres >= 0)
 	{
-		if (pres > 18)
+		if (*pres > 18)
 			pres2 = 18;
 		else
-			pres2 = pres;
+			pres2 = *pres;
 		floatnbr = node->fnumber * ft_power(10, pres2 + 1);
 		node->fnumber *= ft_power(10, pres2 + 1);
 		node->fnumber -= (uint64_t)node->fnumber;
@@ -185,12 +180,11 @@ char		*parse_float2(t_print *node, int *a)
 		last_char = *a - 1;
 		while (pres2-- >= 0)
 		{
-			str2[last_char--] = floatnbr % 10 + '0';
+			(*str2)[last_char--] = floatnbr % 10 + '0';
 			floatnbr /= 10;
 		}
-		pres = pres > 18 ? (pres - 18 - 1) : pres2;
+		*pres = *pres > 18 ? (*pres - 18 - 1) : pres2;
 	}
-	return (str2);
 }
 
 t_print		parse_float(t_print node)
@@ -198,12 +192,16 @@ t_print		parse_float(t_print node)
 	char		*str;
 	int			i;
 	__int64_t	num;
+	int			pres;
+	char		*str2;
 
 	num = (__int64_t)node.fnumber;
 	node.fnumber -= num;
 	node.precision = node.precision == -2 ? 6 : node.precision;
 	node.field_start = node.pointer;
-	str = float_cut(&num, &node);
+	pres = node.precision != -1 ? node.precision : 0;
+	str2 = ft_strnew(pres + 1);
+	str = float_cut(&num, &node, &pres, &str2);
 	parse_float6(&node, &num);
 	parse_float7(&node, &num, &str);
 	parse_float8(&node, &num, &str);
