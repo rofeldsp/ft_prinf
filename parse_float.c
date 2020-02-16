@@ -19,7 +19,7 @@ void		parse_float8(t_print *node, __int64_t *num, char **str)
 		if (*num < 0 || node->flag & PLUS)
 		{
 			node->buffer[node->field_start] = *num < 0 ? '-' : '+';
-			*str = ft_strcpy(*str, &((*str)[num < 0 ? 1 : 0]));
+			*str = ft_strcpy(*str, &((*str)[*num < 0 ? 1 : 0]));
 			node->empty_space -= *num < 0 ? 0 : 1;
 			node->pointer += *num < 0 ? 1 : 0;
 			node->field_start++;
@@ -74,7 +74,7 @@ void		parse_float6(t_print *node, __int64_t *num)
 
 void		parse_float5(t_print *node, __int64_t *num, char **str)
 {
-	if ((node->flag & ZERO && num < 0 && node->precision == -2))
+	if ((node->flag & ZERO && *num < 0 && node->precision == -2))
 	{
 		node->buffer[node->field_start] = '-';
 		*str = ft_strcpy(*str, &((*str)[1]));
@@ -184,7 +184,10 @@ char		*parse_float2(t_print *node, int *a)
 		*a += pres2 + 1;
 		last_char = *a - 1;
 		while (pres2-- >= 0)
-			str2[last_char--] = (floatnbr /= 10) % 10 + '0';
+		{
+			str2[last_char--] = floatnbr % 10 + '0';
+			floatnbr /= 10;
+		}
 		pres = pres > 18 ? (pres - 18 - 1) : pres2;
 	}
 	return (str2);

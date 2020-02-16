@@ -53,12 +53,12 @@ int main(int argc, char **argv)
 //	ft_printf("%bf", 36.45645);
 //	write(1, "^C", 2);
 //	ft_printf("%B", "Hello World!");
-//	ft_printf("{%f}{%lf}{%Lf}", 1.42, 1.42, 1.42l);
+	ft_printf("%05.0f", -7.3);
 //	printf("\n{%f}{%lf}{%Lf}", 1.42, 1.42, 1.42l);
-	ft_printf("{green}%s%hihello%-17.14llu%lli%08hu%s%17ssom{red}estuff%s%hi%i%.24lu%llu%u%.2s{{eoc}%li    %25.16f","abc",sh_neg_1,
-			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1, "Hello World", -356.123456789101112897675);
-	printf("\n%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li","abc",sh_neg_1,
-		   ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);
+//	ft_printf("{green}%s%hihello%-17.14llu%lli%08hu%s%17ssom{red}estuff%s%hi%i%.24lu%llu%u%.2s{{eoc}%li    %25.16f","abc",sh_neg_1,
+//			  ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1, "Hello World", -356.123456789101112897675);
+//	printf("\n%s%hihello%-17.14llu%lli%08hu%s%17ssomestuff%s%hi%i%.24lu%llu%u%.2s%li","abc",sh_neg_1,
+//		   ull_pos_1,ll_neg_1,ush_pos_1,"wassup","nope","",(short)32767,0,ul_pos_1,0ull,ui_pos_1,"notall",l_pos_1);
 //	printf("%p", NULL);
 //	ft_printf("%c%s", letter, string);
 	return(0);
