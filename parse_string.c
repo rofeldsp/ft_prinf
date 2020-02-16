@@ -7,7 +7,6 @@
 t_print 	parse_string(t_print node)
 {
 	char 	*str;
-//	char 	*str2;
 	int		i;
 
 	i = 0;
@@ -31,4 +30,3 @@ t_print 	parse_string(t_print node)
 	free(str);
 	return (node);
 }
-
