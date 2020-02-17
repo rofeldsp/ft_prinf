@@ -1,12 +1,20 @@
-//
-// Created by Rosanne Feldspar on 12/02/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_color.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 12:16:11 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/17 12:16:13 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print 	print_color(t_print node)
+t_print		print_color(t_print node)
 {
-	int 	offset;
+	int		offset;
 
 	if (!(ft_strncmp(node.input, "{red}", offset = 5)))
 		buffer_color(&node, RED);
@@ -31,7 +39,7 @@ t_print 	print_color(t_print node)
 	return (node);
 }
 
-void 		buffer_color(t_print *node, const char *color)
+void		buffer_color(t_print *node, const char *color)
 {
 	int i;
 

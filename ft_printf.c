@@ -17,7 +17,7 @@ int			ft_printf(const char *str, ...)
 	t_print		node;
 
 	if (str == NULL)
-		exit (33);
+		exit(33);
 	node.pointer = 0;
 	node.count_nulls = 0;
 	node.buffer_size = BUFF_SIZE;

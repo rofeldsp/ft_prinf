@@ -1,12 +1,20 @@
-//
-// Created by Rosanne Feldspar on 03/02/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_octal.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 12:15:31 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/17 12:15:32 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
 void		parse_octal3(t_print *node, char **str)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	if (node->flag & OCTO)
@@ -33,8 +41,13 @@ void		parse_octal3(t_print *node, char **str)
 
 void		parse_octal2(t_print *node, char **str, char c)
 {
-	*node = adjust_to_width(*node, (node->precision == -1 ? 0 :
-	(node->flag & OCTO ? ft_strlen(*str) + 1 : ft_strlen(*str))));
+	int len;
+
+	if (node->precision == -1)
+		len = 0;
+	else
+		len = node->flag & OCTO ? ft_strlen(*str) + 1 : ft_strlen(*str);
+	*node = adjust_to_width(*node, len);
 	*node = adjust_to_flag2(*node, (node->flag & OCTO ? ft_strlen(*str) + 1
 	: ft_strlen(*str)), c, *str);
 	if ((node->flag & SPACE) && (!(node->flag & PLUS)) && node->number >= 0)
@@ -54,7 +67,7 @@ void		parse_octal2(t_print *node, char **str, char c)
 		node->buffer[node->pointer] = '0';
 }
 
-t_print 	parse_octal(t_print node, char c)
+t_print		parse_octal(t_print node, char c)
 {
 	char	*str;
 
@@ -68,7 +81,7 @@ t_print 	parse_octal(t_print node, char c)
 		str = ft_itoa_base((unsigned short)node.unumber, 8, c);
 	else
 		str = (node.size & HH ? ft_itoa_base((unsigned char)node.unumber, 8, c)
-						: ft_itoa_base(node.unumber, 8 , 'a'));
+						: ft_itoa_base(node.unumber, 8, 'a'));
 	parse_octal2(&node, &str, c);
 	parse_octal3(&node, &str);
 	free(str);

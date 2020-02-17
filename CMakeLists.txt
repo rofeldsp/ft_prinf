@@ -76,6 +76,7 @@ add_executable(printf_owngit
         get_type.c
         get_width.c
         main.c
+        parse_binary.c
         parse_char.c
         parse_decimal.c
         parse_float.c
@@ -84,4 +85,6 @@ add_executable(printf_owngit
         parse_percent.c
         parse_pointer.c
         parse_string.c
-        parse_udecimal.c print_color.c parse_binary.c parse_unicode.c)
+        parse_udecimal.c
+        parse_unicode.c
+        print_color.c)

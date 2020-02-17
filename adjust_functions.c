@@ -1,6 +1,14 @@
-//
-// Created by Rosanne Feldspar on 22/01/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   adjust_functions.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 11:55:32 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/17 11:55:33 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
@@ -20,7 +28,7 @@ t_print		adjust_to_width(t_print node, int len)
 		node.buffer[node.pointer + node.width - len2] = ' ';
 		len2--;
 	}
-	return(node);
+	return (node);
 }
 
 t_print		adjust_to_width2(t_print node, int len)
@@ -41,10 +49,10 @@ t_print		adjust_to_width2(t_print node, int len)
 		node.buffer[node.pointer + node.width - len2] = ' ';
 		len2--;
 	}
-	return(node);
+	return (node);
 }
 
-t_print 	adjust_to_flag(t_print node, int len)
+t_print		adjust_to_flag(t_print node, int len)
 {
 	int	len_width;
 
@@ -61,7 +69,7 @@ t_print 	adjust_to_flag(t_print node, int len)
 	return (node);
 }
 
-t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
+t_print		adjust_to_flag2(t_print node, int len, char c, char *str)
 {
 	int	len_width;
 
@@ -89,7 +97,7 @@ t_print 	adjust_to_flag2(t_print node, int len, char c, char *str)
 	return (node);
 }
 
-t_print 	adjust_to_flag3(t_print node, int len, char *str)
+t_print		adjust_to_flag3(t_print node, int len, char *str)
 {
 	int	len_width;
 
@@ -104,7 +112,7 @@ t_print 	adjust_to_flag3(t_print node, int len, char *str)
 	return (node);
 }
 
-void 		adjust_to_precision_3(t_print *node, int len)
+void		adjust_to_precision_3(t_print *node, int len)
 {
 	if (node->flag & PLUS)
 	{
@@ -131,9 +139,9 @@ void 		adjust_to_precision_3(t_print *node, int len)
 	}
 }
 
-void 		adjust_to_precision_2(t_print *node, int len)
+void		adjust_to_precision_2(t_print *node, int len)
 {
-	int 	pointer_buff;
+	int		pointer_buff;
 
 	pointer_buff = node->pointer;
 	while ((node->precision--) - len > 0)
@@ -154,7 +162,7 @@ void 		adjust_to_precision_2(t_print *node, int len)
 	node->pointer = pointer_buff;
 }
 
-t_print 	adjust_to_precision(t_print node, int len, char **str)
+t_print		adjust_to_precision(t_print node, int len, char **str)
 {
 	if (node.precision == -1 && (node.unumber == 0 || node.number == 0))
 		*(str[0]) = '\0';
@@ -177,10 +185,10 @@ void		adjust_to_precision_v2_2(t_print *node, char **str, char **str2)
 		exit(-1);
 }
 
-void	 	adjust_to_precision_v2(t_print *node, char **str)
+void		adjust_to_precision_v2(t_print *node, char **str)
 {
-	int 	len;
-	char 	*str2;
+	int		len;
+	char	*str2;
 
 	if (node->precision > -2)
 	{
@@ -200,12 +208,11 @@ void	 	adjust_to_precision_v2(t_print *node, char **str)
 		adjust_to_precision_v2_2(node, str, &str2);
 		free(str2);
 	}
-	else
-		if (!(*str = ft_strdup(*str)))
-			exit(-1);
+	else if (!(*str = ft_strdup(*str)))
+		exit(-1);
 }
 
-void 		adjust_to_precision_v3_2(t_print *node, int len)
+void		adjust_to_precision_v3_2(t_print *node, int len)
 {
 	int pointer_buff;
 
@@ -219,7 +226,7 @@ void 		adjust_to_precision_v3_2(t_print *node, int len)
 	node->pointer = pointer_buff;
 }
 
-t_print 	adjust_to_precision_v3(t_print node, int len, char **str)
+t_print		adjust_to_precision_v3(t_print node, int len, char **str)
 {
 	if (node.precision == -1 && ((node.unumber == 0 || node.number == 0) ||
 									(node.number == 1 && node.unumber == 1)))

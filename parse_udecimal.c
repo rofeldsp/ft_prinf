@@ -1,42 +1,62 @@
-//
-// Created by Rosanne Feldspar on 03/02/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_udecimal.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 10:57:25 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/17 10:57:27 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print 	parse_udecimal(t_print node) {
-	char *str;
+void		parse_udecimal2(t_print *node, char **str)
+{
 	int i;
 
-	node.unumber = (node.size & L) ? va_arg(node.ap, unsigned long int) :
-				   ((node.size & LL) ? va_arg(node.ap, unsigned long long int) :
-					va_arg(node.ap, unsigned int));
-	node.field_start = node.pointer;
-	str = (node.size == H) ? ft_uitoa((unsigned short) node.unumber) : (node.size == HH ?
-			 ft_uitoa((unsigned char) node.unumber) : ft_uitoa(node.unumber));
 	i = 0;
-	node = adjust_to_width(node, (node.precision == -1 ? 0 : ft_strlen(str)));
-	node = adjust_to_flag2(node, (node.precision == -1 ? 0 : ft_strlen(str)),'0', str);
-	node.pointer += node.empty_space;
-	node = adjust_to_precision_v3(node, ft_strlen(str), &str);
-	while (str[i]) {
-		if ((node.pointer + 1) % BUFF_SIZE == 0)
-			node.buffer = increase_buffer(&node.buffer, &node);
-		node.buffer[node.pointer] = str[i];
-		i++;
-		node.pointer++;
+	*node = adjust_to_width(*node, (node->precision == -1 ? 0 :
+	ft_strlen(*str)));
+	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 :
+	ft_strlen(*str)), '0', *str);
+	node->pointer += node->empty_space;
+	*node = adjust_to_precision_v3(*node, ft_strlen(*str), str);
+	while ((*str)[i])
+	{
+		check_overflow(node);
+		node->buffer[node->pointer++] = (*str)[i++];
 	}
-	node.input++;
-	node.pointer = node.end_of_field > node.pointer ? node.end_of_field : node.pointer;
+	node->input++;
+	node->pointer = node->end_of_field > node->pointer ?
+										node->end_of_field : node->pointer;
+}
+
+t_print		parse_udecimal(t_print node)
+{
+	char *str;
+
+	if (node.size & L)
+		node.unumber = va_arg(node.ap, unsigned long int);
+	else
+		node.unumber = (node.size & LL) ? va_arg(node.ap,
+			unsigned long long int) : va_arg(node.ap, unsigned int);
+	node.field_start = node.pointer;
+	if (node.size & H)
+		str = ft_uitoa((unsigned short)node.number);
+	else
+		str = (node.size == HH ? ft_uitoa((unsigned char)node.unumber) :
+													ft_uitoa(node.unumber));
+	parse_udecimal2(&node, &str);
 	free(str);
 	return (node);
 }
 
-
-static char		*cut(uint64_t j, uint64_t n)
+static char	*cut(uint64_t j, uint64_t n)
 {
-	char				*dst;
-	uint64_t				b;
+	char			*dst;
+	uint64_t		b;
 
 	b = n;
 	while (b / 10 > 0)
@@ -45,7 +65,7 @@ static char		*cut(uint64_t j, uint64_t n)
 		b = b / 10;
 	}
 	if (!(dst = (char*)malloc(sizeof(char) * (j + 1))))
-		exit (-1);
+		exit(33);
 	dst[j] = '\0';
 	j--;
 	while (n / 10 > 0)
@@ -58,14 +78,12 @@ static char		*cut(uint64_t j, uint64_t n)
 	return (dst);
 }
 
-char			*ft_uitoa(uint64_t n)
+char		*ft_uitoa(uint64_t n)
 {
 	__uint64_t		j;
-	char				*dst;
+	char			*dst;
 
 	j = 1;
 	dst = cut(j, n);
 	return (dst);
 }
-
-

@@ -1,10 +1,18 @@
-//
-// Created by Rosanne Feldspar on 13/02/2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_unicode.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rofeldsp <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 12:15:44 by rofeldsp          #+#    #+#             */
+/*   Updated: 2020/02/17 12:15:46 by rofeldsp         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_print 	parse_unicode(t_print node)
+t_print		parse_unicode(t_print node)
 {
 	unsigned int utf;
 
