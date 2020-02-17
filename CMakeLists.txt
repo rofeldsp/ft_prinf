@@ -66,7 +66,7 @@ add_executable(printf_owngit
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        adjust_functions.c
+        adjust_to_precision.c
         ft_printf.c
         ft_printf.h
         ft_putstr_printf.c
@@ -87,4 +87,4 @@ add_executable(printf_owngit
         parse_string.c
         parse_udecimal.c
         parse_unicode.c
-        print_color.c)
+        print_color.c additional_functions.c adjust_to_width.c adjust_to_flag.c adjust_to_precision_2.c parse_float_2.c)

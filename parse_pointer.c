@@ -48,7 +48,7 @@ t_print		parse_pointer(t_print node)
 	else
 		len = node.flag & OCTO ? ft_strlen(str) + 2 : ft_strlen(str);
 	node = adjust_to_width(node, len);
-	node = adjust_to_flag2(node, len, 'a', str);
+	node = adjust_to_flag_v2(node, len, 'a', str);
 	parse_pointer2(&node, &str);
 	node.input++;
 	free(str);

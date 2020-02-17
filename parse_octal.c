@@ -48,7 +48,7 @@ void		parse_octal2(t_print *node, char **str, char c)
 	else
 		len = node->flag & OCTO ? ft_strlen(*str) + 1 : ft_strlen(*str);
 	*node = adjust_to_width(*node, len);
-	*node = adjust_to_flag2(*node, (node->flag & OCTO ? ft_strlen(*str) + 1
+	*node = adjust_to_flag_v2(*node, (node->flag & OCTO ? ft_strlen(*str) + 1
 	: ft_strlen(*str)), c, *str);
 	if ((node->flag & SPACE) && (!(node->flag & PLUS)) && node->number >= 0)
 	{

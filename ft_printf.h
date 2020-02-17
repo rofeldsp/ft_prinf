@@ -103,8 +103,8 @@ t_print				adjust_to_precision_v3(t_print node, int len, char **str);
 t_print				adjust_to_flag(t_print node, int len);
 t_print				parse_decimal(t_print node);
 t_print				parse_udecimal(t_print node);
-t_print				adjust_to_flag2(t_print node, int len, char c, char *str);
-t_print				adjust_to_flag3(t_print node, int len, char *str);
+t_print				adjust_to_flag_v2(t_print node, int len, char c, char *str);
+t_print				adjust_to_flag_v3(t_print node, int len, char *str);
 void				free_flags(t_print *node);
 t_print				parse_percent(t_print node);
 t_print				parse_hexodecimal(t_print node, char c);
@@ -147,5 +147,7 @@ void				parse_octal2(t_print *node, char **str, char c);
 void				parse_octal3(t_print *node, char **str);
 void				parse_pointer2(t_print *node, char **str);
 void				parse_string2(t_print *node, char **str);
+t_print				print_arg(t_print node);
+void				check_overflow(t_print *node);
 
 #endif

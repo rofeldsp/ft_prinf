@@ -19,7 +19,7 @@ void		parse_udecimal2(t_print *node, char **str)
 	i = 0;
 	*node = adjust_to_width(*node, (node->precision == -1 ? 0 :
 	ft_strlen(*str)));
-	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 :
+	*node = adjust_to_flag_v2(*node, (node->precision == -1 ? 0 :
 	ft_strlen(*str)), '0', *str);
 	node->pointer += node->empty_space;
 	*node = adjust_to_precision_v3(*node, ft_strlen(*str), str);

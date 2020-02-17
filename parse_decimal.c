@@ -68,7 +68,7 @@ void		parse_decimal2(t_print *node, char **str)
 {
 	*node = adjust_to_width(*node, (node->precision == -1 ? 0 :
 	ft_strlen(*str)));
-	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 :
+	*node = adjust_to_flag_v2(*node, (node->precision == -1 ? 0 :
 	ft_strlen(*str)), '0', *str);
 	if ((node->flag & ZERO && node->number < 0 && node->precision == -2))
 	{

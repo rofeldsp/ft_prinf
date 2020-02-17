@@ -79,7 +79,7 @@ void		parse_hexodecimal2(t_print *node, char c, char *str)
 		len = (node->flag & OCTO && node->unumber != 0 ? ft_strlen(str) + 2
 				: ft_strlen(str));
 	*node = adjust_to_width(*node, (node->precision == -1 ? 0 : len));
-	*node = adjust_to_flag2(*node, (node->precision == -1 ? 0 : len), c, str);
+	*node = adjust_to_flag_v2(*node, (node->precision == -1 ? 0 : len), c, str);
 	if ((node->flag & SPACE) && (!(node->flag & PLUS)) && node->number >= 0)
 	{
 		check_overflow(node);
