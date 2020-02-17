@@ -44,7 +44,7 @@ t_print		parse_udecimal(t_print node)
 			unsigned long long int) : va_arg(node.ap, unsigned int);
 	node.field_start = node.pointer;
 	if (node.size & H)
-		str = ft_uitoa((unsigned short)node.number);
+		str = ft_uitoa((unsigned short)node.unumber);
 	else
 		str = (node.size == HH ? ft_uitoa((unsigned char)node.unumber) :
 													ft_uitoa(node.unumber));
