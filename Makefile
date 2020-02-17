@@ -65,7 +65,7 @@ $(NAME): $(OBJS)
 	@ranlib $(NAME)
 
 $(DIR_O)/%.o: $(DIR_S)/%.c
-	@mkdir -p temporary
+	@mkdir -p object_files
 	@$(CC) $(FLAGS) -I $(HEADER) -o $@ -c $<
 
 clean:

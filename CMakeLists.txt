@@ -3,10 +3,11 @@ project(printf_owngit C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
+include_directories(include)
 include_directories(libft)
 
 add_executable(printf_owngit
+        include/ft_printf.h
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_isalnum.c
@@ -66,25 +67,29 @@ add_executable(printf_owngit
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        adjust_to_precision.c
-        ft_printf.c
-        ft_printf.h
-        ft_putstr_printf.c
-        get_flag.c
-        get_precision.c
-        get_size.c
-        get_type.c
-        get_width.c
-        main.c
-        parse_binary.c
-        parse_char.c
-        parse_decimal.c
-        parse_float.c
-        parse_hexodecimal.c
-        parse_octal.c
-        parse_percent.c
-        parse_pointer.c
-        parse_string.c
-        parse_udecimal.c
-        parse_unicode.c
-        print_color.c additional_functions.c adjust_to_width.c adjust_to_flag.c adjust_to_precision_2.c parse_float_2.c)
+        sources/additional_functions.c
+        sources/adjust_to_flag.c
+        sources/adjust_to_precision.c
+        sources/adjust_to_precision_2.c
+        sources/adjust_to_width.c
+        sources/ft_printf.c
+        sources/ft_putstr_printf.c
+        sources/get_flag.c
+        sources/get_precision.c
+        sources/get_size.c
+        sources/get_type.c
+        sources/get_width.c
+        sources/parse_binary.c
+        sources/parse_char.c
+        sources/parse_decimal.c
+        sources/parse_float.c
+        sources/parse_float_2.c
+        sources/parse_hexodecimal.c
+        sources/parse_octal.c
+        sources/parse_percent.c
+        sources/parse_pointer.c
+        sources/parse_string.c
+        sources/parse_udecimal.c
+        sources/parse_unicode.c
+        sources/print_color.c
+        main.c)
