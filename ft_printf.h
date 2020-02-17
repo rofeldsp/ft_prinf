@@ -82,7 +82,8 @@ typedef struct		s_print
 /*
 **	Functions. Each function with index (e.g. parse_pointer2 - is a shortcut
 ** 	to function without index, so they both will be less then 25 lines, as
-** 	specified by 42 code norm rules.
+** 	specified by 42 code norm rules. If _v2 is used, it means that another
+** version of same function is declared
 */
 
 int					ft_printf(const char *str, ...);
