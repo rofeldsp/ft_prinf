@@ -3,7 +3,7 @@
 //
 
 #include <stdint.h>
-#include "ft_printf.h"
+#include "include/ft_printf.h"
 #include <stdio.h>
 
 
@@ -48,9 +48,9 @@ int main(int argc, char **argv)
 	int fd;
 
 
-//	fd = open("check.txt", O_RDWR);
-//	ft_dprintf(fd, "check %Ud", 68394);
-//	close(fd);
+	fd = open("check.txt", O_RDWR);
+	ft_dprintf(fd, "check %Ud", 62394);
+	close(fd);
 //	ft_printf("%bf", 36.45645);
 //	write(1, "^C", 2);
 //	ft_printf("%B", "Hello World!");
